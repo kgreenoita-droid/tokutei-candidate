@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>性格診断テスト | Tokutei Ginou</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0c0a24 0%, #16113a 55%, #091520 100%);
+    font-family: 'Noto Sans JP', 'Noto Sans', sans-serif;
+    display: flex; align-items: center; justify-content: center;
+    padding: 32px 16px;
+  }
+  .card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.09);
+    border-radius: 24px; padding: 40px 36px;
+    max-width: 540px; width: 100%;
+    box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+  }
+  h1, h2 { color: #fff; font-weight: 800; }
+  .subtitle { color: #6C9BF7; font-size: 12px; font-weight: 700; margin: 6px 0 16px; }
+  .desc { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.85; margin-bottom: 24px; }
+  input {
+    width: 100%; background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.15); border-radius: 10px;
+    padding: 12px 16px; color: #fff; font-size: 18px;
+    font-family: inherit; outline: none; text-align: center;
+    letter-spacing: 3px; font-weight: 700; margin-bottom: 8px;
+  }
+  .btn {
+    width: 100%; border: none; border-radius: 12px;
+    padding: 14px 32px; font-size: 15px; font-weight: 700;
+    cursor: pointer; font-family: inherit; margin-top: 4px;
+  }
+  .btn-primary { background: linear-gradient(135deg, #6C9BF7, #4a7af5); color: #fff; }
+  .btn-green   { background: linear-gradient(135deg, #5BC8AF, #38a98e); color: #fff; }
+  .btn-ghost   { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.6); }
+  .error { color: #F4A261; font-size: 12px; margin: 0 0 8px; text-align: center; }
+  .progress-wrap { margin-bottom: 20px; }
+  .progress-info { display: flex; justify-content: space-between; margin-bottom: 6px; }
+  .progress-info span:first-child { color: rgba(255,255,255,0.35); font-size: 12px; }
+  .progress-info span:last-child  { color: #6C9BF7; font-size: 12px; font-weight: 700; }
+  .progress-bar { background: rgba(255,255,255,0.07); border-radius: 6px; height: 5px; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg,#6C9BF7,#9B8EF7); border-radius: 6px; transition: width 0.4s; }
+  .dim-badge { display: inline-block; border-radius: 20px; padding: 4px 13px; font-size: 11px; font-weight: 700; margin-bottom: 16px; }
+  .question  { color: #fff; font-size: 17px; font-weight: 700; line-height: 1.75; margin-bottom: 26px; }
+  .scale-btns { display: flex; gap: 8px; margin-bottom: 12px; }
+  .scale-btn  {
+    flex: 1; padding: 16px 4px; border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.03);
+    color: rgba(255,255,255,0.4); font-size: 20px; font-weight: 800;
+    cursor: pointer; font-family: inherit; transition: all 0.12s;
+  }
+  .scale-labels { display: flex; justify-content: space-between; margin-bottom: 26px; }
+  .scale-labels span { color: rgba(255,255,255,0.28); font-size: 10px; }
+  .nav-btns { display: flex; gap: 10px; }
+  .dim-tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+  .dim-tag  { border-radius: 9px; padding: 6px 12px; font-size: 12px; font-weight: 700; }
+  .thankyou-icon { font-size: 64px; margin-bottom: 20px; text-align: center; }
+  .thankyou-note {
+    background: rgba(108,155,247,0.08); border: 1px solid rgba(108,155,247,0.2);
+    border-radius: 14px; padding: 16px 20px; margin-top: 28px;
+  }
+  .thankyou-note p { color: rgba(255,255,255,0.4); font-size: 12px; }
+  .code-hints { background: rgba(255,255,255,0.04); border-radius: 12px; padding: 12px 16px; margin-bottom: 20px; }
+  .code-hints p { color: rgba(255,255,255,0.55); font-size: 13px; margin: 3px 0; }
+  #app { width: 100%; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 32px 16px; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+
+<script>
+// ═══════════════════════════════════════════
+// ★ ここにSupabaseの情報を入力してください ★
+// ═══════════════════════════════════════════
+const SUPABASE_URL = 'https://uaxyxphvtouadfonmwzp.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_OfDj1GzXoYXOWErBUK-ooQ_VHSF6YfZ';
+// ═══════════════════════════════════════════
+
+const CODE_EXPIRY_MS = 24 * 60 * 60 * 1000;
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+const LANGUAGES = [
+  { code:'ja', flag:'🇯🇵', nativeName:'日本語' },
+  { code:'id', flag:'🇮🇩', nativeName:'Bahasa Indonesia' },
+  { code:'my', flag:'🇲🇲', nativeName:'မြန်မာဘာသာ' },
+];
+
+const UI = {
+  ja:{ title:'性格診断テスト', subtitle:'特定技能候補者向け ビッグファイブ診断', desc:'このテストはあなたの性格を理解するためのものです。正解・不正解はありません。直感的に、正直に答えてください。全55問、約15分で完了します。', startBtn:'テストを開始する', prev:'戻る', submit:'送信する', progress:'問', unanswered:n=>`残り${n}問未回答`, scaleLabels:['全く当てはまらない','あまり当てはまらない','どちらでもない','やや当てはまる','非常に当てはまる'], thankyouTitle:'ご回答ありがとうございました', thankyouBody:'テストが完了しました。面接官にお知らせください。' },
+  id:{ title:'Tes Kepribadian', subtitle:'Tes Big Five untuk Kandidat Tokutei Ginou', desc:'Tes ini untuk memahami kepribadian Anda. Tidak ada jawaban benar atau salah. Jawablah secara jujur. 55 pertanyaan, sekitar 15 menit.', startBtn:'Mulai Tes', prev:'Kembali', submit:'Kirim', progress:'soal', unanswered:n=>`Masih ${n} soal belum dijawab`, scaleLabels:['Sangat tidak setuju','Tidak setuju','Netral','Setuju','Sangat setuju'], thankyouTitle:'Terima kasih telah menjawab', thankyouBody:'Tes telah selesai. Silakan beritahu pewawancara.' },
+  my:{ title:'စိတ်ကျန်းမာရေး စစ်ဆေးမှု', subtitle:'Tokutei Ginou လျောက်ထားသူများအတွက် Big Five', desc:'ဤစစ်ဆေးမှုသည် သင်၏ကိုယ်ရည်ကိုယ်သွေးကို နားလည်ရန်ဖြစ်သည်။ ရိုးသားစွာ ဖြေဆိုပေးပါ။ မေးခွန်း ၅၅ ခု ၁၅ မိနစ်ခန့်ကြာမည်။', startBtn:'စတင်မည်', prev:'နောက်သို့', submit:'တင်သွင်းမည်', progress:'မေးခွန်း', unanswered:n=>`${n} မေးခွန်း မဖြေရသေး`, scaleLabels:['လုံးဝမကိုက်ညီ','မကိုက်ညီ','ကြားနေ','ကိုက်ညီသည်','အလွန်ကိုက်ညီ'], thankyouTitle:'ဖြေဆိုပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်', thankyouBody:'စစ်ဆေးမှုပြီးဆုံးသွားပြီ။ အင်တာဗျူးသူအား အကြောင်းကြားပေးပါ။' },
+};
+
+const DIMS = {
+  O:{ icon:'✦', color:'#6C9BF7', ja:{name:'開放性'}, id:{name:'Keterbukaan'}, my:{name:'ဖွင့်လှစ်မှု'} },
+  C:{ icon:'◈', color:'#5BC8AF', ja:{name:'誠実性'}, id:{name:'Ketelitian'},  my:{name:'လိုက်နာမှု'} },
+  E:{ icon:'◉', color:'#F4A261', ja:{name:'外向性'}, id:{name:'Ekstraversi'}, my:{name:'ပြင်ပလှည့်မှု'} },
+  A:{ icon:'❋', color:'#E76F9A', ja:{name:'協調性'}, id:{name:'Keramahan'},   my:{name:'ပူးပေါင်းဆောင်ရွက်မှု'} },
+  N:{ icon:'◎', color:'#9B8EF7', ja:{name:'神経症傾向'}, id:{name:'Neurotisisme'}, my:{name:'စိတ်မငြိမ်မသက်မှု'} },
+};
+
+const QUESTIONS = {
+  ja:[
+    {id:1,dim:'O',text:'新しい仕事の方法や技術を学ぶことが好きだ'},{id:2,dim:'O',text:'想像力が豊かだと思う'},{id:3,dim:'O',text:'変化や新しい環境に積極的に適応できる'},{id:4,dim:'O',text:'芸術や文化など様々な分野に関心がある'},{id:5,dim:'O',r:true,text:'慣れ親しんだやり方の方が安心するのでなるべく変えたくない'},{id:6,dim:'O',text:'複雑な問題についてじっくり考えることが楽しい'},{id:7,dim:'O',r:true,text:'知らないことを学ぶより知っていることを深める方が好きだ'},{id:8,dim:'O',text:'異なる文化や考え方を持つ人と話すのは刺激的だ'},{id:9,dim:'O',r:true,text:'仕事のやり方は決まった手順通りが一番良いと思う'},{id:10,dim:'O',text:'新しいアイデアを考えたり提案することが得意だ'},
+    {id:11,dim:'C',text:'仕事は最後まで丁寧にやり遂げる'},{id:12,dim:'C',text:'計画を立ててから行動するのが得意だ'},{id:13,dim:'C',r:true,text:'ついつい先延ばしにしてしまうことが多い'},{id:14,dim:'C',text:'ルールや約束はどんな状況でもきちんと守る'},{id:15,dim:'C',text:'細かいことにも注意を払って仕事をする'},{id:16,dim:'C',text:'目標を決めたら最後まであきらめない'},{id:17,dim:'C',r:true,text:'締め切りに間に合わないことがよくある'},{id:18,dim:'C',text:'自分の仕事の質に責任を持っている'},{id:19,dim:'C',r:true,text:'仕事中に集中力が途切れてしまうことが多い'},{id:20,dim:'C',text:'やるべきことはメモや計画表で管理している'},
+    {id:21,dim:'E',text:'初対面の人とも気軽に話せる'},{id:22,dim:'E',text:'グループでの作業が好きだ'},{id:23,dim:'E',r:true,text:'人が多い場所にいると疲れを感じる'},{id:24,dim:'E',text:'職場でも積極的に自分の意見を言える'},{id:25,dim:'E',text:'エネルギッシュで活動的だと思う'},{id:26,dim:'E',text:'周りの人を元気づけるのが得意だ'},{id:27,dim:'E',r:true,text:'人と話すより一人で作業する方が集中できる'},{id:28,dim:'E',text:'新しい人間関係を作ることが好きだ'},{id:29,dim:'E',r:true,text:'大勢の前で話すのは苦手だ'},{id:30,dim:'E',text:'職場のイベントや懇親会には積極的に参加したい'},
+    {id:31,dim:'A',text:'困っている人がいたら進んで助けたいと思う'},{id:32,dim:'A',text:'上司や同僚と円滑に協力できる'},{id:33,dim:'A',r:true,text:'自分の意見が正しいと思ったら強く主張する'},{id:34,dim:'A',text:'他の人の気持ちや立場を大切にする'},{id:35,dim:'A',text:'チームのために自分の時間を使うことができる'},{id:36,dim:'A',text:'人を信頼して仕事を任せることができる'},{id:37,dim:'A',r:true,text:'自分のやり方が邪魔されると不満を感じる'},{id:38,dim:'A',text:'相手の話をよく聞いてから行動するようにしている'},{id:39,dim:'A',r:true,text:'競争に勝つことが協力することより重要だと思う'},{id:40,dim:'A',text:'職場の人間関係を良好に保つことを意識している'},
+    {id:41,dim:'N',text:'ストレスを感じると気分が落ち込みやすい'},{id:42,dim:'N',text:'小さなミスでも気になってしまう'},{id:43,dim:'N',r:true,text:'プレッシャーがある状況でも冷静でいられる'},{id:44,dim:'N',text:'感情が不安定になることがある'},{id:45,dim:'N',r:true,text:'困難な状況でも動じない方だ'},{id:46,dim:'N',text:'心配事があると頭から離れない'},{id:47,dim:'N',text:'批判されると気持ちが沈んでしまう'},{id:48,dim:'N',r:true,text:'嫌なことがあっても翌日にはすっきりしている'},{id:49,dim:'N',text:'将来のことを考えると不安になることが多い'},{id:50,dim:'N',r:true,text:'感情的になることはほとんどなく常に落ち着いている'},
+    {id:51,dim:'V',text:'私はこれまで一度も嘘をついたことがない'},{id:52,dim:'V',text:'私は誰かに対して意地悪な気持ちを持ったことがない'},{id:53,dim:'V',text:'私はいつも約束の時間より早く到着する'},{id:54,dim:'V',text:'私は仕事でミスをしたことが一度もない'},{id:55,dim:'V',text:'私はどんな状況でも完璧に冷静でいられる'},
+  ],
+  id:[
+    {id:1,dim:'O',text:'Saya suka belajar cara kerja dan teknologi baru'},{id:2,dim:'O',text:'Saya memiliki imajinasi yang kaya'},{id:3,dim:'O',text:'Saya bisa beradaptasi secara aktif dengan lingkungan baru'},{id:4,dim:'O',text:'Saya tertarik pada berbagai bidang seperti seni dan budaya'},{id:5,dim:'O',r:true,text:'Saya lebih nyaman dengan cara yang sudah biasa dan tidak ingin mengubahnya'},{id:6,dim:'O',text:'Saya menikmati memikirkan masalah yang kompleks'},{id:7,dim:'O',r:true,text:'Saya lebih suka memperdalam hal yang diketahui daripada belajar hal baru'},{id:8,dim:'O',text:'Berbicara dengan orang yang memiliki budaya berbeda sangat menarik bagi saya'},{id:9,dim:'O',r:true,text:'Saya pikir cara kerja terbaik adalah mengikuti prosedur yang sudah ditetapkan'},{id:10,dim:'O',text:'Saya pandai memikirkan dan mengusulkan ide-ide baru'},
+    {id:11,dim:'C',text:'Saya selalu menyelesaikan pekerjaan dengan teliti hingga selesai'},{id:12,dim:'C',text:'Saya pandai membuat rencana sebelum bertindak'},{id:13,dim:'C',r:true,text:'Saya sering menunda-nunda pekerjaan'},{id:14,dim:'C',text:'Saya selalu mematuhi aturan dan janji dalam situasi apapun'},{id:15,dim:'C',text:'Saya memperhatikan detail kecil dalam pekerjaan'},{id:16,dim:'C',text:'Jika sudah menetapkan tujuan saya tidak mudah menyerah'},{id:17,dim:'C',r:true,text:'Saya sering tidak tepat waktu dalam menyelesaikan tugas'},{id:18,dim:'C',text:'Saya bertanggung jawab atas kualitas pekerjaan saya'},{id:19,dim:'C',r:true,text:'Konsentrasi saya sering terputus saat bekerja'},{id:20,dim:'C',text:'Saya mengelola tugas dengan catatan atau jadwal kerja'},
+    {id:21,dim:'E',text:'Saya bisa berbicara dengan orang yang baru dikenal dengan mudah'},{id:22,dim:'E',text:'Saya suka bekerja dalam kelompok'},{id:23,dim:'E',r:true,text:'Saya merasa lelah ketika berada di tempat yang banyak orang'},{id:24,dim:'E',text:'Saya bisa aktif menyampaikan pendapat di tempat kerja'},{id:25,dim:'E',text:'Saya adalah orang yang energik dan aktif'},{id:26,dim:'E',text:'Saya pandai memberi semangat kepada orang-orang di sekitar saya'},{id:27,dim:'E',r:true,text:'Saya lebih bisa berkonsentrasi bekerja sendiri daripada berbicara dengan orang lain'},{id:28,dim:'E',text:'Saya suka membangun hubungan baru dengan orang lain'},{id:29,dim:'E',r:true,text:'Saya kurang nyaman berbicara di depan banyak orang'},{id:30,dim:'E',text:'Saya ingin berpartisipasi aktif dalam acara dan pertemuan di tempat kerja'},
+    {id:31,dim:'A',text:'Jika ada orang yang kesulitan saya ingin membantu dengan sukarela'},{id:32,dim:'A',text:'Saya bisa bekerja sama dengan atasan dan rekan kerja dengan baik'},{id:33,dim:'A',r:true,text:'Jika saya pikir pendapat saya benar saya akan menegaskannya dengan kuat'},{id:34,dim:'A',text:'Saya menghargai perasaan dan posisi orang lain'},{id:35,dim:'A',text:'Saya bisa meluangkan waktu saya untuk tim'},{id:36,dim:'A',text:'Saya bisa mempercayai orang lain dan mendelegasikan pekerjaan'},{id:37,dim:'A',r:true,text:'Saya merasa tidak puas jika cara kerja saya diganggu'},{id:38,dim:'A',text:'Saya berusaha mendengarkan dengan baik sebelum bertindak'},{id:39,dim:'A',r:true,text:'Saya pikir menang dalam persaingan lebih penting dari bekerja sama'},{id:40,dim:'A',text:'Saya selalu berusaha menjaga hubungan baik di tempat kerja'},
+    {id:41,dim:'N',text:'Ketika merasa stres suasana hati saya mudah memburuk'},{id:42,dim:'N',text:'Kesalahan kecil pun membuat saya sangat khawatir'},{id:43,dim:'N',r:true,text:'Saya bisa tetap tenang meski dalam situasi penuh tekanan'},{id:44,dim:'N',text:'Emosi saya kadang tidak stabil'},{id:45,dim:'N',r:true,text:'Saya tidak mudah goyah dalam situasi sulit'},{id:46,dim:'N',text:'Jika ada kekhawatiran sulit untuk tidak memikirkannya'},{id:47,dim:'N',text:'Ketika dikritik perasaan saya menjadi sangat tertekan'},{id:48,dim:'N',r:true,text:'Meskipun ada hal yang tidak menyenangkan saya bisa merasa segar keesokan harinya'},{id:49,dim:'N',text:'Saya sering merasa cemas ketika memikirkan masa depan'},{id:50,dim:'N',r:true,text:'Saya hampir tidak pernah menjadi emosional dan selalu tenang'},
+    {id:51,dim:'V',text:'Saya belum pernah berbohong sama sekali dalam hidup saya'},{id:52,dim:'V',text:'Saya tidak pernah memiliki perasaan jahat terhadap siapapun'},{id:53,dim:'V',text:'Saya selalu tiba lebih awal dari waktu yang dijanjikan'},{id:54,dim:'V',text:'Saya tidak pernah melakukan kesalahan dalam pekerjaan'},{id:55,dim:'V',text:'Saya bisa tetap tenang sempurna dalam situasi apapun'},
+  ],
+  my:[
+    {id:1,dim:'O',text:'အလုပ်၏ နည်းလမ်းများနှင့် နည်းပညာအသစ်များ သင်ယူရသည်ကို နှစ်သက်သည်'},{id:2,dim:'O',text:'ကျွန်ုပ်တွင် စိတ်ကူးစိတ်သန်းများ ကြွယ်ဝသည်ဟု ထင်သည်'},{id:3,dim:'O',text:'ပြောင်းလဲမှုနှင့် ပတ်ဝန်းကျင်အသစ်တို့နှင့် တက်ကြွစွာ လိုက်လျောနိုင်သည်'},{id:4,dim:'O',text:'အနုပညာ ယဉ်ကျေးမှု အစရှိသည့် နယ်ပယ်အမျိုးမျိုးကို စိတ်ဝင်တစားရှိသည်'},{id:5,dim:'O',r:true,text:'ကျွန်ုပ်သိကျွမ်းသော နည်းလမ်းသည် ပိုလုံခြုံသောကြောင့် မပြောင်းလဲလိုပါ'},{id:6,dim:'O',text:'ရှုပ်ထွေးသောပြဿနာများကို နက်နက်ရှိုင်းရှိုင်း စဉ်းစားရသည်မှာ မျိုးစိတ်ကောင်းသည်'},{id:7,dim:'O',r:true,text:'မသိသောအရာ သင်ယူရသည်ထက် သိပြီးသားကို နက်ရှိုင်းစေရသည်ကို ပိုနှစ်သက်သည်'},{id:8,dim:'O',text:'ယဉ်ကျေးမှု ကွဲပြားသောသူများနှင့် ပြောဆိုဆက်ဆံရသည်မှာ အားပြည့်လောက်ဖွယ်ကောင်းသည်'},{id:9,dim:'O',r:true,text:'အလုပ်လုပ်နည်းသည် သတ်မှတ်ထားသောလုပ်ငန်းစဉ်အတိုင်းသာ ကောင်းမည်ဟု ထင်သည်'},{id:10,dim:'O',text:'အကြံဉာဏ်အသစ်များ တွေးဆ၍ တင်ပြရသည်ကို ကောင်းစွာ တတ်မြောက်သည်'},
+    {id:11,dim:'C',text:'အလုပ်ကို အဆုံးအထိ ဂရုစိုက်တိကျစွာ ပြီးဆုံးအောင် ဆောင်ရွက်သည်'},{id:12,dim:'C',text:'စီမံချက်ချမှတ်ပြီးမှ ဆောင်ရွက်ရသည်ကို ကောင်းစွာ တတ်မြောက်သည်'},{id:13,dim:'C',r:true,text:'အလုပ်ကို နောက်ဆွဲ နောက်ကျ ဖြစ်နေတတ်သည်'},{id:14,dim:'C',text:'မည်သည့်အခြေအနေတွင်မဆို စည်းမျဉ်းများနှင့် ကတိများကို ဂရုတစိုက် လိုက်နာသည်'},{id:15,dim:'C',text:'အသေးစိတ်ကိစ္စများကိုပါ ဂရုစိုက်၍ အလုပ်ဆောင်ရွက်သည်'},{id:16,dim:'C',text:'ရည်မှန်းချက်ချမှတ်ပြီးလျှင် အဆုံးအထိ ဆောင်ရွက်တတ်သည်'},{id:17,dim:'C',r:true,text:'သတ်မှတ်ရက်များကို မမှီသောကိစ္စများ မကြာခဏဖြစ်သည်'},{id:18,dim:'C',text:'မိမိ၏အလုပ်အရည်အသွေးကို တာဝန်ယူသည်'},{id:19,dim:'C',r:true,text:'အလုပ်လုပ်နေစဉ် အာရုံစူးစိုက်မှု မကြာခဏ ကျသွားတတ်သည်'},{id:20,dim:'C',text:'လုပ်ဆောင်ရမည့်ကိစ္စများကို မှတ်စုနှင့် အချိန်ဇယားများဖြင့် စီမံခန့်ခွဲသည်'},
+    {id:21,dim:'E',text:'ပထမဆုံးတွေ့သောသူနှင့်လည်း တသွက်သွက် ပြောဆိုနိုင်သည်'},{id:22,dim:'E',text:'အဖွဲ့လိုက် လုပ်ဆောင်သည့်အလုပ်ကို နှစ်သက်သည်'},{id:23,dim:'E',r:true,text:'လူများသောနေရာတွင် ရှိနေလျှင် ပင်ပန်းမှုကို ခံစားရသည်'},{id:24,dim:'E',text:'အလုပ်ခွင်တွင်လည်း တက်ကြွစွာ မိမိ၏ မြင်ကွင်းကို ပြောဆိုနိုင်သည်'},{id:25,dim:'E',text:'ကြံ့ခိုင်တက်ကြွပြီး တက်ကြွသောသူဟု ထင်သည်'},{id:26,dim:'E',text:'ပတ်ဝန်းကျင်ရှိသူများကို ကြက်သည်းမကြော အားပေးနိုင်တတ်သည်'},{id:27,dim:'E',r:true,text:'လူနှင့် ပြောဆိုနေသည်ထက် တစ်ယောက်တည်း အလုပ်လုပ်ရသည်က ပိုအာရုံစိုက်နိုင်သည်'},{id:28,dim:'E',text:'လူဆက်ဆံရေးအသစ်များ တည်ဆောက်ရသည်ကို နှစ်သက်သည်'},{id:29,dim:'E',r:true,text:'လူအများ၏ ရှေ့မှောက်တွင် ပြောဆိုရသည်မှာ ခက်ခဲသည်'},{id:30,dim:'E',text:'အလုပ်ခွင်ပွဲများနှင့် ပွဲလမ်းများတွင် တက်ကြွစွာ ပါဝင်လိုသည်'},
+    {id:31,dim:'A',text:'အခက်အခဲဖြစ်နေသောသူကို ကူညီလိုစိတ်ဖြင့် ဆောင်ရွက်ချင်သည်'},{id:32,dim:'A',text:'အကြီးအကဲနှင့် လုပ်ဖော်ကိုင်ဖက်တို့နှင့် ချောမွေ့စွာ ပူးပေါင်းနိုင်သည်'},{id:33,dim:'A',r:true,text:'မိမိ၏ မြင်ကွင်းမှန်သည်ဟု ထင်ပါက အမြဲတမ်း ခိုင်မာစွာ ပြောဆိုတတ်သည်'},{id:34,dim:'A',text:'အခြားသူများ၏ ခံစားချက်နှင့် အနေအထားကို အလေးထားသည်'},{id:35,dim:'A',text:'အဖွဲ့အတွက် မိမိ၏ အချိန်ကို ပေးနိုင်သည်'},{id:36,dim:'A',text:'သူတစ်ပါးကို ယုံကြည်၍ အလုပ်အပ်နှံနိုင်သည်'},{id:37,dim:'A',r:true,text:'မိမိ၏ လုပ်နည်းလုပ်ဟန်ကို နှောင့်ယှက်ခံရပါက မကျေနပ်မှု ဖြစ်တတ်သည်'},{id:38,dim:'A',text:'ဆောင်ရွက်မတိုင်မှီ တဖက်သား၏ ပြောဆိုချက်ကို ကောင်းစွာ နားဆင်တတ်သည်'},{id:39,dim:'A',r:true,text:'ပြိုင်ဆိုင်မှုတွင် နိုင်ရသည်မှာ ပူးပေါင်းဆောင်ရွက်ရသည်ထက် ပိုအရေးကြီးသည်ဟု ထင်သည်'},{id:40,dim:'A',text:'အလုပ်ခွင်ဆက်ဆံရေးကို ကောင်းမွန်စေရန် အာရုံထားသည်'},
+    {id:41,dim:'N',text:'စိတ်ဖိစီးမှု ဖြစ်လာလျှင် စိတ်ဓာတ်ကျ ကျသွားတတ်သည်'},{id:42,dim:'N',text:'အမှားအယွင်းငယ်လေးတောင် ပူပင်သောကဖြစ်တတ်သည်'},{id:43,dim:'N',r:true,text:'ဖိစီးသောအခြေအနေတွင်မဆို တည်ငြိမ်နေနိုင်သည်'},{id:44,dim:'N',text:'ခံစားချက်များ မတည်ငြိမ်ဖြစ်တတ်သည်'},{id:45,dim:'N',r:true,text:'ခက်ခဲသောအခြေအနေတွင်မဆို ထိတ်လန့်မှု မဖြစ်သောဘက်တွင် ရှိသည်'},{id:46,dim:'N',text:'ပူပင်မှုရှိပါက ခေါင်းထဲမှ ထွက်မသွားနိုင်ပါ'},{id:47,dim:'N',text:'ဝေဖန်ခံရပါက စိတ်ဓာတ်ကျ သွားတတ်သည်'},{id:48,dim:'N',r:true,text:'မကောင်းမှုဖြစ်ပေမဲ့ နောက်နေ့ဆိုပါက သက်သာ ကောင်းမွန်သွားတတ်သည်'},{id:49,dim:'N',text:'အနာဂတ်ကို တွေးသောအခါ ပူပင်မှုများ ဖြစ်တတ်သည်'},{id:50,dim:'N',r:true,text:'ခံစားချက်ကို ထုတ်ဖော်ခြင်းနည်းပြီး အမြဲတမ်း တည်ငြိမ်နေသည်'},
+    {id:51,dim:'V',text:'ကျွန်ုပ်သည် ယခုထိ လုံးဝ မုသာမပြောဖူးပါ'},{id:52,dim:'V',text:'ကျွန်ုပ်သည် မည်သူ့ကိုမျှ ဆိုးဆိုးဝါးဝါး မထင်ဖူးပါ'},{id:53,dim:'V',text:'ကျွန်ုပ်သည် အမြဲတမ်း ချိန်းဆိုထားသောအချိန်ထက် စောမရောက်ဖူးပါ'},{id:54,dim:'V',text:'ကျွန်ုပ်သည် အလုပ်တွင် အမှားတစ်ကြိမ်မျှ မလုပ်ဖူးပါ'},{id:55,dim:'V',text:'ကျွန်ုပ်သည် မည်သည့်အခြေအနေတွင်မဆို ပြည့်ဝစွာ တည်ငြိမ်နေနိုင်သည်'},
+  ],
+};
+
+// ─── helpers ───
+function buildOrder(qs){
+  const main=qs.filter(q=>q.dim!=='V'), v=qs.filter(q=>q.dim==='V'), r=[...main];
+  [9,19,29,39,49].forEach((p,i)=>r.splice(p+i,0,v[i])); return r;
+}
+function calcScores(ans,qs){
+  const s={O:0,C:0,E:0,A:0,N:0},c={O:0,C:0,E:0,A:0,N:0};
+  qs.filter(q=>q.dim!=='V').forEach(q=>{ const v=ans[q.id]; if(v==null)return; s[q.dim]+=q.r?6-v:v; c[q.dim]++; });
+  const o={}; Object.keys(s).forEach(d=>{o[d]=c[d]?Math.round((s[d]/(c[d]*5))*100):0;}); return o;
+}
+function checkV(ans,qs){
+  const v=qs.filter(q=>q.dim==='V');
+  return {ok:v.filter(q=>(ans[q.id]||0)>=4).length<=1};
+}
+function genId(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,6); }
+
+// ─── STATE ───
+let state = {
+  phase: 'code',  // code | intro | test | done
+  lang: null,
+  codeObj: null,
+  answers: {},
+  currentQ: 0,
+  displayQs: [],
+  error: '',
+  submitting: false,
+};
+
+function render() {
+  const app = document.getElementById('app');
+  app.innerHTML = '';
+  const div = document.createElement('div');
+
+  if (state.phase === 'code')   div.innerHTML = renderCode();
+  if (state.phase === 'intro')  div.innerHTML = renderIntro();
+  if (state.phase === 'test')   div.innerHTML = renderTest();
+  if (state.phase === 'done')   div.innerHTML = renderDone();
+
+  app.appendChild(div);
+  bindEvents();
+}
+
+function renderCode() {
+  return `<div class="card" style="text-align:center">
+    <div style="font-size:52px;margin-bottom:14px">🧠</div>
+    <h1 style="font-size:22px;margin-bottom:6px">特定技能候補者<br>性格診断テスト</h1>
+    <p style="color:rgba(255,255,255,0.4);font-size:13px;margin-bottom:24px">Big Five × Tokutei Ginou</p>
+    <div class="code-hints">
+      <p>🇯🇵 受験コードを入力してください</p>
+      <p>🇮🇩 Masukkan kode ujian Anda</p>
+      <p>🇲🇲 စစ်ဆေးမှုကုဒ်ကို ထည့်သွင်းပေးပါ</p>
+    </div>
+    <input id="codeInput" placeholder="XXXX-XXXX-XXXX" maxlength="14" oninput="this.value=this.value.toUpperCase()">
+    ${state.error ? `<p class="error">${state.error}</p>` : ''}
+    <button class="btn btn-primary" id="codeBtn">開始する / Mulai / စတင်မည်</button>
+  </div>`;
+}
+
+function renderIntro() {
+  const ui = UI[state.lang];
+  const tags = Object.entries(DIMS).map(([k,d])=>
+    `<div class="dim-tag" style="background:${d.color}18;border:1px solid ${d.color}44;color:${d.color}">${d.icon} ${d[state.lang].name}</div>`
+  ).join('');
+  return `<div class="card" style="text-align:center">
+    <div style="font-size:42px;margin-bottom:12px">🧠</div>
+    <h2 style="font-size:20px;margin-bottom:6px">${ui.title}</h2>
+    <p class="subtitle">${ui.subtitle}</p>
+    <p class="desc">${ui.desc}</p>
+    <div class="dim-tags">${tags}</div>
+    <button class="btn btn-primary" id="startBtn">${ui.startBtn} →</button>
+  </div>`;
+}
+
+function renderTest() {
+  const q = state.displayQs[state.currentQ];
+  if (!q) return '';
+  const ui = UI[state.lang];
+  const total = state.displayQs.length;
+  const answered = Object.keys(state.answers).length;
+  const pct = Math.round(((state.currentQ+1)/total)*100);
+  const dimKey = q.dim==='V' ? 'C' : q.dim;
+  const dim = DIMS[dimKey];
+  const cur = state.answers[q.id];
+  const allDone = answered === total;
+
+  const scaleBtns = [1,2,3,4,5].map(v => {
+    const sel = cur===v;
+    return `<button class="scale-btn" data-val="${v}"
+      style="${sel?`border-color:${dim.color};background:${dim.color}22;color:${dim.color}`:''}">
+      ${v}</button>`;
+  }).join('');
+
+  const dimBadge = q.dim!=='V'
+    ? `<div class="dim-badge" style="background:${dim.color}1e;border:1px solid ${dim.color}55;color:${dim.color}">${dim.icon} ${dim[state.lang].name}</div>`
+    : '<div style="height:24px"></div>';
+
+  const navBtns = `
+    ${state.currentQ>0 ? `<button class="btn btn-ghost" id="prevBtn" style="flex:1">← ${ui.prev}</button>` : ''}
+    ${allDone ? `<button class="btn btn-green" id="submitBtn" style="flex:2;opacity:${state.submitting?0.6:1}">${state.submitting?'送信中...':'✓ '+ui.submit}</button>` : ''}
+  `;
+
+  return `<div class="card">
+    <div class="progress-wrap">
+      <div class="progress-info">
+        <span>${state.currentQ+1} / ${total} ${ui.progress}</span>
+        <span>${pct}%</span>
+      </div>
+      <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
+    </div>
+    ${dimBadge}
+    <p class="question">${q.text}</p>
+    <div class="scale-btns">${scaleBtns}</div>
+    <div class="scale-labels"><span>${ui.scaleLabels[0]}</span><span>${ui.scaleLabels[4]}</span></div>
+    <div class="nav-btns">${navBtns}</div>
+    ${!allDone&&state.currentQ===total-1 ? `<p style="color:rgba(255,255,255,0.3);font-size:11px;text-align:center;margin-top:10px">${ui.unanswered(total-answered)}</p>` : ''}
+  </div>`;
+}
+
+function renderDone() {
+  const ui = UI[state.lang];
+  const note = state.lang==='ja'?'このページを面接官にお見せください。':state.lang==='id'?'Tunjukkan halaman ini kepada pewawancara.':'ဤစာမျက်နှာကို အင်တာဗျူးသူအား ပြပေးပါ။';
+  return `<div class="card" style="text-align:center">
+    <div class="thankyou-icon">✅</div>
+    <h2 style="font-size:24px;margin-bottom:12px">${ui.thankyouTitle}</h2>
+    <p style="color:rgba(255,255,255,0.55);font-size:15px;line-height:1.8">${ui.thankyouBody}</p>
+    <div class="thankyou-note"><p>${note}</p></div>
+  </div>`;
+}
+
+function bindEvents() {
+  // Code submit
+  const codeBtn = document.getElementById('codeBtn');
+  if (codeBtn) codeBtn.addEventListener('click', handleCodeSubmit);
+  const codeInput = document.getElementById('codeInput');
+  if (codeInput) codeInput.addEventListener('keydown', e=>{ if(e.key==='Enter') handleCodeSubmit(); });
+
+  // Start test
+  const startBtn = document.getElementById('startBtn');
+  if (startBtn) startBtn.addEventListener('click', ()=>{
+    state.answers = {};
+    state.currentQ = 0;
+    state.displayQs = buildOrder(QUESTIONS[state.lang]);
+    state.phase = 'test';
+    render();
+  });
+
+  // Scale buttons
+  document.querySelectorAll('.scale-btn').forEach(btn => {
+    btn.addEventListener('click', ()=>{
+      const val = parseInt(btn.dataset.val);
+      const q = state.displayQs[state.currentQ];
+      state.answers[q.id] = val;
+      if (state.currentQ < state.displayQs.length-1) state.currentQ++;
+      render();
+    });
+  });
+
+  // Prev
+  const prevBtn = document.getElementById('prevBtn');
+  if (prevBtn) prevBtn.addEventListener('click', ()=>{ state.currentQ--; render(); });
+
+  // Submit
+  const submitBtn = document.getElementById('submitBtn');
+  if (submitBtn) submitBtn.addEventListener('click', handleSubmit);
+}
+
+async function handleCodeSubmit() {
+  const input = document.getElementById('codeInput');
+  const code = input ? input.value.trim().toUpperCase() : '';
+  if (!code) { state.error='コードを入力してください'; render(); return; }
+
+  const { data, error } = await sb.from('codes').select('*').eq('code', code).single();
+  if (error || !data) { state.error='コードが無効・使用済み・または期限切れです / Kode tidak valid / ကုဒ်မမှန်ကန်'; render(); return; }
+  if (data.used_at)   { state.error='このコードは使用済みです / Kode sudah digunakan / ကုဒ်အသုံးပြုပြီးဖြစ်သည်'; render(); return; }
+  if (Date.now() > data.expires_at) { state.error='コードの有効期限が切れています / Kode kadaluarsa / ကုဒ်သက်တမ်းကုန်ဆုံးသည်'; render(); return; }
+
+  state.codeObj = data;
+  state.lang = data.lang;
+  state.error = '';
+  state.phase = 'intro';
+  render();
+}
+
+async function handleSubmit() {
+  if (state.submitting) return;
+  state.submitting = true;
+  render();
+
+  const scores = calcScores(state.answers, QUESTIONS[state.lang]);
+  const validity = checkV(state.answers, QUESTIONS[state.lang]);
+
+  // Mark code as used
+  await sb.from('codes').update({ used_at: Date.now() }).eq('code', state.codeObj.code);
+
+  // Save result
+  await sb.from('results').insert({
+    code: state.codeObj.code,
+    name: state.codeObj.note || '—',
+    lang: state.lang,
+    date: new Date().toISOString(),
+    scores: scores,
+    validity: validity,
+  });
+
+  state.submitting = false;
+  state.phase = 'done';
+  render();
+}
+
+render();
+</script>
+</body>
+</html>
