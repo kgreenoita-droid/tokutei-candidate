@@ -6,75 +6,47 @@
 <title>性格診断テスト | Tokutei Ginou</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    min-height: 100vh;
-    background: linear-gradient(135deg, #0c0a24 0%, #16113a 55%, #091520 100%);
-    font-family: 'Noto Sans JP', 'Noto Sans', sans-serif;
-    display: flex; align-items: center; justify-content: center;
-    padding: 32px 16px;
-  }
-  .card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.09);
-    border-radius: 24px; padding: 40px 36px;
-    max-width: 540px; width: 100%;
-    box-shadow: 0 40px 80px rgba(0,0,0,0.5);
-  }
-  h1, h2 { color: #fff; font-weight: 800; }
-  .subtitle { color: #6C9BF7; font-size: 12px; font-weight: 700; margin: 6px 0 16px; }
-  .desc { color: rgba(255,255,255,0.6); font-size: 14px; line-height: 1.85; margin-bottom: 24px; }
-  input {
-    width: 100%; background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.15); border-radius: 10px;
-    padding: 12px 16px; color: #fff; font-size: 18px;
-    font-family: inherit; outline: none; text-align: center;
-    letter-spacing: 3px; font-weight: 700; margin-bottom: 8px;
-  }
-  .btn {
-    width: 100%; border: none; border-radius: 12px;
-    padding: 14px 32px; font-size: 15px; font-weight: 700;
-    cursor: pointer; font-family: inherit; margin-top: 4px;
-  }
-  .btn-primary { background: linear-gradient(135deg, #6C9BF7, #4a7af5); color: #fff; }
-  .btn-green   { background: linear-gradient(135deg, #5BC8AF, #38a98e); color: #fff; }
-  .btn-ghost   { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.6); }
-  .error { color: #F4A261; font-size: 12px; margin: 0 0 8px; text-align: center; }
-  .progress-wrap { margin-bottom: 20px; }
-  .progress-info { display: flex; justify-content: space-between; margin-bottom: 6px; }
-  .progress-info span:first-child { color: rgba(255,255,255,0.35); font-size: 12px; }
-  .progress-info span:last-child  { color: #6C9BF7; font-size: 12px; font-weight: 700; }
-  .progress-bar { background: rgba(255,255,255,0.07); border-radius: 6px; height: 5px; }
-  .progress-fill { height: 100%; background: linear-gradient(90deg,#6C9BF7,#9B8EF7); border-radius: 6px; transition: width 0.4s; }
-  .dim-badge { display: inline-block; border-radius: 20px; padding: 4px 13px; font-size: 11px; font-weight: 700; margin-bottom: 16px; }
-  .question  { color: #fff; font-size: 17px; font-weight: 700; line-height: 1.75; margin-bottom: 26px; }
-  .scale-btns { display: flex; gap: 8px; margin-bottom: 12px; }
-  .scale-btn  {
-    flex: 1; padding: 16px 4px; border-radius: 12px;
-    border: 2px solid rgba(255,255,255,0.1);
-    background: rgba(255,255,255,0.03);
-    color: rgba(255,255,255,0.4); font-size: 20px; font-weight: 800;
-    cursor: pointer; font-family: inherit; transition: all 0.12s;
-  }
-  .scale-labels { display: flex; justify-content: space-between; margin-bottom: 26px; }
-  .scale-labels span { color: rgba(255,255,255,0.28); font-size: 10px; }
-  .nav-btns { display: flex; gap: 10px; }
-  .dim-tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
-  .dim-tag  { border-radius: 9px; padding: 6px 12px; font-size: 12px; font-weight: 700; }
-  .thankyou-icon { font-size: 64px; margin-bottom: 20px; text-align: center; }
-  .thankyou-note {
-    background: rgba(108,155,247,0.08); border: 1px solid rgba(108,155,247,0.2);
-    border-radius: 14px; padding: 16px 20px; margin-top: 28px;
-  }
-  .thankyou-note p { color: rgba(255,255,255,0.4); font-size: 12px; }
-  .code-hints { background: rgba(255,255,255,0.04); border-radius: 12px; padding: 12px 16px; margin-bottom: 20px; }
-  .code-hints p { color: rgba(255,255,255,0.55); font-size: 13px; margin: 3px 0; }
-  #app { width: 100%; display: flex; align-items: center; justify-content: center; min-height: 100vh; padding: 32px 16px; }
+* { box-sizing:border-box; margin:0; padding:0; }
+body { min-height:100vh; background:linear-gradient(135deg,#0c0a24 0%,#16113a 55%,#091520 100%); font-family:'Noto Sans JP','Noto Sans',sans-serif; display:flex; align-items:center; justify-content:center; padding:32px 16px; }
+.card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09); border-radius:24px; padding:40px 36px; max-width:540px; width:100%; box-shadow:0 40px 80px rgba(0,0,0,0.5); }
+h1,h2 { color:#fff; font-weight:800; }
+.subtitle { color:#6C9BF7; font-size:12px; font-weight:700; margin:6px 0 16px; }
+.desc { color:rgba(255,255,255,0.6); font-size:14px; line-height:1.85; margin-bottom:24px; }
+input, textarea { width:100%; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); border-radius:10px; padding:12px 16px; color:#fff; font-size:15px; font-family:inherit; outline:none; margin-bottom:8px; }
+input::placeholder { color:rgba(255,255,255,0.3); }
+.code-input { text-align:center; font-size:20px; letter-spacing:3px; font-weight:700; }
+.label { color:rgba(255,255,255,0.5); font-size:12px; margin-bottom:4px; display:block; }
+.required { color:#E76F9A; margin-left:3px; }
+.btn { width:100%; border:none; border-radius:12px; padding:14px 32px; font-size:15px; font-weight:700; cursor:pointer; font-family:inherit; margin-top:4px; }
+.btn-primary { background:linear-gradient(135deg,#6C9BF7,#4a7af5); color:#fff; }
+.btn-green { background:linear-gradient(135deg,#5BC8AF,#38a98e); color:#fff; }
+.btn-ghost { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); color:rgba(255,255,255,0.6); }
+.error { color:#F4A261; font-size:12px; margin:0 0 8px; text-align:center; }
+.progress-wrap { margin-bottom:20px; }
+.progress-info { display:flex; justify-content:space-between; margin-bottom:6px; }
+.progress-info span:first-child { color:rgba(255,255,255,0.35); font-size:12px; }
+.progress-info span:last-child { color:#6C9BF7; font-size:12px; font-weight:700; }
+.progress-bar { background:rgba(255,255,255,0.07); border-radius:6px; height:5px; }
+.progress-fill { height:100%; background:linear-gradient(90deg,#6C9BF7,#9B8EF7); border-radius:6px; transition:width 0.4s; }
+.question { color:#fff; font-size:17px; font-weight:700; line-height:1.75; margin-bottom:26px; }
+.scale-btns { display:flex; gap:8px; margin-bottom:12px; }
+.scale-btn { flex:1; padding:16px 4px; border-radius:12px; border:2px solid rgba(255,255,255,0.1); background:rgba(255,255,255,0.03); color:rgba(255,255,255,0.4); font-size:20px; font-weight:800; cursor:pointer; font-family:inherit; transition:all 0.12s; }
+.scale-labels { display:flex; justify-content:space-between; margin-bottom:26px; }
+.scale-labels span { color:rgba(255,255,255,0.28); font-size:10px; }
+.nav-btns { display:flex; gap:10px; }
+.dim-tags { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:28px; }
+.dim-tag { border-radius:9px; padding:6px 12px; font-size:12px; font-weight:700; }
+.thankyou-icon { font-size:64px; margin-bottom:20px; text-align:center; }
+.thankyou-note { background:rgba(108,155,247,0.08); border:1px solid rgba(108,155,247,0.2); border-radius:14px; padding:16px 20px; margin-top:28px; }
+.thankyou-note p { color:rgba(255,255,255,0.4); font-size:12px; }
+.code-hints { background:rgba(255,255,255,0.04); border-radius:12px; padding:12px 16px; margin-bottom:20px; }
+.code-hints p { color:rgba(255,255,255,0.55); font-size:13px; margin:3px 0; }
+.input-group { margin-bottom:16px; }
+#app { width:100%; display:flex; align-items:center; justify-content:center; min-height:100vh; padding:32px 16px; }
 </style>
 </head>
 <body>
 <div id="app"></div>
-
 <script>
 // ═══════════════════════════════════════════
 // ★ ここにSupabaseの情報を入力してください ★
@@ -83,7 +55,6 @@ const SUPABASE_URL = 'https://uaxyxphvtouadfonmwzp.supabase.co';
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVheHl4cGh2dG91YWRmb25td3pwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkwNTc3ODYsImV4cCI6MjA5NDYzMzc4Nn0.iOXMmfwj7UfeoKOZdVuM6ZMbQVPXOYD9rhgqpKmgiIU';
 // ═══════════════════════════════════════════
 
-const CODE_EXPIRY_MS = 24 * 60 * 60 * 1000;
 const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const LANGUAGES = [
@@ -93,16 +64,25 @@ const LANGUAGES = [
 ];
 
 const UI = {
-  ja:{ title:'性格診断テスト', subtitle:'特定技能候補者向け ビッグファイブ診断', desc:'このテストはあなたの性格を理解するためのものです。正解・不正解はありません。直感的に、正直に答えてください。全55問、約15分で完了します。', startBtn:'テストを開始する', prev:'戻る', submit:'送信する', progress:'問', unanswered:n=>`残り${n}問未回答`, scaleLabels:['全く当てはまらない','あまり当てはまらない','どちらでもない','やや当てはまる','非常に当てはまる'], thankyouTitle:'ご回答ありがとうございました', thankyouBody:'テストが完了しました。面接官にお知らせください。' },
-  id:{ title:'Tes Kepribadian', subtitle:'Tes Big Five untuk Kandidat Tokutei Ginou', desc:'Tes ini untuk memahami kepribadian Anda. Tidak ada jawaban benar atau salah. Jawablah secara jujur. 55 pertanyaan, sekitar 15 menit.', startBtn:'Mulai Tes', prev:'Kembali', submit:'Kirim', progress:'soal', unanswered:n=>`Masih ${n} soal belum dijawab`, scaleLabels:['Sangat tidak setuju','Tidak setuju','Netral','Setuju','Sangat setuju'], thankyouTitle:'Terima kasih telah menjawab', thankyouBody:'Tes telah selesai. Silakan beritahu pewawancara.' },
-  my:{ title:'စိတ်ကျန်းမာရေး စစ်ဆေးမှု', subtitle:'Tokutei Ginou လျောက်ထားသူများအတွက် Big Five', desc:'ဤစစ်ဆေးမှုသည် သင်၏ကိုယ်ရည်ကိုယ်သွေးကို နားလည်ရန်ဖြစ်သည်။ ရိုးသားစွာ ဖြေဆိုပေးပါ။ မေးခွန်း ၅၅ ခု ၁၅ မိနစ်ခန့်ကြာမည်။', startBtn:'စတင်မည်', prev:'နောက်သို့', submit:'တင်သွင်းမည်', progress:'မေးခွန်း', unanswered:n=>`${n} မေးခွန်း မဖြေရသေး`, scaleLabels:['လုံးဝမကိုက်ညီ','မကိုက်ညီ','ကြားနေ','ကိုက်ညီသည်','အလွန်ကိုက်ညီ'], thankyouTitle:'ဖြေဆိုပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်', thankyouBody:'စစ်ဆေးမှုပြီးဆုံးသွားပြီ။ အင်တာဗျူးသူအား အကြောင်းကြားပေးပါ။' },
+  ja:{ title:'性格診断テスト', subtitle:'特定技能候補者向け ビッグファイブ診断', desc:'このテストはあなたの性格を理解するためのものです。正解・不正解はありません。直感的に、正直に答えてください。全55問、約15分で完了します。', startBtn:'テストを開始する', prev:'戻る', submit:'送信する', progress:'問', unanswered:n=>`残り${n}問未回答`, scaleLabels:['全く当てはまらない','あまり当てはまらない','どちらでもない','やや当てはまる','非常に当てはまる'], thankyouTitle:'ご回答ありがとうございました', thankyouBody:'テストが完了しました。面接官にお知らせください。',
+    nameLabel:'お名前', nameRequired:'（必須）', namePlaceholder:'例：山田 太郎',
+    numberLabel:'受験者番号', numberOptional:'（任意）', numberPlaceholder:'例：001',
+    nameError:'お名前を入力してください' },
+  id:{ title:'Tes Kepribadian', subtitle:'Tes Big Five untuk Kandidat Tokutei Ginou', desc:'Tes ini untuk memahami kepribadian Anda. Tidak ada jawaban benar atau salah. Jawablah secara jujur. 55 pertanyaan, sekitar 15 menit.', startBtn:'Mulai Tes', prev:'Kembali', submit:'Kirim', progress:'soal', unanswered:n=>`Masih ${n} soal belum dijawab`, scaleLabels:['Sangat tidak setuju','Tidak setuju','Netral','Setuju','Sangat setuju'], thankyouTitle:'Terima kasih telah menjawab', thankyouBody:'Tes telah selesai. Silakan beritahu pewawancara.',
+    nameLabel:'Nama', nameRequired:'（wajib）', namePlaceholder:'Contoh: Budi Santoso',
+    numberLabel:'Nomor Peserta', numberOptional:'（opsional）', numberPlaceholder:'Contoh: 001',
+    nameError:'Silakan masukkan nama Anda' },
+  my:{ title:'စိတ်ကျန်းမာရေး စစ်ဆေးမှု', subtitle:'Tokutei Ginou လျောက်ထားသူများအတွက် Big Five', desc:'ဤစစ်ဆေးမှုသည် သင်၏ကိုယ်ရည်ကိုယ်သွေးကို နားလည်ရန်ဖြစ်သည်။ ရိုးသားစွာ ဖြေဆိုပေးပါ။ မေးခွန်း ၅၅ ခု ၁၅ မိနစ်ခန့်ကြာမည်။', startBtn:'စတင်မည်', prev:'နောက်သို့', submit:'တင်သွင်းမည်', progress:'မေးခွန်း', unanswered:n=>`${n} မေးခွန်း မဖြေရသေး`, scaleLabels:['လုံးဝမကိုက်ညီ','မကိုက်ညီ','ကြားနေ','ကိုက်ညီသည်','အလွန်ကိုက်ညီ'], thankyouTitle:'ဖြေဆိုပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်', thankyouBody:'စစ်ဆေးမှုပြီးဆုံးသွားပြီ။ အင်တာဗျူးသူအား အကြောင်းကြားပေးပါ။',
+    nameLabel:'နာမည်', nameRequired:'（လိုအပ်သည်）', namePlaceholder:'ဥပမာ - မောင်မောင်',
+    numberLabel:'စာစစ်သူနံပါတ်', numberOptional:'（ရွေးချယ်နိုင်သည်）', numberPlaceholder:'ဥပမာ - 001',
+    nameError:'နာမည်ထည့်သွင်းပေးပါ' },
 };
 
 const DIMS = {
   O:{ icon:'✦', color:'#6C9BF7', ja:{name:'開放性'}, id:{name:'Keterbukaan'}, my:{name:'ဖွင့်လှစ်မှု'} },
-  C:{ icon:'◈', color:'#5BC8AF', ja:{name:'誠実性'}, id:{name:'Ketelitian'},  my:{name:'လိုက်နာမှု'} },
+  C:{ icon:'◈', color:'#5BC8AF', ja:{name:'誠実性'}, id:{name:'Ketelitian'}, my:{name:'လိုက်နာမှု'} },
   E:{ icon:'◉', color:'#F4A261', ja:{name:'外向性'}, id:{name:'Ekstraversi'}, my:{name:'ပြင်ပလှည့်မှု'} },
-  A:{ icon:'❋', color:'#E76F9A', ja:{name:'協調性'}, id:{name:'Keramahan'},   my:{name:'ပူးပေါင်းဆောင်ရွက်မှု'} },
+  A:{ icon:'❋', color:'#E76F9A', ja:{name:'協調性'}, id:{name:'Keramahan'}, my:{name:'ပူးပေါင်းဆောင်ရွက်မှု'} },
   N:{ icon:'◎', color:'#9B8EF7', ja:{name:'神経症傾向'}, id:{name:'Neurotisisme'}, my:{name:'စိတ်မငြိမ်မသက်မှု'} },
 };
 
@@ -133,46 +113,21 @@ const QUESTIONS = {
   ],
 };
 
-// ─── helpers ───
-function buildOrder(qs){
-  const main=qs.filter(q=>q.dim!=='V'), v=qs.filter(q=>q.dim==='V'), r=[...main];
-  [9,19,29,39,49].forEach((p,i)=>r.splice(p+i,0,v[i])); return r;
-}
-function calcScores(ans,qs){
-  const s={O:0,C:0,E:0,A:0,N:0},c={O:0,C:0,E:0,A:0,N:0};
-  qs.filter(q=>q.dim!=='V').forEach(q=>{ const v=ans[q.id]; if(v==null)return; s[q.dim]+=q.r?6-v:v; c[q.dim]++; });
-  const o={}; Object.keys(s).forEach(d=>{o[d]=c[d]?Math.round((s[d]/(c[d]*5))*100):0;}); return o;
-}
-function checkV(ans,qs){
-  const v=qs.filter(q=>q.dim==='V');
-  return {ok:v.filter(q=>(ans[q.id]||0)>=4).length<=1};
-}
-function genId(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,6); }
+function buildOrder(qs){ const main=qs.filter(q=>q.dim!=='V'),v=qs.filter(q=>q.dim==='V'),r=[...main]; [9,19,29,39,49].forEach((p,i)=>r.splice(p+i,0,v[i])); return r; }
+function calcScores(ans,qs){ const s={O:0,C:0,E:0,A:0,N:0},c={O:0,C:0,E:0,A:0,N:0}; qs.filter(q=>q.dim!=='V').forEach(q=>{ const v=ans[q.id]; if(v==null)return; s[q.dim]+=q.r?6-v:v; c[q.dim]++; }); const o={}; Object.keys(s).forEach(d=>{o[d]=c[d]?Math.round((s[d]/(c[d]*5))*100):0;}); return o; }
+function checkV(ans,qs){ const v=qs.filter(q=>q.dim==='V'); return {ok:v.filter(q=>(ans[q.id]||0)>=4).length<=1}; }
 
-// ─── STATE ───
-let state = {
-  phase: 'code',  // code | intro | test | done
-  lang: null,
-  codeObj: null,
-  answers: {},
-  currentQ: 0,
-  displayQs: [],
-  error: '',
-  submitting: false,
-};
+let state = { phase:'code', lang:null, codeObj:null, answers:{}, currentQ:0, displayQs:[], error:'', submitting:false, candidateName:'', candidateNumber:'' };
 
 function render() {
-  const app = document.getElementById('app');
-  app.innerHTML = '';
-  const div = document.createElement('div');
-
-  if (state.phase === 'code')   div.innerHTML = renderCode();
-  if (state.phase === 'intro')  div.innerHTML = renderIntro();
-  if (state.phase === 'test')   div.innerHTML = renderTest();
-  if (state.phase === 'done')   div.innerHTML = renderDone();
-
-  app.appendChild(div);
-  bindEvents();
+  const app=document.getElementById('app'); app.innerHTML='';
+  const div=document.createElement('div');
+  if(state.phase==='code')   div.innerHTML=renderCode();
+  if(state.phase==='info')   div.innerHTML=renderInfo();
+  if(state.phase==='intro')  div.innerHTML=renderIntro();
+  if(state.phase==='test')   div.innerHTML=renderTest();
+  if(state.phase==='done')   div.innerHTML=renderDone();
+  app.appendChild(div); bindEvents();
 }
 
 function renderCode() {
@@ -185,15 +140,33 @@ function renderCode() {
       <p>🇮🇩 Masukkan kode ujian Anda</p>
       <p>🇲🇲 စစ်ဆေးမှုကုဒ်ကို ထည့်သွင်းပေးပါ</p>
     </div>
-    <input id="codeInput" placeholder="XXXX-XXXX-XXXX" maxlength="14" oninput="this.value=this.value.toUpperCase()">
-    ${state.error ? `<p class="error">${state.error}</p>` : ''}
+    <input id="codeInput" class="code-input" placeholder="XXXX-XXXX-XXXX" maxlength="14" oninput="this.value=this.value.toUpperCase()">
+    ${state.error?`<p class="error">${state.error}</p>`:''}
     <button class="btn btn-primary" id="codeBtn">開始する / Mulai / စတင်မည်</button>
   </div>`;
 }
 
+function renderInfo() {
+  const ui=UI[state.lang];
+  return `<div class="card">
+    <div style="font-size:36px;margin-bottom:14px;text-align:center">✏️</div>
+    <h2 style="font-size:18px;margin-bottom:20px;text-align:center">${ui.nameLabel} / ${ui.numberLabel}</h2>
+    <div class="input-group">
+      <label class="label">${ui.nameLabel}<span class="required">${ui.nameRequired}</span></label>
+      <input id="nameInput" placeholder="${ui.namePlaceholder}" value="${state.candidateName}">
+      ${state.error?`<p class="error">${state.error}</p>`:''}
+    </div>
+    <div class="input-group">
+      <label class="label">${ui.numberLabel}<span style="color:rgba(255,255,255,0.4);margin-left:3px">${ui.numberOptional}</span></label>
+      <input id="numberInput" placeholder="${ui.numberPlaceholder}" value="${state.candidateNumber}">
+    </div>
+    <button class="btn btn-primary" id="infoNextBtn" style="margin-top:8px">次へ / Next →</button>
+  </div>`;
+}
+
 function renderIntro() {
-  const ui = UI[state.lang];
-  const tags = Object.entries(DIMS).map(([k,d])=>
+  const ui=UI[state.lang];
+  const tags=Object.entries(DIMS).map(([k,d])=>
     `<div class="dim-tag" style="background:${d.color}18;border:1px solid ${d.color}44;color:${d.color}">${d.icon} ${d[state.lang].name}</div>`
   ).join('');
   return `<div class="card" style="text-align:center">
@@ -207,33 +180,16 @@ function renderIntro() {
 }
 
 function renderTest() {
-  const q = state.displayQs[state.currentQ];
-  if (!q) return '';
-  const ui = UI[state.lang];
-  const total = state.displayQs.length;
-  const answered = Object.keys(state.answers).length;
-  const pct = Math.round(((state.currentQ+1)/total)*100);
-  const dimKey = q.dim==='V' ? 'C' : q.dim;
-  const dim = DIMS[dimKey];
-  const cur = state.answers[q.id];
-  const allDone = answered === total;
-
-  const scaleBtns = [1,2,3,4,5].map(v => {
-    const sel = cur===v;
-    return `<button class="scale-btn" data-val="${v}"
-      style="${sel?`border-color:${dim.color};background:${dim.color}22;color:${dim.color}`:''}">
-      ${v}</button>`;
+  const q=state.displayQs[state.currentQ]; if(!q) return '';
+  const ui=UI[state.lang];
+  const total=state.displayQs.length, answered=Object.keys(state.answers).length;
+  const pct=Math.round(((state.currentQ+1)/total)*100);
+  const dimKey=q.dim==='V'?'C':q.dim, dim=DIMS[dimKey], cur=state.answers[q.id];
+  const allDone=answered===total;
+  const scaleBtns=[1,2,3,4,5].map(v=>{
+    const sel=cur===v;
+    return `<button class="scale-btn" data-val="${v}" style="${sel?`border-color:${dim.color};background:${dim.color}22;color:${dim.color}`:''}"> ${v}</button>`;
   }).join('');
-
-  const dimBadge = q.dim!=='V'
-    ? `<div class="dim-badge" style="background:${dim.color}1e;border:1px solid ${dim.color}55;color:${dim.color}">${dim.icon} ${dim[state.lang].name}</div>`
-    : '<div style="height:24px"></div>';
-
-  const navBtns = `
-    ${state.currentQ>0 ? `<button class="btn btn-ghost" id="prevBtn" style="flex:1">← ${ui.prev}</button>` : ''}
-    ${allDone ? `<button class="btn btn-green" id="submitBtn" style="flex:2;opacity:${state.submitting?0.6:1}">${state.submitting?'送信中...':'✓ '+ui.submit}</button>` : ''}
-  `;
-
   return `<div class="card">
     <div class="progress-wrap">
       <div class="progress-info">
@@ -242,18 +198,21 @@ function renderTest() {
       </div>
       <div class="progress-bar"><div class="progress-fill" style="width:${pct}%"></div></div>
     </div>
-    ${dimBadge}
+    <div style="height:24px;margin-bottom:16px"></div>
     <p class="question">${q.text}</p>
     <div class="scale-btns">${scaleBtns}</div>
     <div class="scale-labels"><span>${ui.scaleLabels[0]}</span><span>${ui.scaleLabels[4]}</span></div>
-    <div class="nav-btns">${navBtns}</div>
-    ${!allDone&&state.currentQ===total-1 ? `<p style="color:rgba(255,255,255,0.3);font-size:11px;text-align:center;margin-top:10px">${ui.unanswered(total-answered)}</p>` : ''}
+    <div class="nav-btns">
+      ${state.currentQ>0?`<button class="btn btn-ghost" id="prevBtn" style="flex:1">← ${ui.prev}</button>`:''}
+      ${allDone?`<button class="btn btn-green" id="submitBtn" style="flex:2;opacity:${state.submitting?0.6:1}">${state.submitting?'送信中...':'✓ '+ui.submit}</button>`:''}
+    </div>
+    ${!allDone&&state.currentQ===total-1?`<p style="color:rgba(255,255,255,0.3);font-size:11px;text-align:center;margin-top:10px">${ui.unanswered(total-answered)}</p>`:''}
   </div>`;
 }
 
 function renderDone() {
-  const ui = UI[state.lang];
-  const note = state.lang==='ja'?'このページを面接官にお見せください。':state.lang==='id'?'Tunjukkan halaman ini kepada pewawancara.':'ဤစာမျက်နှာကို အင်တာဗျူးသူအား ပြပေးပါ။';
+  const ui=UI[state.lang];
+  const note=state.lang==='ja'?'このページを面接官にお見せください。':state.lang==='id'?'Tunjukkan halaman ini kepada pewawancara.':'ဤစာမျက်နှာကို အင်တာဗျူးသူအား ပြပေးပါ။';
   return `<div class="card" style="text-align:center">
     <div class="thankyou-icon">✅</div>
     <h2 style="font-size:24px;margin-bottom:12px">${ui.thankyouTitle}</h2>
@@ -263,83 +222,65 @@ function renderDone() {
 }
 
 function bindEvents() {
-  // Code submit
-  const codeBtn = document.getElementById('codeBtn');
-  if (codeBtn) codeBtn.addEventListener('click', handleCodeSubmit);
-  const codeInput = document.getElementById('codeInput');
-  if (codeInput) codeInput.addEventListener('keydown', e=>{ if(e.key==='Enter') handleCodeSubmit(); });
+  const codeBtn=document.getElementById('codeBtn');
+  if(codeBtn) codeBtn.addEventListener('click',handleCodeSubmit);
+  const codeInput=document.getElementById('codeInput');
+  if(codeInput) codeInput.addEventListener('keydown',e=>{if(e.key==='Enter')handleCodeSubmit();});
 
-  // Start test
-  const startBtn = document.getElementById('startBtn');
-  if (startBtn) startBtn.addEventListener('click', ()=>{
-    state.answers = {};
-    state.currentQ = 0;
-    state.displayQs = buildOrder(QUESTIONS[state.lang]);
-    state.phase = 'test';
-    render();
+  const infoNextBtn=document.getElementById('infoNextBtn');
+  if(infoNextBtn) infoNextBtn.addEventListener('click',()=>{
+    const name=document.getElementById('nameInput')?.value.trim();
+    const number=document.getElementById('numberInput')?.value.trim();
+    if(!name){ state.error=UI[state.lang].nameError; render(); return; }
+    state.candidateName=name; state.candidateNumber=number; state.error=''; state.phase='intro'; render();
   });
 
-  // Scale buttons
-  document.querySelectorAll('.scale-btn').forEach(btn => {
-    btn.addEventListener('click', ()=>{
-      const val = parseInt(btn.dataset.val);
-      const q = state.displayQs[state.currentQ];
-      state.answers[q.id] = val;
-      if (state.currentQ < state.displayQs.length-1) state.currentQ++;
+  const startBtn=document.getElementById('startBtn');
+  if(startBtn) startBtn.addEventListener('click',()=>{
+    state.answers={}; state.currentQ=0; state.displayQs=buildOrder(QUESTIONS[state.lang]); state.phase='test'; render();
+  });
+
+  document.querySelectorAll('.scale-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      const val=parseInt(btn.dataset.val), q=state.displayQs[state.currentQ];
+      state.answers[q.id]=val;
+      if(state.currentQ<state.displayQs.length-1) state.currentQ++;
       render();
     });
   });
 
-  // Prev
-  const prevBtn = document.getElementById('prevBtn');
-  if (prevBtn) prevBtn.addEventListener('click', ()=>{ state.currentQ--; render(); });
+  const prevBtn=document.getElementById('prevBtn');
+  if(prevBtn) prevBtn.addEventListener('click',()=>{state.currentQ--; render();});
 
-  // Submit
-  const submitBtn = document.getElementById('submitBtn');
-  if (submitBtn) submitBtn.addEventListener('click', handleSubmit);
+  const submitBtn=document.getElementById('submitBtn');
+  if(submitBtn) submitBtn.addEventListener('click',handleSubmit);
 }
 
 async function handleCodeSubmit() {
-  const input = document.getElementById('codeInput');
-  const code = input ? input.value.trim().toUpperCase() : '';
-  if (!code) { state.error='コードを入力してください'; render(); return; }
-
-  const { data, error } = await sb.from('codes').select('*').eq('code', code).single();
-  if (error || !data) { state.error='コードが無効・使用済み・または期限切れです / Kode tidak valid / ကုဒ်မမှန်ကန်'; render(); return; }
-  if (data.used_at)   { state.error='このコードは使用済みです / Kode sudah digunakan / ကုဒ်အသုံးပြုပြီးဖြစ်သည်'; render(); return; }
-  if (Date.now() > data.expires_at) { state.error='コードの有効期限が切れています / Kode kadaluarsa / ကုဒ်သက်တမ်းကုန်ဆုံးသည်'; render(); return; }
-
-  state.codeObj = data;
-  state.lang = data.lang;
-  state.error = '';
-  state.phase = 'intro';
-  render();
+  const input=document.getElementById('codeInput');
+  const code=input?input.value.trim().toUpperCase():'';
+  if(!code){state.error='コードを入力してください';render();return;}
+  const {data,error}=await sb.from('codes').select('*').eq('code',code).single();
+  if(error||!data){state.error='コードが無効・使用済み・または期限切れです';render();return;}
+  if(data.used_at){state.error='このコードは使用済みです';render();return;}
+  if(Date.now()>data.expires_at){state.error='コードの有効期限が切れています';render();return;}
+  state.codeObj=data; state.lang=data.lang; state.error=''; state.phase='info'; render();
 }
 
 async function handleSubmit() {
-  if (state.submitting) return;
-  state.submitting = true;
-  render();
-
-  const scores = calcScores(state.answers, QUESTIONS[state.lang]);
-  const validity = checkV(state.answers, QUESTIONS[state.lang]);
-
-  // Mark code as used
-  await sb.from('codes').update({ used_at: Date.now() }).eq('code', state.codeObj.code);
-
-  // Save result
+  if(state.submitting) return;
+  state.submitting=true; render();
+  const scores=calcScores(state.answers,QUESTIONS[state.lang]);
+  const validity=checkV(state.answers,QUESTIONS[state.lang]);
+  await sb.from('codes').update({used_at:Date.now()}).eq('code',state.codeObj.code);
+  const displayName=state.candidateNumber
+    ? `${state.candidateNumber}_${state.candidateName}`
+    : state.candidateName;
   await sb.from('results').insert({
-    code: state.codeObj.code,
-    name: state.codeObj.note || '—',
-    lang: state.lang,
-    date: new Date().toISOString(),
-    scores: scores,
-    validity: validity,
+    code:state.codeObj.code, name:displayName, lang:state.lang,
+    date:new Date().toISOString(), scores, validity,
   });
-
-  state.submitting = false;
-  state.phase = 'done';
-  render();
+  state.submitting=false; state.phase='done'; render();
 }
 
 render();
