@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>性格診断テスト | Tokutei Ginou</title>
+<title>候補者 性格診断テスト | Tokutei Ginou</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 * { box-sizing:border-box; margin:0; padding:0; }
@@ -12,7 +12,7 @@ body { min-height:100vh; background:linear-gradient(135deg,#0c0a24 0%,#16113a 55
 h1,h2 { color:#fff; font-weight:800; }
 .subtitle { color:#6C9BF7; font-size:12px; font-weight:700; margin:6px 0 16px; }
 .desc { color:rgba(255,255,255,0.6); font-size:14px; line-height:1.85; margin-bottom:24px; }
-input, textarea { width:100%; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); border-radius:10px; padding:12px 16px; color:#fff; font-size:15px; font-family:inherit; outline:none; margin-bottom:8px; }
+input { width:100%; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); border-radius:10px; padding:12px 16px; color:#fff; font-size:15px; font-family:inherit; outline:none; margin-bottom:8px; }
 input::placeholder { color:rgba(255,255,255,0.3); }
 .code-input { text-align:center; font-size:20px; letter-spacing:3px; font-weight:700; }
 .label { color:rgba(255,255,255,0.5); font-size:12px; margin-bottom:4px; display:block; }
@@ -36,7 +36,6 @@ input::placeholder { color:rgba(255,255,255,0.3); }
 .nav-btns { display:flex; gap:10px; }
 .dim-tags { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:28px; }
 .dim-tag { border-radius:9px; padding:6px 12px; font-size:12px; font-weight:700; }
-.thankyou-icon { font-size:64px; margin-bottom:20px; text-align:center; }
 .thankyou-note { background:rgba(108,155,247,0.08); border:1px solid rgba(108,155,247,0.2); border-radius:14px; padding:16px 20px; margin-top:28px; }
 .thankyou-note p { color:rgba(255,255,255,0.4); font-size:12px; }
 .code-hints { background:rgba(255,255,255,0.04); border-radius:12px; padding:12px 16px; margin-bottom:20px; }
@@ -57,32 +56,17 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 
 const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-const LANGUAGES = [
-  { code:'ja', flag:'🇯🇵', nativeName:'日本語' },
-  { code:'id', flag:'🇮🇩', nativeName:'Bahasa Indonesia' },
-  { code:'my', flag:'🇲🇲', nativeName:'မြန်မာဘာသာ' },
-];
-
 const UI = {
-  ja:{ title:'性格診断テスト', subtitle:'特定技能候補者向け ビッグファイブ診断', desc:'このテストはあなたの性格を理解するためのものです。正解・不正解はありません。直感的に、正直に答えてください。全55問、約15分で完了します。', startBtn:'テストを開始する', prev:'戻る', submit:'送信する', progress:'問', unanswered:n=>`残り${n}問未回答`, scaleLabels:['全く当てはまらない','あまり当てはまらない','どちらでもない','やや当てはまる','非常に当てはまる'], thankyouTitle:'ご回答ありがとうございました', thankyouBody:'テストが完了しました。面接官にお知らせください。',
-    nameLabel:'お名前', nameRequired:'（必須）', namePlaceholder:'例：山田 太郎',
-    numberLabel:'受験者番号', numberOptional:'（任意）', numberPlaceholder:'例：001',
-    nameError:'お名前を入力してください' },
-  id:{ title:'Tes Kepribadian', subtitle:'Tes Big Five untuk Kandidat Tokutei Ginou', desc:'Tes ini untuk memahami kepribadian Anda. Tidak ada jawaban benar atau salah. Jawablah secara jujur. 55 pertanyaan, sekitar 15 menit.', startBtn:'Mulai Tes', prev:'Kembali', submit:'Kirim', progress:'soal', unanswered:n=>`Masih ${n} soal belum dijawab`, scaleLabels:['Sangat tidak setuju','Tidak setuju','Netral','Setuju','Sangat setuju'], thankyouTitle:'Terima kasih telah menjawab', thankyouBody:'Tes telah selesai. Silakan beritahu pewawancara.',
-    nameLabel:'Nama', nameRequired:'（wajib）', namePlaceholder:'Contoh: Budi Santoso',
-    numberLabel:'Nomor Peserta', numberOptional:'（opsional）', numberPlaceholder:'Contoh: 001',
-    nameError:'Silakan masukkan nama Anda' },
-  my:{ title:'စိတ်ကျန်းမာရေး စစ်ဆေးမှု', subtitle:'Tokutei Ginou လျောက်ထားသူများအတွက် Big Five', desc:'ဤစစ်ဆေးမှုသည် သင်၏ကိုယ်ရည်ကိုယ်သွေးကို နားလည်ရန်ဖြစ်သည်။ ရိုးသားစွာ ဖြေဆိုပေးပါ။ မေးခွန်း ၅၅ ခု ၁၅ မိနစ်ခန့်ကြာမည်။', startBtn:'စတင်မည်', prev:'နောက်သို့', submit:'တင်သွင်းမည်', progress:'မေးခွန်း', unanswered:n=>`${n} မေးခွန်း မဖြေရသေး`, scaleLabels:['လုံးဝမကိုက်ညီ','မကိုက်ညီ','ကြားနေ','ကိုက်ညီသည်','အလွန်ကိုက်ညီ'], thankyouTitle:'ဖြေဆိုပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်', thankyouBody:'စစ်ဆေးမှုပြီးဆုံးသွားပြီ။ အင်တာဗျူးသူအား အကြောင်းကြားပေးပါ။',
-    nameLabel:'နာမည်', nameRequired:'（လိုအပ်သည်）', namePlaceholder:'ဥပမာ - မောင်မောင်',
-    numberLabel:'စာစစ်သူနံပါတ်', numberOptional:'（ရွေးချယ်နိုင်သည်）', numberPlaceholder:'ဥပမာ - 001',
-    nameError:'နာမည်ထည့်သွင်းပေးပါ' },
+  ja:{ title:'候補者 性格診断テスト', subtitle:'ビッグファイブ診断 × Tokutei Ginou', desc:'このテストはあなたの性格を理解するためのものです。正解・不正解はありません。直感的に、正直に答えてください。全55問、約15分で完了します。', startBtn:'テストを開始する', prev:'戻る', submit:'送信する', progress:'問', unanswered:n=>`残り${n}問未回答`, scaleLabels:['全く当てはまらない','あまり当てはまらない','どちらでもない','やや当てはまる','非常に当てはまる'], thankyouTitle:'ご回答ありがとうございました', thankyouBody:'テストが完了しました。面接官にお知らせください。', nameLabel:'お名前', nameRequired:'（必須）', namePlaceholder:'例：山田 太郎', numberLabel:'受験者番号', numberOptional:'（任意）', numberPlaceholder:'例：001', nameError:'お名前を入力してください' },
+  id:{ title:'Tes Kepribadian Kandidat', subtitle:'Big Five × Tokutei Ginou', desc:'Tes ini untuk memahami kepribadian Anda. Tidak ada jawaban benar atau salah. Jawablah secara jujur. 55 pertanyaan, sekitar 15 menit.', startBtn:'Mulai Tes', prev:'Kembali', submit:'Kirim', progress:'soal', unanswered:n=>`Masih ${n} soal belum dijawab`, scaleLabels:['Sangat tidak setuju','Tidak setuju','Netral','Setuju','Sangat setuju'], thankyouTitle:'Terima kasih telah menjawab', thankyouBody:'Tes telah selesai. Silakan beritahu pewawancara.', nameLabel:'Nama', nameRequired:'（wajib）', namePlaceholder:'Contoh: Budi Santoso', numberLabel:'Nomor Peserta', numberOptional:'（opsional）', numberPlaceholder:'Contoh: 001', nameError:'Silakan masukkan nama Anda' },
+  my:{ title:'ကိုယ်စားလှယ် စိတ်စစ်ဆေးမှု', subtitle:'Big Five × Tokutei Ginou', desc:'ဤစစ်ဆေးမှုသည် သင်၏ကိုယ်ရည်ကိုယ်သွေးကို နားလည်ရန်ဖြစ်သည်။ ရိုးသားစွာ ဖြေဆိုပေးပါ။ မေးခွန်း ၅၅ ခု ၁၅ မိနစ်ခန့်ကြာမည်။', startBtn:'စတင်မည်', prev:'နောက်သို့', submit:'တင်သွင်းမည်', progress:'မေးခွန်း', unanswered:n=>`${n} မေးခွန်း မဖြေရသေး`, scaleLabels:['လုံးဝမကိုက်ညီ','မကိုက်ညီ','ကြားနေ','ကိုက်ညီသည်','အလွန်ကိုက်ညီ'], thankyouTitle:'ဖြေဆိုပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်', thankyouBody:'စစ်ဆေးမှုပြီးဆုံးသွားပြီ။ အင်တာဗျူးသူအား အကြောင်းကြားပေးပါ။', nameLabel:'နာမည်', nameRequired:'（လိုအပ်သည်）', namePlaceholder:'ဥပမာ - မောင်မောင်', numberLabel:'စာစစ်သူနံပါတ်', numberOptional:'（ရွေးချယ်နိုင်သည်）', numberPlaceholder:'ဥပမာ - 001', nameError:'နာမည်ထည့်သွင်းပေးပါ' },
 };
 
 const DIMS = {
   O:{ icon:'✦', color:'#6C9BF7', ja:{name:'開放性'}, id:{name:'Keterbukaan'}, my:{name:'ဖွင့်လှစ်မှု'} },
-  C:{ icon:'◈', color:'#5BC8AF', ja:{name:'誠実性'}, id:{name:'Ketelitian'}, my:{name:'လိုက်နာမှု'} },
+  C:{ icon:'◈', color:'#5BC8AF', ja:{name:'誠実性'}, id:{name:'Ketelitian'},  my:{name:'လိုက်နာမှု'} },
   E:{ icon:'◉', color:'#F4A261', ja:{name:'外向性'}, id:{name:'Ekstraversi'}, my:{name:'ပြင်ပလှည့်မှု'} },
-  A:{ icon:'❋', color:'#E76F9A', ja:{name:'協調性'}, id:{name:'Keramahan'}, my:{name:'ပူးပေါင်းဆောင်ရွက်မှု'} },
+  A:{ icon:'❋', color:'#E76F9A', ja:{name:'協調性'}, id:{name:'Keramahan'},   my:{name:'ပူးပေါင်းဆောင်ရွက်မှု'} },
   N:{ icon:'◎', color:'#9B8EF7', ja:{name:'神経症傾向'}, id:{name:'Neurotisisme'}, my:{name:'စိတ်မငြိမ်မသက်မှု'} },
 };
 
@@ -122,18 +106,18 @@ let state = { phase:'code', lang:null, codeObj:null, answers:{}, currentQ:0, dis
 function render() {
   const app=document.getElementById('app'); app.innerHTML='';
   const div=document.createElement('div');
-  if(state.phase==='code')   div.innerHTML=renderCode();
-  if(state.phase==='info')   div.innerHTML=renderInfo();
-  if(state.phase==='intro')  div.innerHTML=renderIntro();
-  if(state.phase==='test')   div.innerHTML=renderTest();
-  if(state.phase==='done')   div.innerHTML=renderDone();
+  if(state.phase==='code')  div.innerHTML=renderCode();
+  if(state.phase==='info')  div.innerHTML=renderInfo();
+  if(state.phase==='intro') div.innerHTML=renderIntro();
+  if(state.phase==='test')  div.innerHTML=renderTest();
+  if(state.phase==='done')  div.innerHTML=renderDone();
   app.appendChild(div); bindEvents();
 }
 
 function renderCode() {
   return `<div class="card" style="text-align:center">
     <div style="font-size:52px;margin-bottom:14px">🧠</div>
-    <h1 style="font-size:22px;margin-bottom:6px">特定技能候補者<br>性格診断テスト</h1>
+    <h1 style="font-size:22px;margin-bottom:6px">候補者<br>性格診断テスト</h1>
     <p style="color:rgba(255,255,255,0.4);font-size:13px;margin-bottom:24px">Big Five × Tokutei Ginou</p>
     <div class="code-hints">
       <p>🇯🇵 受験コードを入力してください</p>
@@ -214,7 +198,7 @@ function renderDone() {
   const ui=UI[state.lang];
   const note=state.lang==='ja'?'このページを面接官にお見せください。':state.lang==='id'?'Tunjukkan halaman ini kepada pewawancara.':'ဤစာမျက်နှာကို အင်တာဗျူးသူအား ပြပေးပါ။';
   return `<div class="card" style="text-align:center">
-    <div class="thankyou-icon">✅</div>
+    <div style="font-size:64px;margin-bottom:20px">✅</div>
     <h2 style="font-size:24px;margin-bottom:12px">${ui.thankyouTitle}</h2>
     <p style="color:rgba(255,255,255,0.55);font-size:15px;line-height:1.8">${ui.thankyouBody}</p>
     <div class="thankyou-note"><p>${note}</p></div>
@@ -231,7 +215,7 @@ function bindEvents() {
   if(infoNextBtn) infoNextBtn.addEventListener('click',()=>{
     const name=document.getElementById('nameInput')?.value.trim();
     const number=document.getElementById('numberInput')?.value.trim();
-    if(!name){ state.error=UI[state.lang].nameError; render(); return; }
+    if(!name){state.error=UI[state.lang].nameError;render();return;}
     state.candidateName=name; state.candidateNumber=number; state.error=''; state.phase='intro'; render();
   });
 
@@ -250,7 +234,7 @@ function bindEvents() {
   });
 
   const prevBtn=document.getElementById('prevBtn');
-  if(prevBtn) prevBtn.addEventListener('click',()=>{state.currentQ--; render();});
+  if(prevBtn) prevBtn.addEventListener('click',()=>{state.currentQ--;render();});
 
   const submitBtn=document.getElementById('submitBtn');
   if(submitBtn) submitBtn.addEventListener('click',handleSubmit);
@@ -260,10 +244,12 @@ async function handleCodeSubmit() {
   const input=document.getElementById('codeInput');
   const code=input?input.value.trim().toUpperCase():'';
   if(!code){state.error='コードを入力してください';render();return;}
+
+  // ★ 有効期限のみチェック（使用回数制限なし）
   const {data,error}=await sb.from('codes').select('*').eq('code',code).single();
-  if(error||!data){state.error='コードが無効・使用済み・または期限切れです';render();return;}
-  if(data.used_at){state.error='このコードは使用済みです';render();return;}
-  if(Date.now()>data.expires_at){state.error='コードの有効期限が切れています';render();return;}
+  if(error||!data){state.error='コードが無効または期限切れです / Kode tidak valid / ကုဒ်မမှန်ကန်';render();return;}
+  if(Date.now()>data.expires_at){state.error='コードの有効期限が切れています / Kode kadaluarsa / ကုဒ်သက်တမ်းကုန်ဆုံးသည်';render();return;}
+
   state.codeObj=data; state.lang=data.lang; state.error=''; state.phase='info'; render();
 }
 
@@ -272,10 +258,11 @@ async function handleSubmit() {
   state.submitting=true; render();
   const scores=calcScores(state.answers,QUESTIONS[state.lang]);
   const validity=checkV(state.answers,QUESTIONS[state.lang]);
-  await sb.from('codes').update({used_at:Date.now()}).eq('code',state.codeObj.code);
+
+  // ★ used_at の更新は不要（複数人が使えるため）
   const displayName=state.candidateNumber
-    ? `${state.candidateNumber}_${state.candidateName}`
-    : state.candidateName;
+    ?`${state.candidateNumber}_${state.candidateName}`
+    :state.candidateName;
   await sb.from('results').insert({
     code:state.codeObj.code, name:displayName, lang:state.lang,
     date:new Date().toISOString(), scores, validity,
