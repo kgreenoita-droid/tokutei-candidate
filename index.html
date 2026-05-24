@@ -10,8 +10,6 @@
 body { min-height:100vh; background:linear-gradient(135deg,#0c0a24 0%,#16113a 55%,#091520 100%); font-family:'Noto Sans JP','Noto Sans',sans-serif; display:flex; align-items:center; justify-content:center; padding:32px 16px; }
 .card { background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.09); border-radius:24px; padding:40px 36px; max-width:540px; width:100%; box-shadow:0 40px 80px rgba(0,0,0,0.5); }
 h1,h2 { color:#fff; font-weight:800; }
-.subtitle { color:#6C9BF7; font-size:12px; font-weight:700; margin:6px 0 16px; }
-.desc { color:rgba(255,255,255,0.6); font-size:14px; line-height:1.85; margin-bottom:24px; }
 input { width:100%; background:rgba(255,255,255,0.07); border:1px solid rgba(255,255,255,0.15); border-radius:10px; padding:12px 16px; color:#fff; font-size:15px; font-family:inherit; outline:none; margin-bottom:8px; }
 input::placeholder { color:rgba(255,255,255,0.3); }
 .code-input { text-align:center; font-size:20px; letter-spacing:3px; font-weight:700; }
@@ -34,13 +32,19 @@ input::placeholder { color:rgba(255,255,255,0.3); }
 .scale-labels { display:flex; justify-content:space-between; margin-bottom:26px; }
 .scale-labels span { color:rgba(255,255,255,0.28); font-size:10px; }
 .nav-btns { display:flex; gap:10px; }
-.dim-tags { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:28px; }
+.dim-tags { display:flex; gap:8px; justify-content:center; flex-wrap:wrap; margin-bottom:24px; }
 .dim-tag { border-radius:9px; padding:6px 12px; font-size:12px; font-weight:700; }
 .thankyou-note { background:rgba(108,155,247,0.08); border:1px solid rgba(108,155,247,0.2); border-radius:14px; padding:16px 20px; margin-top:28px; }
 .thankyou-note p { color:rgba(255,255,255,0.4); font-size:12px; }
 .code-hints { background:rgba(255,255,255,0.04); border-radius:12px; padding:12px 16px; margin-bottom:20px; }
 .code-hints p { color:rgba(255,255,255,0.55); font-size:13px; margin:3px 0; }
 .input-group { margin-bottom:16px; }
+/* ★ 注意書きボックス */
+.warning-box { background:rgba(231,111,154,0.1); border:1.5px solid rgba(231,111,154,0.5); border-radius:12px; padding:16px 18px; margin-bottom:20px; }
+.warning-title { color:#E76F9A; font-size:14px; font-weight:800; text-align:center; margin-bottom:10px; }
+.warning-desc { color:rgba(255,255,255,0.85); font-size:14px; line-height:1.85; margin:0 0 12px; }
+.warning-divider { border:none; border-top:1px solid rgba(231,111,154,0.3); margin:12px 0; }
+.warning-alert { color:#F4A261; font-size:14px; font-weight:700; line-height:1.85; margin:0; }
 #app { width:100%; display:flex; align-items:center; justify-content:center; min-height:100vh; padding:32px 16px; }
 </style>
 </head>
@@ -57,9 +61,45 @@ const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZ
 const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 const UI = {
-  ja:{ title:'候補者 性格診断テスト', subtitle:'ビッグファイブ診断 × Tokutei Ginou', desc:'このテストはあなたの性格を理解するためのものです。正解・不正解はありません。直感的に、正直に答えてください。全55問、約15分で完了します。', startBtn:'テストを開始する', prev:'戻る', submit:'送信する', progress:'問', unanswered:n=>`残り${n}問未回答`, scaleLabels:['全く当てはまらない','あまり当てはまらない','どちらでもない','やや当てはまる','非常に当てはまる'], thankyouTitle:'ご回答ありがとうございました', thankyouBody:'テストが完了しました。面接官にお知らせください。', nameLabel:'お名前', nameRequired:'（必須）', namePlaceholder:'例：山田 太郎', numberLabel:'受験者番号', numberOptional:'（任意）', numberPlaceholder:'例：001', nameError:'お名前を入力してください' },
-  id:{ title:'Tes Kepribadian Kandidat', subtitle:'Big Five × Tokutei Ginou', desc:'Tes ini untuk memahami kepribadian Anda. Tidak ada jawaban benar atau salah. Jawablah secara jujur. 55 pertanyaan, sekitar 15 menit.', startBtn:'Mulai Tes', prev:'Kembali', submit:'Kirim', progress:'soal', unanswered:n=>`Masih ${n} soal belum dijawab`, scaleLabels:['Sangat tidak setuju','Tidak setuju','Netral','Setuju','Sangat setuju'], thankyouTitle:'Terima kasih telah menjawab', thankyouBody:'Tes telah selesai. Silakan beritahu pewawancara.', nameLabel:'Nama', nameRequired:'（wajib）', namePlaceholder:'Contoh: Budi Santoso', numberLabel:'Nomor Peserta', numberOptional:'（opsional）', numberPlaceholder:'Contoh: 001', nameError:'Silakan masukkan nama Anda' },
-  my:{ title:'ကိုယ်စားလှယ် စိတ်စစ်ဆေးမှု', subtitle:'Big Five × Tokutei Ginou', desc:'ဤစစ်ဆေးမှုသည် သင်၏ကိုယ်ရည်ကိုယ်သွေးကို နားလည်ရန်ဖြစ်သည်။ ရိုးသားစွာ ဖြေဆိုပေးပါ။ မေးခွန်း ၅၅ ခု ၁၅ မိနစ်ခန့်ကြာမည်။', startBtn:'စတင်မည်', prev:'နောက်သို့', submit:'တင်သွင်းမည်', progress:'မေးခွန်း', unanswered:n=>`${n} မေးခွန်း မဖြေရသေး`, scaleLabels:['လုံးဝမကိုက်ညီ','မကိုက်ညီ','ကြားနေ','ကိုက်ညီသည်','အလွန်ကိုက်ညီ'], thankyouTitle:'ဖြေဆိုပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်', thankyouBody:'စစ်ဆေးမှုပြီးဆုံးသွားပြီ။ အင်တာဗျူးသူအား အကြောင်းကြားပေးပါ။', nameLabel:'နာမည်', nameRequired:'（လိုအပ်သည်）', namePlaceholder:'ဥပမာ - မောင်မောင်', numberLabel:'စာစစ်သူနံပါတ်', numberOptional:'（ရွေးချယ်နိုင်သည်）', numberPlaceholder:'ဥပမာ - 001', nameError:'နာမည်ထည့်သွင်းပေးပါ' },
+  ja:{
+    title:'候補者 性格診断テスト', subtitle:'ビッグファイブ診断 × Tokutei Ginou',
+    warningTitle:'⚠️ 必ずお読みください',
+    warningDesc:'このテストはあなたの性格を理解するためのものです。正解・不正解はありません。直感的に、正直に答えてください。全55問、約15分で完了します。',
+    warningAlert:'⚠️ 注意！よく見せようと答えた場合、不誠実な回答をしていると判断され、面接においてマイナスの評価となります。',
+    startBtn:'テストを開始する', prev:'戻る', submit:'送信する', progress:'問',
+    unanswered:n=>`残り${n}問未回答`,
+    scaleLabels:['全く当てはまらない','あまり当てはまらない','どちらでもない','やや当てはまる','非常に当てはまる'],
+    thankyouTitle:'ご回答ありがとうございました', thankyouBody:'テストが完了しました。面接官にお知らせください。',
+    nameLabel:'お名前', nameRequired:'（必須）', namePlaceholder:'例：山田 太郎',
+    numberLabel:'受験者番号', numberOptional:'（任意）', numberPlaceholder:'例：1',
+    nameError:'お名前を入力してください'
+  },
+  id:{
+    title:'Tes Kepribadian Kandidat', subtitle:'Big Five × Tokutei Ginou',
+    warningTitle:'⚠️ Harap dibaca dengan seksama',
+    warningDesc:'Tes ini untuk memahami kepribadian Anda. Tidak ada jawaban benar atau salah. Jawablah secara jujur. 55 pertanyaan, sekitar 15 menit.',
+    warningAlert:'⚠️ Perhatian! Jika Anda menjawab untuk terlihat lebih baik, hal itu akan dianggap sebagai jawaban yang tidak jujur dan berdampak negatif pada hasil wawancara Anda.',
+    startBtn:'Mulai Tes', prev:'Kembali', submit:'Kirim', progress:'soal',
+    unanswered:n=>`Masih ${n} soal belum dijawab`,
+    scaleLabels:['Sangat tidak setuju','Tidak setuju','Netral','Setuju','Sangat setuju'],
+    thankyouTitle:'Terima kasih telah menjawab', thankyouBody:'Tes telah selesai. Silakan beritahu pewawancara.',
+    nameLabel:'Nama', nameRequired:'（wajib）', namePlaceholder:'Contoh: Budi Santoso',
+    numberLabel:'Nomor Peserta', numberOptional:'（opsional）', numberPlaceholder:'Contoh: 1',
+    nameError:'Silakan masukkan nama Anda'
+  },
+  my:{
+    title:'ကိုယ်စားလှယ် စိတ်စစ်ဆေးမှု', subtitle:'Big Five × Tokutei Ginou',
+    warningTitle:'⚠️ ဖတ်ရှုပေးရန် မဖြစ်မနေ လိုအပ်သည်',
+    warningDesc:'ဤစစ်ဆေးမှုသည် သင်၏ကိုယ်ရည်ကိုယ်သွေးကို နားလည်ရန်ဖြစ်သည်။ ရိုးသားစွာ ဖြေဆိုပေးပါ။ မေးခွန်း ၅၅ ခု ၁၅ မိနစ်ခန့်ကြာမည်။',
+    warningAlert:'⚠️ သတိပြုပါ！ ကောင်းမွန်အောင် ဟန်ဆောင်ဖြေဆိုပါက မရိုးသားသောအဖြေဟု သတ်မှတ်ကာ အင်တာဗျူးတွင် အနုတ်လက္ခဏာ ဖြစ်စေပါသည်။',
+    startBtn:'စတင်မည်', prev:'နောက်သို့', submit:'တင်သွင်းမည်', progress:'မေးခွန်း',
+    unanswered:n=>`${n} မေးခွန်း မဖြေရသေး`,
+    scaleLabels:['လုံးဝမကိုက်ညီ','မကိုက်ညီ','ကြားနေ','ကိုက်ညီသည်','အလွန်ကိုက်ညီ'],
+    thankyouTitle:'ဖြေဆိုပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်', thankyouBody:'စစ်ဆေးမှုပြီးဆုံးသွားပြီ။ အင်တာဗျူးသူအား အကြောင်းကြားပေးပါ။',
+    nameLabel:'နာမည်', nameRequired:'（လိုအပ်သည်）', namePlaceholder:'ဥပမာ - မောင်မောင်',
+    numberLabel:'စာစစ်သူနံပါတ်', numberOptional:'（ရွေးချယ်နိုင်သည်）', numberPlaceholder:'ဥပမာ - 1',
+    nameError:'နာမည်ထည့်သွင်းပေးပါ'
+  },
 };
 
 const DIMS = {
@@ -319,8 +359,14 @@ function renderIntro() {
   return `<div class="card" style="text-align:center">
     <div style="font-size:42px;margin-bottom:12px">🧠</div>
     <h2 style="font-size:20px;margin-bottom:6px">${ui.title}</h2>
-    <p class="subtitle">${ui.subtitle}</p>
-    <p class="desc">${ui.desc}</p>
+    <p style="color:#6C9BF7;font-size:12px;font-weight:700;margin-bottom:20px">${ui.subtitle}</p>
+    <!-- ★ 注意書きボックス -->
+    <div class="warning-box" style="text-align:left">
+      <p class="warning-title">${ui.warningTitle}</p>
+      <p class="warning-desc">${ui.warningDesc}</p>
+      <hr class="warning-divider">
+      <p class="warning-alert">${ui.warningAlert}</p>
+    </div>
     <div class="dim-tags">${tags}</div>
     <button class="btn btn-primary" id="startBtn">${ui.startBtn} →</button>
   </div>`;
@@ -402,7 +448,6 @@ async function handleCodeSubmit() {
   const input=document.getElementById('codeInput');
   const code=input?input.value.trim().toUpperCase():'';
   if(!code){state.error='コードを入力してください';render();return;}
-  // ★ 有効期限チェックなし（削除されるまで有効）
   const {data,error}=await sb.from('codes').select('*').eq('code',code).single();
   if(error||!data){state.error='コードが無効です / Kode tidak valid / ကုဒ်မမှန်ကန်';render();return;}
   state.codeObj=data; state.lang=data.lang; state.error=''; state.phase='info'; render();
