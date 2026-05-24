@@ -72,34 +72,197 @@ const DIMS = {
 
 const QUESTIONS = {
   ja:[
-    {id:1,dim:'O',text:'新しい仕事の方法や技術を学ぶことが好きだ'},{id:2,dim:'O',text:'想像力が豊かだと思う'},{id:3,dim:'O',text:'変化や新しい環境に積極的に適応できる'},{id:4,dim:'O',text:'芸術や文化など様々な分野に関心がある'},{id:5,dim:'O',r:true,text:'慣れ親しんだやり方の方が安心するのでなるべく変えたくない'},{id:6,dim:'O',text:'複雑な問題についてじっくり考えることが楽しい'},{id:7,dim:'O',r:true,text:'知らないことを学ぶより知っていることを深める方が好きだ'},{id:8,dim:'O',text:'異なる文化や考え方を持つ人と話すのは刺激的だ'},{id:9,dim:'O',r:true,text:'仕事のやり方は決まった手順通りが一番良いと思う'},{id:10,dim:'O',text:'新しいアイデアを考えたり提案することが得意だ'},
-    {id:11,dim:'C',text:'仕事は最後まで丁寧にやり遂げる'},{id:12,dim:'C',text:'計画を立ててから行動するのが得意だ'},{id:13,dim:'C',r:true,text:'ついつい先延ばしにしてしまうことが多い'},{id:14,dim:'C',text:'ルールや約束はどんな状況でもきちんと守る'},{id:15,dim:'C',text:'細かいことにも注意を払って仕事をする'},{id:16,dim:'C',text:'目標を決めたら最後まであきらめない'},{id:17,dim:'C',r:true,text:'締め切りに間に合わないことがよくある'},{id:18,dim:'C',text:'自分の仕事の質に責任を持っている'},{id:19,dim:'C',r:true,text:'仕事中に集中力が途切れてしまうことが多い'},{id:20,dim:'C',text:'やるべきことはメモや計画表で管理している'},
-    {id:21,dim:'E',text:'初対面の人とも気軽に話せる'},{id:22,dim:'E',text:'グループでの作業が好きだ'},{id:23,dim:'E',r:true,text:'人が多い場所にいると疲れを感じる'},{id:24,dim:'E',text:'職場でも積極的に自分の意見を言える'},{id:25,dim:'E',text:'エネルギッシュで活動的だと思う'},{id:26,dim:'E',text:'周りの人を元気づけるのが得意だ'},{id:27,dim:'E',r:true,text:'人と話すより一人で作業する方が集中できる'},{id:28,dim:'E',text:'新しい人間関係を作ることが好きだ'},{id:29,dim:'E',r:true,text:'大勢の前で話すのは苦手だ'},{id:30,dim:'E',text:'職場のイベントや懇親会には積極的に参加したい'},
-    {id:31,dim:'A',text:'困っている人がいたら進んで助けたいと思う'},{id:32,dim:'A',text:'上司や同僚と円滑に協力できる'},{id:33,dim:'A',r:true,text:'自分の意見が正しいと思ったら強く主張する'},{id:34,dim:'A',text:'他の人の気持ちや立場を大切にする'},{id:35,dim:'A',text:'チームのために自分の時間を使うことができる'},{id:36,dim:'A',text:'人を信頼して仕事を任せることができる'},{id:37,dim:'A',r:true,text:'自分のやり方が邪魔されると不満を感じる'},{id:38,dim:'A',text:'相手の話をよく聞いてから行動するようにしている'},{id:39,dim:'A',r:true,text:'競争に勝つことが協力することより重要だと思う'},{id:40,dim:'A',text:'職場の人間関係を良好に保つことを意識している'},
-    {id:41,dim:'N',text:'ストレスを感じると気分が落ち込みやすい'},{id:42,dim:'N',text:'小さなミスでも気になってしまう'},{id:43,dim:'N',r:true,text:'プレッシャーがある状況でも冷静でいられる'},{id:44,dim:'N',text:'感情が不安定になることがある'},{id:45,dim:'N',r:true,text:'困難な状況でも動じない方だ'},{id:46,dim:'N',text:'心配事があると頭から離れない'},{id:47,dim:'N',text:'批判されると気持ちが沈んでしまう'},{id:48,dim:'N',r:true,text:'嫌なことがあっても翌日にはすっきりしている'},{id:49,dim:'N',text:'将来のことを考えると不安になることが多い'},{id:50,dim:'N',r:true,text:'感情的になることはほとんどなく常に落ち着いている'},
-    {id:51,dim:'V',text:'私はこれまで一度も嘘をついたことがない'},{id:52,dim:'V',text:'私は誰かに対して意地悪な気持ちを持ったことがない'},{id:53,dim:'V',text:'私はいつも約束の時間より早く到着する'},{id:54,dim:'V',text:'私は仕事でミスをしたことが一度もない'},{id:55,dim:'V',text:'私はどんな状況でも完璧に冷静でいられる'},
+    {id:1, dim:'O', r:true, text:'新しいやり方を試すより、慣れた方法で進める方が安心する'},
+    {id:2, dim:'O',         text:'自分とは全く違う考え方の人と話すと、新しい発見があると感じる'},
+    {id:3, dim:'O', r:true, text:'仕事の手順が細かく決まっている方が、自分で考えて進めるより楽だと感じる'},
+    {id:4, dim:'O',         text:'知らない国の文化や習慣を知るのは、面倒より楽しいと感じる方だ'},
+    {id:5, dim:'O', r:true, text:'答えのはっきりしない問題を考え続けるのは、あまり好きではない'},
+    {id:6, dim:'O',         text:'自分が正しいと思っていたことが間違いだと気づいても、素直に受け入れられる'},
+    {id:7, dim:'O',         text:'長年うまくいっているやり方より、新しい方法を試したくなることがある'},
+    {id:8, dim:'O', r:true, text:'同じ職場・同じ仕事をずっと続ける方が落ち着く'},
+    {id:9, dim:'O', r:true, text:'なぜ変える必要があるのかと疑問に感じることが多い'},
+    {id:10,dim:'O',         text:'専門外の話題でも、興味を持って自分から調べることがある'},
+    {id:11,dim:'C', r:true, text:'完璧にやるより、まず終わらせることを優先する方だ'},
+    {id:12,dim:'C',         text:'誰も見ていなくても、手を抜かないようにしている方だ'},
+    {id:13,dim:'C', r:true, text:'やる気が出ないときは、仕事の質が落ちても仕方ないと思う方だ'},
+    {id:14,dim:'C',         text:'頼まれた仕事は、期限より早めに終わらせるよう意識する方だ'},
+    {id:15,dim:'C', r:true, text:'複数の仕事を抱えると、どれも中途半端になりがちだ'},
+    {id:16,dim:'C', r:true, text:'計画通りに進まないと、モチベーションが急に落ちる方だ'},
+    {id:17,dim:'C', r:true, text:'自分のミスより、周りの段取りの悪さが原因だと感じることが多い'},
+    {id:18,dim:'C',         text:'気になるミスがあれば、自分の担当外でも指摘する方だ'},
+    {id:19,dim:'C', r:true, text:'締め切りが近づくまで本格的に取り掛からないことがある'},
+    {id:20,dim:'C',         text:'仕事を任されたら、結果に責任を持つ方だ'},
+    {id:21,dim:'E', r:true, text:'休憩時間は同僚と話すより、一人でいる方が落ち着く'},
+    {id:22,dim:'E',         text:'初対面の人が多い場でも、自分から話しかけることができる方だ'},
+    {id:23,dim:'E', r:true, text:'会議や打ち合わせで、自分から発言することは少ない方だ'},
+    {id:24,dim:'E',         text:'一人で作業する時間が続くと、誰かと話したくなる方だ'},
+    {id:25,dim:'E', r:true, text:'注目を集める場面は、できれば避けたい方だ'},
+    {id:26,dim:'E',         text:'新しい職場でも、すぐに周りと打ち解けられる方だ'},
+    {id:27,dim:'E', r:true, text:'人と話した後より、一人で過ごした後の方が元気が出る方だ'},
+    {id:28,dim:'E',         text:'チームをまとめる役割を任されると、やりがいを感じる方だ'},
+    {id:29,dim:'E',         text:'職場での人間関係を広げることに、積極的な方だ'},
+    {id:30,dim:'E',         text:'意見を求められていなくても、良いアイデアがあれば発言する方だ'},
+    {id:31,dim:'A', r:true, text:'自分の仕事が終わっていないのに同僚を手伝うのは、難しいと感じる方だ'},
+    {id:32,dim:'A',         text:'納得できない指示でも、まずは従ってみる方だ'},
+    {id:33,dim:'A', r:true, text:'自分のやり方の方が正しいと思ったとき、はっきり主張する方だ'},
+    {id:34,dim:'A',         text:'相手が感情的になっているときも、冷静に話を聞き続けられる方だ'},
+    {id:35,dim:'A',         text:'チームの決定に不満があっても、決まったことには協力する方だ'},
+    {id:36,dim:'A', r:true, text:'頼まれたことでも、自分には関係ないと感じたら断ることがある'},
+    {id:37,dim:'A',         text:'意見が対立した相手とも、翌日には普通に接することができる方だ'},
+    {id:38,dim:'A',         text:'自分が損をすることになっても、約束は守る方だ'},
+    {id:39,dim:'A', r:true, text:'人に頼むより、自分でやった方が早いと感じることが多い'},
+    {id:40,dim:'A',         text:'チームの総意を、自分の考えより優先できる方だ'},
+    {id:41,dim:'N',         text:'小さなミスでも、しばらく頭から離れないことがある'},
+    {id:42,dim:'N',         text:'翌日に大事な仕事があると、前日の夜に眠れないことがある'},
+    {id:43,dim:'N', r:true, text:'上司から厳しいことを言われても、必要なフィードバックとして受け取れる方だ'},
+    {id:44,dim:'N',         text:'仕事でトラブルが起きたとき、まず「どうしよう」と焦ってしまう方だ'},
+    {id:45,dim:'N', r:true, text:'慣れない仕事を任されると、不安より楽しみが大きい方だ'},
+    {id:46,dim:'N',         text:'感情が顔や態度に出やすいと言われることがある'},
+    {id:47,dim:'N', r:true, text:'職場で嫌なことがあっても、家に帰れば気持ちを切り替えられる方だ'},
+    {id:48,dim:'N',         text:'忙しい時期が続くと、気持ちに余裕がなくなりイライラしやすい'},
+    {id:49,dim:'N', r:true, text:'緊張する場面ほど、冷静に判断できる方だと思う'},
+    {id:50,dim:'N',         text:'自分がどう評価されているか、気になって仕方ないことがある'},
+    {id:51,dim:'V', text:'人の悪口を言ったり、心の中で思ったりしたことは一度もない'},
+    {id:52,dim:'V', text:'約束や締め切りを破ったことは、これまで一度もない'},
+    {id:53,dim:'V', text:'誰かに嘘をついたことは、どんな小さなことでも一切ない'},
+    {id:54,dim:'V', text:'仕事や勉強でズルをしたいと思ったことは一度もない'},
+    {id:55,dim:'V', text:'自分のことより他人を優先することが、いつも自然にできている'},
   ],
   id:[
-    {id:1,dim:'O',text:'Saya suka belajar cara kerja dan teknologi baru'},{id:2,dim:'O',text:'Saya memiliki imajinasi yang kaya'},{id:3,dim:'O',text:'Saya bisa beradaptasi secara aktif dengan lingkungan baru'},{id:4,dim:'O',text:'Saya tertarik pada berbagai bidang seperti seni dan budaya'},{id:5,dim:'O',r:true,text:'Saya lebih nyaman dengan cara yang sudah biasa dan tidak ingin mengubahnya'},{id:6,dim:'O',text:'Saya menikmati memikirkan masalah yang kompleks'},{id:7,dim:'O',r:true,text:'Saya lebih suka memperdalam hal yang diketahui daripada belajar hal baru'},{id:8,dim:'O',text:'Berbicara dengan orang yang memiliki budaya berbeda sangat menarik bagi saya'},{id:9,dim:'O',r:true,text:'Saya pikir cara kerja terbaik adalah mengikuti prosedur yang sudah ditetapkan'},{id:10,dim:'O',text:'Saya pandai memikirkan dan mengusulkan ide-ide baru'},
-    {id:11,dim:'C',text:'Saya selalu menyelesaikan pekerjaan dengan teliti hingga selesai'},{id:12,dim:'C',text:'Saya pandai membuat rencana sebelum bertindak'},{id:13,dim:'C',r:true,text:'Saya sering menunda-nunda pekerjaan'},{id:14,dim:'C',text:'Saya selalu mematuhi aturan dan janji dalam situasi apapun'},{id:15,dim:'C',text:'Saya memperhatikan detail kecil dalam pekerjaan'},{id:16,dim:'C',text:'Jika sudah menetapkan tujuan saya tidak mudah menyerah'},{id:17,dim:'C',r:true,text:'Saya sering tidak tepat waktu dalam menyelesaikan tugas'},{id:18,dim:'C',text:'Saya bertanggung jawab atas kualitas pekerjaan saya'},{id:19,dim:'C',r:true,text:'Konsentrasi saya sering terputus saat bekerja'},{id:20,dim:'C',text:'Saya mengelola tugas dengan catatan atau jadwal kerja'},
-    {id:21,dim:'E',text:'Saya bisa berbicara dengan orang yang baru dikenal dengan mudah'},{id:22,dim:'E',text:'Saya suka bekerja dalam kelompok'},{id:23,dim:'E',r:true,text:'Saya merasa lelah ketika berada di tempat yang banyak orang'},{id:24,dim:'E',text:'Saya bisa aktif menyampaikan pendapat di tempat kerja'},{id:25,dim:'E',text:'Saya adalah orang yang energik dan aktif'},{id:26,dim:'E',text:'Saya pandai memberi semangat kepada orang-orang di sekitar saya'},{id:27,dim:'E',r:true,text:'Saya lebih bisa berkonsentrasi bekerja sendiri daripada berbicara dengan orang lain'},{id:28,dim:'E',text:'Saya suka membangun hubungan baru dengan orang lain'},{id:29,dim:'E',r:true,text:'Saya kurang nyaman berbicara di depan banyak orang'},{id:30,dim:'E',text:'Saya ingin berpartisipasi aktif dalam acara dan pertemuan di tempat kerja'},
-    {id:31,dim:'A',text:'Jika ada orang yang kesulitan saya ingin membantu dengan sukarela'},{id:32,dim:'A',text:'Saya bisa bekerja sama dengan atasan dan rekan kerja dengan baik'},{id:33,dim:'A',r:true,text:'Jika saya pikir pendapat saya benar saya akan menegaskannya dengan kuat'},{id:34,dim:'A',text:'Saya menghargai perasaan dan posisi orang lain'},{id:35,dim:'A',text:'Saya bisa meluangkan waktu saya untuk tim'},{id:36,dim:'A',text:'Saya bisa mempercayai orang lain dan mendelegasikan pekerjaan'},{id:37,dim:'A',r:true,text:'Saya merasa tidak puas jika cara kerja saya diganggu'},{id:38,dim:'A',text:'Saya berusaha mendengarkan dengan baik sebelum bertindak'},{id:39,dim:'A',r:true,text:'Saya pikir menang dalam persaingan lebih penting dari bekerja sama'},{id:40,dim:'A',text:'Saya selalu berusaha menjaga hubungan baik di tempat kerja'},
-    {id:41,dim:'N',text:'Ketika merasa stres suasana hati saya mudah memburuk'},{id:42,dim:'N',text:'Kesalahan kecil pun membuat saya sangat khawatir'},{id:43,dim:'N',r:true,text:'Saya bisa tetap tenang meski dalam situasi penuh tekanan'},{id:44,dim:'N',text:'Emosi saya kadang tidak stabil'},{id:45,dim:'N',r:true,text:'Saya tidak mudah goyah dalam situasi sulit'},{id:46,dim:'N',text:'Jika ada kekhawatiran sulit untuk tidak memikirkannya'},{id:47,dim:'N',text:'Ketika dikritik perasaan saya menjadi sangat tertekan'},{id:48,dim:'N',r:true,text:'Meskipun ada hal yang tidak menyenangkan saya bisa merasa segar keesokan harinya'},{id:49,dim:'N',text:'Saya sering merasa cemas ketika memikirkan masa depan'},{id:50,dim:'N',r:true,text:'Saya hampir tidak pernah menjadi emosional dan selalu tenang'},
-    {id:51,dim:'V',text:'Saya belum pernah berbohong sama sekali dalam hidup saya'},{id:52,dim:'V',text:'Saya tidak pernah memiliki perasaan jahat terhadap siapapun'},{id:53,dim:'V',text:'Saya selalu tiba lebih awal dari waktu yang dijanjikan'},{id:54,dim:'V',text:'Saya tidak pernah melakukan kesalahan dalam pekerjaan'},{id:55,dim:'V',text:'Saya bisa tetap tenang sempurna dalam situasi apapun'},
+    {id:1, dim:'O', r:true, text:'Daripada mencoba cara baru, saya lebih tenang melanjutkan dengan cara yang sudah biasa'},
+    {id:2, dim:'O',         text:'Ketika berbicara dengan orang yang punya cara pikir berbeda, saya merasa mendapat penemuan baru'},
+    {id:3, dim:'O', r:true, text:'Saya merasa lebih mudah jika prosedur kerja sudah ditentukan secara rinci, daripada memikirkannya sendiri'},
+    {id:4, dim:'O',         text:'Mengetahui budaya dan kebiasaan negara lain terasa menyenangkan daripada merepotkan bagi saya'},
+    {id:5, dim:'O', r:true, text:'Saya kurang suka terus memikirkan masalah yang tidak memiliki jawaban jelas'},
+    {id:6, dim:'O',         text:'Meskipun menyadari bahwa hal yang saya yakini benar ternyata salah, saya bisa menerimanya dengan lapang dada'},
+    {id:7, dim:'O',         text:'Saya sering ingin mencoba cara baru daripada cara lama yang sudah terbukti berhasil'},
+    {id:8, dim:'O', r:true, text:'Saya lebih tenang jika terus bekerja di tempat yang sama dengan pekerjaan yang sama'},
+    {id:9, dim:'O', r:true, text:'Saya sering bertanya-tanya mengapa perlu ada perubahan'},
+    {id:10,dim:'O',         text:'Meskipun di luar bidang keahlian saya, saya akan mencari tahu sendiri jika tertarik'},
+    {id:11,dim:'C', r:true, text:'Saya cenderung mengutamakan menyelesaikan pekerjaan terlebih dahulu daripada melakukannya dengan sempurna'},
+    {id:12,dim:'C',         text:'Meskipun tidak ada yang melihat, saya berusaha untuk tidak bermalas-malasan'},
+    {id:13,dim:'C', r:true, text:'Saya pikir tidak apa-apa jika kualitas pekerjaan menurun saat tidak ada motivasi'},
+    {id:14,dim:'C',         text:'Saya selalu berusaha menyelesaikan pekerjaan yang diberikan sebelum batas waktu'},
+    {id:15,dim:'C', r:true, text:'Ketika menangani banyak pekerjaan sekaligus, semuanya cenderung menjadi setengah-setengah'},
+    {id:16,dim:'C', r:true, text:'Jika tidak berjalan sesuai rencana, motivasi saya tiba-tiba menurun'},
+    {id:17,dim:'C', r:true, text:'Saya sering merasa penyebabnya bukan kesalahan saya sendiri, melainkan koordinasi lingkungan sekitar yang buruk'},
+    {id:18,dim:'C',         text:'Jika ada kesalahan yang mengganggu, saya akan menunjukkannya meskipun bukan tanggung jawab saya'},
+    {id:19,dim:'C', r:true, text:'Saya sering baru mulai serius mengerjakan sesuatu ketika batas waktu sudah dekat'},
+    {id:20,dim:'C',         text:'Jika diberi kepercayaan untuk mengerjakan sesuatu, saya bertanggung jawab atas hasilnya'},
+    {id:21,dim:'E', r:true, text:'Saat istirahat, saya lebih tenang sendirian daripada berbicara dengan rekan kerja'},
+    {id:22,dim:'E',         text:'Meskipun banyak orang yang belum dikenal, saya bisa menyapa duluan'},
+    {id:23,dim:'E', r:true, text:'Dalam rapat atau diskusi, saya jarang mengungkapkan pendapat sendiri'},
+    {id:24,dim:'E',         text:'Jika terlalu lama bekerja sendirian, saya mulai ingin berbicara dengan seseorang'},
+    {id:25,dim:'E', r:true, text:'Saya lebih suka menghindari situasi yang membuat saya menjadi pusat perhatian'},
+    {id:26,dim:'E',         text:'Meskipun di tempat kerja baru, saya bisa cepat akrab dengan orang-orang di sekitar saya'},
+    {id:27,dim:'E', r:true, text:'Saya lebih merasa bersemangat setelah menghabiskan waktu sendiri daripada setelah berbicara dengan orang lain'},
+    {id:28,dim:'E',         text:'Jika diberi peran untuk memimpin tim, saya merasa hal itu bermakna'},
+    {id:29,dim:'E',         text:'Saya termasuk orang yang aktif dalam memperluas hubungan di tempat kerja'},
+    {id:30,dim:'E',         text:'Meskipun tidak diminta pendapat, saya akan berbicara jika punya ide yang bagus'},
+    {id:31,dim:'A', r:true, text:'Saya merasa sulit membantu rekan kerja jika pekerjaan saya sendiri belum selesai'},
+    {id:32,dim:'A',         text:'Meskipun tidak setuju dengan instruksi, saya akan mencoba mengikutinya terlebih dahulu'},
+    {id:33,dim:'A', r:true, text:'Jika saya pikir cara saya lebih benar, saya akan mengatakannya dengan tegas'},
+    {id:34,dim:'A',         text:'Meskipun lawan bicara sedang emosional, saya bisa tetap mendengarkan dengan tenang'},
+    {id:35,dim:'A',         text:'Meskipun tidak puas dengan keputusan tim, saya tetap bekerja sama dengan yang sudah diputuskan'},
+    {id:36,dim:'A', r:true, text:'Meskipun diminta tolong, saya bisa menolak jika merasa itu bukan urusan saya'},
+    {id:37,dim:'A',         text:'Meskipun ada perselisihan pendapat, saya bisa bersikap normal dengan orang tersebut keesokan harinya'},
+    {id:38,dim:'A',         text:'Meskipun merugikan diri sendiri, saya tetap menepati janji'},
+    {id:39,dim:'A', r:true, text:'Saya sering merasa lebih cepat jika dikerjakan sendiri daripada meminta bantuan orang lain'},
+    {id:40,dim:'A',         text:'Saya bisa mendahulukan kesepakatan tim daripada pendapat pribadi saya'},
+    {id:41,dim:'N',         text:'Meskipun kesalahan kecil, hal itu sering tidak bisa lepas dari pikiran saya untuk sementara waktu'},
+    {id:42,dim:'N',         text:'Jika ada pekerjaan penting keesokan harinya, saya sering tidak bisa tidur malam sebelumnya'},
+    {id:43,dim:'N', r:true, text:'Meskipun atasan mengatakan sesuatu yang keras, saya bisa menerimanya sebagai umpan balik yang diperlukan'},
+    {id:44,dim:'N',         text:'Ketika ada masalah di tempat kerja, saya cenderung panik dan berpikir "bagaimana ini" terlebih dahulu'},
+    {id:45,dim:'N', r:true, text:'Jika diberi pekerjaan yang tidak biasa, kegembiraan lebih besar daripada kekhawatiran bagi saya'},
+    {id:46,dim:'N',         text:'Saya sering dikatakan mudah terlihat dari ekspresi wajah atau sikapnya'},
+    {id:47,dim:'N', r:true, text:'Meskipun ada hal tidak menyenangkan di tempat kerja, saya bisa mengalihkan perasaan setelah pulang ke rumah'},
+    {id:48,dim:'N',         text:'Jika masa sibuk terus berlanjut, saya mudah menjadi tidak sabaran karena kurang tenang'},
+    {id:49,dim:'N', r:true, text:'Saya pikir saya bisa membuat keputusan dengan lebih tenang justru dalam situasi yang menegangkan'},
+    {id:50,dim:'N',         text:'Saya tidak bisa berhenti memikirkan bagaimana orang lain menilai saya'},
+    {id:51,dim:'V', text:'Saya tidak pernah sekalipun membicarakan kejelekan orang lain atau memikirkannya dalam hati'},
+    {id:52,dim:'V', text:'Saya tidak pernah sekalipun melanggar janji atau batas waktu'},
+    {id:53,dim:'V', text:'Saya tidak pernah berbohong kepada siapapun, bahkan untuk hal sekecil apapun'},
+    {id:54,dim:'V', text:'Saya tidak pernah sekalipun terpikir untuk berbuat curang dalam pekerjaan atau belajar'},
+    {id:55,dim:'V', text:'Saya selalu secara alami bisa mendahulukan orang lain daripada diri sendiri'},
   ],
   my:[
-    {id:1,dim:'O',text:'အလုပ်၏ နည်းလမ်းများနှင့် နည်းပညာအသစ်များ သင်ယူရသည်ကို နှစ်သက်သည်'},{id:2,dim:'O',text:'ကျွန်ုပ်တွင် စိတ်ကူးစိတ်သန်းများ ကြွယ်ဝသည်ဟု ထင်သည်'},{id:3,dim:'O',text:'ပြောင်းလဲမှုနှင့် ပတ်ဝန်းကျင်အသစ်တို့နှင့် တက်ကြွစွာ လိုက်လျောနိုင်သည်'},{id:4,dim:'O',text:'အနုပညာ ယဉ်ကျေးမှု အစရှိသည့် နယ်ပယ်အမျိုးမျိုးကို စိတ်ဝင်တစားရှိသည်'},{id:5,dim:'O',r:true,text:'ကျွန်ုပ်သိကျွမ်းသော နည်းလမ်းသည် ပိုလုံခြုံသောကြောင့် မပြောင်းလဲလိုပါ'},{id:6,dim:'O',text:'ရှုပ်ထွေးသောပြဿနာများကို နက်နက်ရှိုင်းရှိုင်း စဉ်းစားရသည်မှာ မျိုးစိတ်ကောင်းသည်'},{id:7,dim:'O',r:true,text:'မသိသောအရာ သင်ယူရသည်ထက် သိပြီးသားကို နက်ရှိုင်းစေရသည်ကို ပိုနှစ်သက်သည်'},{id:8,dim:'O',text:'ယဉ်ကျေးမှု ကွဲပြားသောသူများနှင့် ပြောဆိုဆက်ဆံရသည်မှာ အားပြည့်လောက်ဖွယ်ကောင်းသည်'},{id:9,dim:'O',r:true,text:'အလုပ်လုပ်နည်းသည် သတ်မှတ်ထားသောလုပ်ငန်းစဉ်အတိုင်းသာ ကောင်းမည်ဟု ထင်သည်'},{id:10,dim:'O',text:'အကြံဉာဏ်အသစ်များ တွေးဆ၍ တင်ပြရသည်ကို ကောင်းစွာ တတ်မြောက်သည်'},
-    {id:11,dim:'C',text:'အလုပ်ကို အဆုံးအထိ ဂရုစိုက်တိကျစွာ ပြီးဆုံးအောင် ဆောင်ရွက်သည်'},{id:12,dim:'C',text:'စီမံချက်ချမှတ်ပြီးမှ ဆောင်ရွက်ရသည်ကို ကောင်းစွာ တတ်မြောက်သည်'},{id:13,dim:'C',r:true,text:'အလုပ်ကို နောက်ဆွဲ နောက်ကျ ဖြစ်နေတတ်သည်'},{id:14,dim:'C',text:'မည်သည့်အခြေအနေတွင်မဆို စည်းမျဉ်းများနှင့် ကတိများကို ဂရုတစိုက် လိုက်နာသည်'},{id:15,dim:'C',text:'အသေးစိတ်ကိစ္စများကိုပါ ဂရုစိုက်၍ အလုပ်ဆောင်ရွက်သည်'},{id:16,dim:'C',text:'ရည်မှန်းချက်ချမှတ်ပြီးလျှင် အဆုံးအထိ ဆောင်ရွက်တတ်သည်'},{id:17,dim:'C',r:true,text:'သတ်မှတ်ရက်များကို မမှီသောကိစ္စများ မကြာခဏဖြစ်သည်'},{id:18,dim:'C',text:'မိမိ၏အလုပ်အရည်အသွေးကို တာဝန်ယူသည်'},{id:19,dim:'C',r:true,text:'အလုပ်လုပ်နေစဉ် အာရုံစူးစိုက်မှု မကြာခဏ ကျသွားတတ်သည်'},{id:20,dim:'C',text:'လုပ်ဆောင်ရမည့်ကိစ္စများကို မှတ်စုနှင့် အချိန်ဇယားများဖြင့် စီမံခန့်ခွဲသည်'},
-    {id:21,dim:'E',text:'ပထမဆုံးတွေ့သောသူနှင့်လည်း တသွက်သွက် ပြောဆိုနိုင်သည်'},{id:22,dim:'E',text:'အဖွဲ့လိုက် လုပ်ဆောင်သည့်အလုပ်ကို နှစ်သက်သည်'},{id:23,dim:'E',r:true,text:'လူများသောနေရာတွင် ရှိနေလျှင် ပင်ပန်းမှုကို ခံစားရသည်'},{id:24,dim:'E',text:'အလုပ်ခွင်တွင်လည်း တက်ကြွစွာ မိမိ၏ မြင်ကွင်းကို ပြောဆိုနိုင်သည်'},{id:25,dim:'E',text:'ကြံ့ခိုင်တက်ကြွပြီး တက်ကြွသောသူဟု ထင်သည်'},{id:26,dim:'E',text:'ပတ်ဝန်းကျင်ရှိသူများကို ကြက်သည်းမကြော အားပေးနိုင်တတ်သည်'},{id:27,dim:'E',r:true,text:'လူနှင့် ပြောဆိုနေသည်ထက် တစ်ယောက်တည်း အလုပ်လုပ်ရသည်က ပိုအာရုံစိုက်နိုင်သည်'},{id:28,dim:'E',text:'လူဆက်ဆံရေးအသစ်များ တည်ဆောက်ရသည်ကို နှစ်သက်သည်'},{id:29,dim:'E',r:true,text:'လူအများ၏ ရှေ့မှောက်တွင် ပြောဆိုရသည်မှာ ခက်ခဲသည်'},{id:30,dim:'E',text:'အလုပ်ခွင်ပွဲများနှင့် ပွဲလမ်းများတွင် တက်ကြွစွာ ပါဝင်လိုသည်'},
-    {id:31,dim:'A',text:'အခက်အခဲဖြစ်နေသောသူကို ကူညီလိုစိတ်ဖြင့် ဆောင်ရွက်ချင်သည်'},{id:32,dim:'A',text:'အကြီးအကဲနှင့် လုပ်ဖော်ကိုင်ဖက်တို့နှင့် ချောမွေ့စွာ ပူးပေါင်းနိုင်သည်'},{id:33,dim:'A',r:true,text:'မိမိ၏ မြင်ကွင်းမှန်သည်ဟု ထင်ပါက အမြဲတမ်း ခိုင်မာစွာ ပြောဆိုတတ်သည်'},{id:34,dim:'A',text:'အခြားသူများ၏ ခံစားချက်နှင့် အနေအထားကို အလေးထားသည်'},{id:35,dim:'A',text:'အဖွဲ့အတွက် မိမိ၏ အချိန်ကို ပေးနိုင်သည်'},{id:36,dim:'A',text:'သူတစ်ပါးကို ယုံကြည်၍ အလုပ်အပ်နှံနိုင်သည်'},{id:37,dim:'A',r:true,text:'မိမိ၏ လုပ်နည်းလုပ်ဟန်ကို နှောင့်ယှက်ခံရပါက မကျေနပ်မှု ဖြစ်တတ်သည်'},{id:38,dim:'A',text:'ဆောင်ရွက်မတိုင်မှီ တဖက်သား၏ ပြောဆိုချက်ကို ကောင်းစွာ နားဆင်တတ်သည်'},{id:39,dim:'A',r:true,text:'ပြိုင်ဆိုင်မှုတွင် နိုင်ရသည်မှာ ပူးပေါင်းဆောင်ရွက်ရသည်ထက် ပိုအရေးကြီးသည်ဟု ထင်သည်'},{id:40,dim:'A',text:'အလုပ်ခွင်ဆက်ဆံရေးကို ကောင်းမွန်စေရန် အာရုံထားသည်'},
-    {id:41,dim:'N',text:'စိတ်ဖိစီးမှု ဖြစ်လာလျှင် စိတ်ဓာတ်ကျ ကျသွားတတ်သည်'},{id:42,dim:'N',text:'အမှားအယွင်းငယ်လေးတောင် ပူပင်သောကဖြစ်တတ်သည်'},{id:43,dim:'N',r:true,text:'ဖိစီးသောအခြေအနေတွင်မဆို တည်ငြိမ်နေနိုင်သည်'},{id:44,dim:'N',text:'ခံစားချက်များ မတည်ငြိမ်ဖြစ်တတ်သည်'},{id:45,dim:'N',r:true,text:'ခက်ခဲသောအခြေအနေတွင်မဆို ထိတ်လန့်မှု မဖြစ်သောဘက်တွင် ရှိသည်'},{id:46,dim:'N',text:'ပူပင်မှုရှိပါက ခေါင်းထဲမှ ထွက်မသွားနိုင်ပါ'},{id:47,dim:'N',text:'ဝေဖန်ခံရပါက စိတ်ဓာတ်ကျ သွားတတ်သည်'},{id:48,dim:'N',r:true,text:'မကောင်းမှုဖြစ်ပေမဲ့ နောက်နေ့ဆိုပါက သက်သာ ကောင်းမွန်သွားတတ်သည်'},{id:49,dim:'N',text:'အနာဂတ်ကို တွေးသောအခါ ပူပင်မှုများ ဖြစ်တတ်သည်'},{id:50,dim:'N',r:true,text:'ခံစားချက်ကို ထုတ်ဖော်ခြင်းနည်းပြီး အမြဲတမ်း တည်ငြိမ်နေသည်'},
-    {id:51,dim:'V',text:'ကျွန်ုပ်သည် ယခုထိ လုံးဝ မုသာမပြောဖူးပါ'},{id:52,dim:'V',text:'ကျွန်ုပ်သည် မည်သူ့ကိုမျှ ဆိုးဆိုးဝါးဝါး မထင်ဖူးပါ'},{id:53,dim:'V',text:'ကျွန်ုပ်သည် အမြဲတမ်း ချိန်းဆိုထားသောအချိန်ထက် စောမရောက်ဖူးပါ'},{id:54,dim:'V',text:'ကျွန်ုပ်သည် အလုပ်တွင် အမှားတစ်ကြိမ်မျှ မလုပ်ဖူးပါ'},{id:55,dim:'V',text:'ကျွန်ုပ်သည် မည်သည့်အခြေအနေတွင်မဆို ပြည့်ဝစွာ တည်ငြိမ်နေနိုင်သည်'},
+    {id:1, dim:'O', r:true, text:'နည်းလမ်းအသစ်ကို စမ်းသုံးရသည်ထက် ကျွမ်းဝင်သောနည်းလမ်းဖြင့် ဆက်လက်ဆောင်ရွက်ရသည်မှာ ပိုသက်သာသည်'},
+    {id:2, dim:'O',         text:'မိမိနှင့် လုံးဝကွဲပြားသောစဉ်းစားပုံရှိသောသူနှင့် ပြောဆိုရသောအခါ အသစ်တစ်ခုကို တွေ့ရှိသည်ဟု ခံစားရသည်'},
+    {id:3, dim:'O', r:true, text:'အလုပ်လုပ်ငန်းစဉ်ကို အသေးစိတ်သတ်မှတ်ထားသောနည်းသည် မိမိကိုယ်တိုင် တွေးဆ၍ ဆောင်ရွက်ရသည်ထက် ပိုလွယ်ကူသည်ဟု ခံစားသည်'},
+    {id:4, dim:'O',         text:'မသိသော နိုင်ငံများ၏ ယဉ်ကျေးမှုနှင့် လေ့ကျင့်မှုများကို သိရှိရသည်မှာ ဒုက္ခဖြစ်သည်ထက် ပျော်ရွှင်ဖွယ်ကောင်းသည်ဟု ခံစားသည်'},
+    {id:5, dim:'O', r:true, text:'အဖြေရှင်းလင်းမှုမရှိသောပြဿနာများကို ဆက်လက်တွေးဆနေရသည်မှာ သိပ်မနှစ်သက်ပါ'},
+    {id:6, dim:'O',         text:'မိမိမှန်သည်ဟု ယုံကြည်ခဲ့သောအရာသည် မှားနေကြောင်း သိလာသောအခါ ရိုးသားစွာ လက်ခံနိုင်သည်'},
+    {id:7, dim:'O',         text:'နှစ်ပေါင်းများစွာ အောင်မြင်ခဲ့သောနည်းလမ်းထက် နည်းလမ်းအသစ်ကို စမ်းလိုသည်ဟု ခံစားသောအချိန်များ ရှိသည်'},
+    {id:8, dim:'O', r:true, text:'တူညီသောလုပ်ငန်းခွင်တွင် တူညီသောအလုပ်ကိုပဲ ဆက်လက်လုပ်ဆောင်ရသည်မှာ ပိုငြိမ်သက်သည်'},
+    {id:9, dim:'O', r:true, text:'အဘယ်ကြောင့် ပြောင်းလဲရသနည်းဟု သံသယဖြစ်မိသောအချိန်များ မကြာခဏ ရှိသည်'},
+    {id:10,dim:'O',         text:'မိမိ၏ ကျွမ်းကျင်မှုနယ်ပယ်ပြင်ပဖြစ်သော အကြောင်းအရာများကိုပင် စိတ်ဝင်တစားဖြင့် မိမိဘာသာ ရှာဖွေလေ့လာသည်'},
+    {id:11,dim:'C', r:true, text:'ပြည့်ဝစွာ လုပ်ဆောင်ရသည်ထက် အရင်ဆုံး ပြီးဆုံးစေရန် ဦးစားပေးသောဘက်တွင် ရှိသည်'},
+    {id:12,dim:'C',         text:'မည်သူမျှ မကြည့်နေသော်လည်း ပျင်းရိစိတ်မဝင်အောင် ကြိုးစားသည်'},
+    {id:13,dim:'C', r:true, text:'စိတ်ဓာတ်မကြွသောအချိန်တွင် အလုပ်အရည်အသွေး ကျဆင်းသော်လည်း မဖြစ်မနေဟုတ်ဟု ထင်သောဘက်တွင် ရှိသည်'},
+    {id:14,dim:'C',         text:'အပ်နှံသောအလုပ်ကို သတ်မှတ်ရက်ထက် စောစီးစွာ ပြီးဆုံးစေရန် အာရုံထားသောဘက်တွင် ရှိသည်'},
+    {id:15,dim:'C', r:true, text:'အလုပ်အများကြီး တစ်ပြိုင်တည်း ကိုင်တွယ်ရသောအခါ အားလုံး အလယ်အလတ်သာ ဖြစ်တတ်သည်'},
+    {id:16,dim:'C', r:true, text:'စီမံချက်အတိုင်း မဖြစ်မနေပါက လှုံ့ဆော်မှု ရုတ်ချည်းကျဆင်းသောဘက်တွင် ရှိသည်'},
+    {id:17,dim:'C', r:true, text:'မိမိ၏ အမှားထက် ပတ်ဝန်းကျင်၏ ညှိနှိုင်းမှုညံ့ဖျင်းခြင်းကြောင့်ဟု ခံစားသောအချိန်များ မကြာခဏ ရှိသည်'},
+    {id:18,dim:'C',         text:'မိမိ၏ တာဝန်မဟုတ်သော်လည်း ဂရုစိုက်သင့်သောအမှားရှိပါက ညွှန်ပြသောဘက်တွင် ရှိသည်'},
+    {id:19,dim:'C', r:true, text:'သတ်မှတ်ရက်နီးမှ တကယ်အသဲထဲ ကောင်းကောင်း မ착手ကြောင်း မကြာခဏ ဖြစ်တတ်သည်'},
+    {id:20,dim:'C',         text:'အလုပ်တစ်ခု အပ်နှံသောအခါ ရလဒ်ကို တာဝန်ယူသောဘက်တွင် ရှိသည်'},
+    {id:21,dim:'E', r:true, text:'အနားယူချိန်တွင် လုပ်ဖော်ကိုင်ဖက်နှင့် ပြောဆိုနေသည်ထက် တစ်ယောက်တည်း နေသည်မှာ ပိုငြိမ်သက်သည်'},
+    {id:22,dim:'E',         text:'မသိသောသူများ များသောနေရာတွင်လည်း မိမိဘက်မှ ဦးစွာ ကပ်ရောက်နှုတ်ဆက်နိုင်သောဘက်တွင် ရှိသည်'},
+    {id:23,dim:'E', r:true, text:'အစည်းအဝေး သို့မဟုတ် ဆွေးနွေးပွဲများတွင် မိမိဘက်မှ ပြောဆိုတင်ပြခြင်းသည် နည်းသောဘက်တွင် ရှိသည်'},
+    {id:24,dim:'E',         text:'တစ်ယောက်တည်း လုပ်ဆောင်သောအချိန် ကြာလာသောအခါ တစ်ယောက်ယောက်နှင့် ပြောချင်သောဘက်တွင် ရှိသည်'},
+    {id:25,dim:'E', r:true, text:'အာရုံစိုက်ခံရသောနေရာများကို တတ်နိုင်သမျှ ရှောင်ချင်သောဘက်တွင် ရှိသည်'},
+    {id:26,dim:'E',         text:'အလုပ်ခွင်အသစ်တွင်လည်း ပတ်ဝန်းကျင်နှင့် မြန်မြန်ကျွမ်းဝင်နိုင်သောဘက်တွင် ရှိသည်'},
+    {id:27,dim:'E', r:true, text:'လူနှင့် ပြောဆိုပြီးနောက်ထက် တစ်ယောက်တည်း နေပြီးနောက် ပိုကြွမောင်းသောဘက်တွင် ရှိသည်'},
+    {id:28,dim:'E',         text:'အဖွဲ့ကို ဦးဆောင်သောအခန်းကဏ္ဍ အပ်နှံသောအခါ အဓိပ္ပါယ်ရှိသည်ဟု ခံစားသောဘက်တွင် ရှိသည်'},
+    {id:29,dim:'E',         text:'အလုပ်ခွင်တွင် လူ့ဆက်ဆံရေးကို ချဲ့ထွင်ရာ၌ တက်ကြွသောဘက်တွင် ရှိသည်'},
+    {id:30,dim:'E',         text:'အကြံဉာဏ်ကောင်းရှိပါက တောင်းဆိုမထားသော်လည်း ပြောဆိုသောဘက်တွင် ရှိသည်'},
+    {id:31,dim:'A', r:true, text:'မိမိ၏ အလုပ်မပြီးဆုံးသေးဘဲ လုပ်ဖော်ကိုင်ဖက်ကို ကူညီရသည်မှာ ခက်ခဲသည်ဟု ခံစားသောဘက်တွင် ရှိသည်'},
+    {id:32,dim:'A',         text:'မကျေနပ်သော ညွှန်ကြားချက်ဖြစ်သော်လည်း အရင်ဆုံး လိုက်နာကြည့်သောဘက်တွင် ရှိသည်'},
+    {id:33,dim:'A', r:true, text:'မိမိ၏ နည်းလမ်းမှန်သည်ဟု ထင်သောအခါ ရှင်းလင်းစွာ ဖြင်ပြောဆိုသောဘက်တွင် ရှိသည်'},
+    {id:34,dim:'A',         text:'တဖက်သားသည် စိတ်ဆိုးနေသောအချိန်တွင်လည်း တည်တည်ငြိမ်ငြိမ်ဖြင့် ဆက်နားဆင်နိုင်သောဘက်တွင် ရှိသည်'},
+    {id:35,dim:'A',         text:'အဖွဲ့၏ ဆုံးဖြတ်ချက်ကို မကျေနပ်သော်လည်း ဆုံးဖြတ်ထားသောအရာများကို ပူးပေါင်းဆောင်ရွက်သောဘက်တွင် ရှိသည်'},
+    {id:36,dim:'A', r:true, text:'တောင်းဆိုသော်လည်း မိမိနှင့် မသက်ဆိုင်ဟု ခံစားပါက ငြင်းဆန်သောအချိန်များ ရှိသည်'},
+    {id:37,dim:'A',         text:'အမြင်မတူမှု ဖြစ်ပွားသောသူနှင့်လည်း နောက်နေ့တွင် ပုံမှန်ဆက်ဆံနိုင်သောဘက်တွင် ရှိသည်'},
+    {id:38,dim:'A',         text:'မိမိထိခိုက်မှုဖြစ်သော်လည်း ကတိကို ထိန်းသိမ်းသောဘက်တွင် ရှိသည်'},
+    {id:39,dim:'A', r:true, text:'သူတစ်ပါးကို မှီခိုသည်ထက် မိမိကိုယ်တိုင် ဆောင်ရွက်ရသည်မှာ ပိုမြန်သည်ဟု ခံစားသောအချိန်များ မကြာခဏ ရှိသည်'},
+    {id:40,dim:'A',         text:'အဖွဲ့၏ ညီညွတ်မှုကို မိမိ၏ အတွေးအခေါ်ထက် ဦးစားပေးနိုင်သောဘက်တွင် ရှိသည်'},
+    {id:41,dim:'N',         text:'အသေးစားအမှားတစ်ခုဖြစ်သော်လည်း ယာယီအချိန်အတွင်း ခေါင်းထဲမှ ထွက်မသွားသောအချိန်များ ရှိသည်'},
+    {id:42,dim:'N',         text:'နောက်နေ့တွင် အရေးကြီးသောအလုပ်ရှိပါက ယမန်နေ့ည အိပ်မပျော်သောအချိန်များ ရှိသည်'},
+    {id:43,dim:'N', r:true, text:'အကြီးအကဲမှ ကြမ်းတမ်းသောစကားများ ပြောသော်လည်း လိုအပ်သော အကြံပြုချက်အဖြစ် လက်ခံနိုင်သောဘက်တွင် ရှိသည်'},
+    {id:44,dim:'N',         text:'အလုပ်ခွင်တွင် ပြဿနာတစ်ခုဖြစ်ပွားသောအခါ "ဘာဖြစ်မှာလဲ" ဟု ဦးစွာ မဝေ့မလည်ဖြစ်သောဘက်တွင် ရှိသည်'},
+    {id:45,dim:'N', r:true, text:'မကျွမ်းဝင်သောအလုပ်တစ်ခု အပ်နှံသောအခါ ပူပင်သောကထက် ဝမ်းသာဝမ်းမြောက်မှုပိုကြီးသောဘက်တွင် ရှိသည်'},
+    {id:46,dim:'N',         text:'စိတ်ခံစားချက်သည် မျက်နှာ သို့မဟုတ် အမူအရာတွင် ပေါ်တတ်သည်ဟု ပြောဆိုခံရသောအချိန်များ ရှိသည်'},
+    {id:47,dim:'N', r:true, text:'အလုပ်ခွင်တွင် မနှစ်မြို့သောအရာ ဖြစ်ပျက်သော်လည်း အိမ်ပြန်ရောက်ပါက စိတ်ကူးတွေးခေါ်မှုကို ပြောင်းနိုင်သောဘက်တွင် ရှိသည်'},
+    {id:48,dim:'N',         text:'အလုပ်ရှုပ်ထွေးသောကာလ ဆက်တိုက်ဖြစ်ပါက ငြိမ်သောစိတ်ရှိမနေဘဲ ဒေါသထွက်လွယ်သောဘက်တွင် ရှိသည်'},
+    {id:49,dim:'N', r:true, text:'စိတ်တင်းကျပ်သောနေရာတွင် ပိုတည်ငြိမ်စွာ ဆုံးဖြတ်နိုင်သောဘက်တွင် ရှိသည်ဟု ထင်သည်'},
+    {id:50,dim:'N',         text:'မိမိကို မည်သို့ အကဲဖြတ်နေသနည်းဟု စိုးရိမ်မှုရပ်မသွားသောအချိန်များ ရှိသည်'},
+    {id:51,dim:'V', text:'သူတစ်ပါး၏ အပြစ်တင်ခြင်းကို ပြောဆိုခြင်း သို့မဟုတ် နှလုံးထဲတွင် တွေးခြင်း တစ်ကြိမ်မျှ မဖူးဖူးပါ'},
+    {id:52,dim:'V', text:'ကတိ သို့မဟုတ် သတ်မှတ်ရက်ကို ချိုးဖောက်ဖူးသောကိစ္စ ယခုအချိန်ထိ တစ်ကြိမ်မျှ မရှိပါ'},
+    {id:53,dim:'V', text:'မည်သူ့ကိုမဆို မုသာပြောဖူးသောကိစ္စ မည်မျှသေးသောအရာမဆို တစ်ကြိမ်မျှ မရှိပါ'},
+    {id:54,dim:'V', text:'အလုပ် သို့မဟုတ် ပညာသင်ကြားရာ၌ လိမ်လည်ချင်သည်ဟု တွေးဖူးသောကိစ္စ တစ်ကြိမ်မျှ မရှိပါ'},
+    {id:55,dim:'V', text:'မိမိကိုယ်ထက် သူတစ်ပါးကို ဦးစားပေးသည်မှာ အမြဲတမ်း သဘာဝကျကျ ဆောင်ရွက်နိုင်သည်'},
   ],
 };
 
-function buildOrder(qs){ const main=qs.filter(q=>q.dim!=='V'),v=qs.filter(q=>q.dim==='V'),r=[...main]; [9,19,29,39,49].forEach((p,i)=>r.splice(p+i,0,v[i])); return r; }
-function calcScores(ans,qs){ const s={O:0,C:0,E:0,A:0,N:0},c={O:0,C:0,E:0,A:0,N:0}; qs.filter(q=>q.dim!=='V').forEach(q=>{ const v=ans[q.id]; if(v==null)return; s[q.dim]+=q.r?6-v:v; c[q.dim]++; }); const o={}; Object.keys(s).forEach(d=>{o[d]=c[d]?Math.round((s[d]/(c[d]*5))*100):0;}); return o; }
-function checkV(ans,qs){ const v=qs.filter(q=>q.dim==='V'); return {ok:v.filter(q=>(ans[q.id]||0)>=4).length<=1}; }
+function buildOrder(qs){
+  const main=qs.filter(q=>q.dim!=='V'), v=qs.filter(q=>q.dim==='V'), r=[...main];
+  [9,19,29,39,49].forEach((p,i)=>r.splice(p+i,0,v[i])); return r;
+}
+function calcScores(ans,qs){
+  const s={O:0,C:0,E:0,A:0,N:0}, c={O:0,C:0,E:0,A:0,N:0};
+  qs.filter(q=>q.dim!=='V').forEach(q=>{ const v=ans[q.id]; if(v==null)return; s[q.dim]+=q.r?6-v:v; c[q.dim]++; });
+  const o={}; Object.keys(s).forEach(d=>{o[d]=c[d]?Math.round((s[d]/(c[d]*5))*100):0;}); return o;
+}
+function checkV(ans,qs){
+  const v=qs.filter(q=>q.dim==='V');
+  const suspicious=v.filter(q=>(ans[q.id]||0)>=4).length;
+  let level, ok;
+  if(suspicious===0)     { level='high';    ok=true;  }
+  else if(suspicious===1){ level='good';    ok=true;  }
+  else if(suspicious<=3) { level='caution'; ok=false; }
+  else                   { level='alert';   ok=false; }
+  return { ok, level, suspicious, total:v.length };
+}
 
 let state = { phase:'code', lang:null, codeObj:null, answers:{}, currentQ:0, displayQs:[], error:'', submitting:false, candidateName:'', candidateNumber:'' };
 
@@ -210,7 +373,6 @@ function bindEvents() {
   if(codeBtn) codeBtn.addEventListener('click',handleCodeSubmit);
   const codeInput=document.getElementById('codeInput');
   if(codeInput) codeInput.addEventListener('keydown',e=>{if(e.key==='Enter')handleCodeSubmit();});
-
   const infoNextBtn=document.getElementById('infoNextBtn');
   if(infoNextBtn) infoNextBtn.addEventListener('click',()=>{
     const name=document.getElementById('nameInput')?.value.trim();
@@ -218,12 +380,10 @@ function bindEvents() {
     if(!name){state.error=UI[state.lang].nameError;render();return;}
     state.candidateName=name; state.candidateNumber=number; state.error=''; state.phase='intro'; render();
   });
-
   const startBtn=document.getElementById('startBtn');
   if(startBtn) startBtn.addEventListener('click',()=>{
     state.answers={}; state.currentQ=0; state.displayQs=buildOrder(QUESTIONS[state.lang]); state.phase='test'; render();
   });
-
   document.querySelectorAll('.scale-btn').forEach(btn=>{
     btn.addEventListener('click',()=>{
       const val=parseInt(btn.dataset.val), q=state.displayQs[state.currentQ];
@@ -232,10 +392,8 @@ function bindEvents() {
       render();
     });
   });
-
   const prevBtn=document.getElementById('prevBtn');
   if(prevBtn) prevBtn.addEventListener('click',()=>{state.currentQ--;render();});
-
   const submitBtn=document.getElementById('submitBtn');
   if(submitBtn) submitBtn.addEventListener('click',handleSubmit);
 }
@@ -244,12 +402,9 @@ async function handleCodeSubmit() {
   const input=document.getElementById('codeInput');
   const code=input?input.value.trim().toUpperCase():'';
   if(!code){state.error='コードを入力してください';render();return;}
-
-  // ★ 有効期限のみチェック（使用回数制限なし）
+  // ★ 有効期限チェックなし（削除されるまで有効）
   const {data,error}=await sb.from('codes').select('*').eq('code',code).single();
-  if(error||!data){state.error='コードが無効または期限切れです / Kode tidak valid / ကုဒ်မမှန်ကန်';render();return;}
-  if(Date.now()>data.expires_at){state.error='コードの有効期限が切れています / Kode kadaluarsa / ကုဒ်သက်တမ်းကုန်ဆုံးသည်';render();return;}
-
+  if(error||!data){state.error='コードが無効です / Kode tidak valid / ကုဒ်မမှန်ကန်';render();return;}
   state.codeObj=data; state.lang=data.lang; state.error=''; state.phase='info'; render();
 }
 
@@ -258,8 +413,6 @@ async function handleSubmit() {
   state.submitting=true; render();
   const scores=calcScores(state.answers,QUESTIONS[state.lang]);
   const validity=checkV(state.answers,QUESTIONS[state.lang]);
-
-  // ★ used_at の更新は不要（複数人が使えるため）
   const displayName=state.candidateNumber
     ?`${state.candidateNumber}_${state.candidateName}`
     :state.candidateName;
