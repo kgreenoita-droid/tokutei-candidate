@@ -70,8 +70,9 @@ const UI = {
     scaleLabels:['全く当てはまらない','あまり当てはまらない','どちらでもない','やや当てはまる','非常に当てはまる'],
     thankyouTitle:'ご回答ありがとうございました', thankyouBody:'テストが完了しました。面接官にお知らせください。',
     nameLabel:'お名前', nameRequired:'（必須）', namePlaceholder:'例：山田 太郎',
-    numberLabel:'受験者番号', numberOptional:'（任意）', numberPlaceholder:'例：1',
+    numberLabel:'面接時の番号', numberRequired:'（必須）',
     nameError:'お名前を入力してください',
+    numberError:'面接時の番号を選択してください',
   },
   id:{
     title:'Tes Kepribadian Kandidat', subtitle:'Big Five × Tokutei Ginou',
@@ -83,8 +84,9 @@ const UI = {
     scaleLabels:['Sangat tidak setuju','Tidak setuju','Netral','Setuju','Sangat setuju'],
     thankyouTitle:'Terima kasih telah menjawab', thankyouBody:'Tes telah selesai. Silakan beritahu pewawancara.',
     nameLabel:'Nama', nameRequired:'（wajib）', namePlaceholder:'Contoh: Budi Santoso',
-    numberLabel:'Nomor Peserta', numberOptional:'（opsional）', numberPlaceholder:'Contoh: 1',
+    numberLabel:'Nomor saat wawancara', numberRequired:'（wajib）',
     nameError:'Silakan masukkan nama Anda',
+    numberError:'Silakan pilih nomor wawancara Anda',
   },
   my:{
     title:'ကိုယ်စားလှယ် စိတ်စစ်ဆေးမှု', subtitle:'Big Five × Tokutei Ginou',
@@ -96,8 +98,9 @@ const UI = {
     scaleLabels:['လုံးဝမကိုက်ညီ','မကိုက်ညီ','ကြားနေ','ကိုက်ညီသည်','အလွန်ကိုက်ညီ'],
     thankyouTitle:'ဖြေဆိုပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်', thankyouBody:'စစ်ဆေးမှုပြီးဆုံးသွားပြီ။ အင်တာဗျူးသူအား အကြောင်းကြားပေးပါ။',
     nameLabel:'နာမည်', nameRequired:'（လိုအပ်သည်）', namePlaceholder:'ဥပမာ - မောင်မောင်',
-    numberLabel:'စာစစ်သူနံပါတ်', numberOptional:'（ရွေးချယ်နိုင်သည်）', numberPlaceholder:'ဥပမာ - 1',
+    numberLabel:'အင်တာဗျူး နံပါတ်', numberRequired:'（လိုအပ်သည်）',
     nameError:'နာမည်ထည့်သွင်းပေးပါ',
+    numberError:'အင်တာဗျူး နံပါတ် ရွေးချယ်ပေးပါ',
   },
 };
 
@@ -327,17 +330,25 @@ function renderCode(){
 
 function renderInfo(){
   const ui=UI[state.lang];
+  const numOptions=Array.from({length:50},(_,i)=>{
+    const v=i+1;
+    return `<option value="${v}" ${state.candidateNumber==v?'selected':''}>${v}</option>`;
+  }).join('');
   return `<div class="card">
     <div style="font-size:36px;margin-bottom:14px;text-align:center">✏️</div>
     <h2 style="font-size:18px;margin-bottom:20px;text-align:center">${ui.nameLabel} / ${ui.numberLabel}</h2>
     <div class="input-group">
       <label class="label">${ui.nameLabel}<span class="required">${ui.nameRequired}</span></label>
       <input id="nameInput" placeholder="${ui.namePlaceholder}" value="${state.candidateName}">
-      ${state.error?`<p class="error">${state.error}</p>`:''}
+      ${state.error==='name'?`<p class="error">${ui.nameError}</p>`:''}
     </div>
     <div class="input-group">
-      <label class="label">${ui.numberLabel}<span style="color:rgba(255,255,255,0.4);margin-left:3px">${ui.numberOptional}</span></label>
-      <input id="numberInput" placeholder="${ui.numberPlaceholder}" value="${state.candidateNumber}">
+      <label class="label">${ui.numberLabel}<span class="required">${ui.numberRequired}</span></label>
+      <select id="numberInput" style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:12px 16px;color:#fff;font-size:15px;font-family:inherit;outline:none;margin-bottom:8px;appearance:none;-webkit-appearance:none">
+        <option value="" style="background:#16113a" ${!state.candidateNumber?'selected':''}>-- 選択 / Pilih / ရွေးပါ --</option>
+        ${numOptions}
+      </select>
+      ${state.error==='number'?`<p class="error">${ui.numberError}</p>`:''}
     </div>
     <button class="btn btn-primary" id="infoNextBtn" style="margin-top:8px">次へ / Next →</button>
   </div>`;
@@ -413,8 +424,9 @@ function bindEvents(){
   const infoNextBtn=document.getElementById('infoNextBtn');
   if(infoNextBtn) infoNextBtn.addEventListener('click',()=>{
     const name=document.getElementById('nameInput')?.value.trim();
-    const number=document.getElementById('numberInput')?.value.trim();
-    if(!name){state.error=UI[state.lang].nameError;render();return;}
+    const number=document.getElementById('numberInput')?.value;
+    if(!name){state.error='name';render();return;}
+    if(!number){state.error='number';render();return;}
     state.candidateName=name;state.candidateNumber=number;state.error='';state.phase='intro';render();
   });
   const startBtn=document.getElementById('startBtn');
@@ -449,12 +461,13 @@ async function handleSubmit(){
   state.submitting=true;render();
   const scores=calcScores(state.answers,QUESTIONS[state.lang]);
   const validity=checkV(state.answers,QUESTIONS[state.lang]);
-  const displayName=state.candidateNumber
-    ?`${state.candidateNumber}_${state.candidateName}`
-    :state.candidateName;
   await sb.from('results').insert({
-    code:state.codeObj.code,name:displayName,lang:state.lang,
-    date:new Date().toISOString(),scores,validity,
+    code:state.codeObj.code,
+    name:state.candidateName,
+    interview_number:parseInt(state.candidateNumber,10),
+    lang:state.lang,
+    date:new Date().toISOString(),
+    scores,validity,
   });
   state.submitting=false;state.phase='done';render();
 }
