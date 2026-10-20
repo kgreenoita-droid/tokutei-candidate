@@ -70,7 +70,7 @@ const UI = {
     scaleLabels:['全く当てはまらない','あまり当てはまらない','どちらでもない','やや当てはまる','非常に当てはまる'],
     thankyouTitle:'ご回答ありがとうございました', thankyouBody:'テストが完了しました。面接官にお知らせください。',
     nameLabel:'お名前', nameRequired:'（必須）', namePlaceholder:'例：山田 太郎',
-    numberLabel:'面接時の番号', numberRequired:'（必須）',
+    numberLabel:'面接時の番号', numberRequired:'（必須）', numberPlaceholder:'-- 選択してください --',
     nameError:'お名前を入力してください',
     numberError:'面接時の番号を選択してください',
   },
@@ -84,7 +84,7 @@ const UI = {
     scaleLabels:['Sangat tidak setuju','Tidak setuju','Netral','Setuju','Sangat setuju'],
     thankyouTitle:'Terima kasih telah menjawab', thankyouBody:'Tes telah selesai. Silakan beritahu pewawancara.',
     nameLabel:'Nama', nameRequired:'（wajib）', namePlaceholder:'Contoh: Budi Santoso',
-    numberLabel:'Nomor saat wawancara', numberRequired:'（wajib）',
+    numberLabel:'Nomor saat wawancara', numberRequired:'（wajib）', numberPlaceholder:'-- Pilih nomor --',
     nameError:'Silakan masukkan nama Anda',
     numberError:'Silakan pilih nomor wawancara Anda',
   },
@@ -98,7 +98,7 @@ const UI = {
     scaleLabels:['လုံးဝမကိုက်ညီ','မကိုက်ညီ','ကြားနေ','ကိုက်ညီသည်','အလွန်ကိုက်ညီ'],
     thankyouTitle:'ဖြေဆိုပေးသည့်အတွက် ကျေးဇူးတင်ပါသည်', thankyouBody:'စစ်ဆေးမှုပြီးဆုံးသွားပြီ။ အင်တာဗျူးသူအား အကြောင်းကြားပေးပါ။',
     nameLabel:'နာမည်', nameRequired:'（လိုအပ်သည်）', namePlaceholder:'ဥပမာ - မောင်မောင်',
-    numberLabel:'အင်တာဗျူး နံပါတ်', numberRequired:'（လိုအပ်သည်）',
+    numberLabel:'အင်တာဗျူး နံပါတ်', numberRequired:'（လိုအပ်သည်）', numberPlaceholder:'-- နံပါတ် ရွေးပါ --',
     nameError:'နာမည်ထည့်သွင်းပေးပါ',
     numberError:'အင်တာဗျူး နံပါတ် ရွေးချယ်ပေးပါ',
   },
@@ -345,7 +345,7 @@ function renderInfo(){
     <div class="input-group">
       <label class="label">${ui.numberLabel}<span class="required">${ui.numberRequired}</span></label>
       <select id="numberInput" style="width:100%;background:#1a1440;border:1px solid rgba(255,255,255,0.25);border-radius:10px;padding:12px 16px;color:#fff;font-size:15px;font-family:inherit;outline:none;margin-bottom:8px;appearance:none;-webkit-appearance:none">
-        <option value="" style="background:#1a1440;color:#fff" ${!state.candidateNumber?'selected':''}>-- 選択 / Pilih / ရွေးပါ --</option>
+        <option value="" style="background:#1a1440;color:#fff" ${!state.candidateNumber?'selected':''}>${ui.numberPlaceholder}</option>
         ${numOptions}
       </select>
       ${state.error==='number'?`<p class="error">${ui.numberError}</p>`:''}
