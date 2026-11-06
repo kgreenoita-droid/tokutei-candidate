@@ -539,17 +539,28 @@ function setAnswer(no, val) {
   // 最終問題の場合はupdateNavで送信ボタンが表示される（追加処理不要）
 }
 
-function gotoQ(idx) {
+function gotoQ(idx, resetAnswer) {
+  // 戻る場合は回答をリセット
+  if (resetAnswer) {
+    const prevQ = questions[idx];
+    if (prevQ) {
+      delete answers[prevQ.no];
+    }
+  }
   document.querySelectorAll('.q-block').forEach(b => b.classList.remove('active'));
   document.getElementById(`qb${idx}`).classList.add('active');
   currentQ = idx;
   updateProgress();
   updateNav();
-  // scale5の選択済み状態を復元（ブラウザがリセットする場合に備え）
   const q = questions[idx];
-  if (q && q.type === 'scale5' && answers[q.no] !== undefined) {
-    const radio = document.querySelector(`input[name="q${q.no}"][value="${answers[q.no]}"]`);
-    if (radio) radio.checked = true;
+  // 表示状態を更新
+  if (q && q.type === 'scale5') {
+    // ラジオボタン全解除
+    document.querySelectorAll(`input[name="q${q.no}"]`).forEach(r => r.checked = false);
+    if (!resetAnswer && answers[q.no] !== undefined) {
+      const radio = document.querySelector(`input[name="q${q.no}"][value="${answers[q.no]}"]`);
+      if (radio) radio.checked = true;
+    }
   }
   if (q && q.type === 'forced') {
     refreshForced(idx);
@@ -586,7 +597,8 @@ function navQ(dir) {
   if (dir > 0 && answers[q.no] === undefined) return;
   const next = currentQ + dir;
   if (next < 0 || next >= questions.length) return;
-  gotoQ(next);
+  // 戻る場合（dir < 0）は移動先の回答をリセット
+  gotoQ(next, dir < 0);
 }
 
 // ===== スコア計算 =====
