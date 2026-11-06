@@ -187,10 +187,20 @@ select option{background:#0d0d1a;color:#fff}
   </div>
 </div>
 
-<!-- ⑤ 結果 -->
+<!-- ⑤ 完了画面（結果は表示しない） -->
 <div id="resultScreen" class="screen">
-  <div class="result-wrap" id="resultWrap"></div>
-  <div id="saveErrorMsg" style="color:#e76f9a;font-size:12px;margin-top:12px;text-align:center;padding:0 16px"></div>
+  <div class="card" style="text-align:center">
+    <div style="font-size:56px;margin-bottom:16px">✅</div>
+    <h1 style="font-size:20px;margin-bottom:8px">送信完了</h1>
+    <p style="color:rgba(255,255,255,0.5);font-size:13px;line-height:1.8">
+      回答を受け付けました。<br>ありがとうございました。
+    </p>
+    <p style="color:rgba(255,255,255,0.3);font-size:11px;margin-top:20px">
+      Jawaban Anda telah diterima. Terima kasih.<br>
+      သင်၏အဖြေများကို လက်ခံပြီးပါပြီ။ ကျေးဇူးတင်ပါသည်။
+    </p>
+    <div id="saveErrorMsg" style="color:#e76f9a;font-size:12px;margin-top:16px"></div>
+  </div>
 </div>
 
 <script>
@@ -648,7 +658,6 @@ function calcScores() {
 async function submitQuiz() {
   showScreen('resultScreen');
   const scores = calcScores();
-  renderResult(scores);
 
   const payload = {
     code: codeObj ? codeObj.code : null,
