@@ -121,22 +121,22 @@ select option{background:#0d0d1a;color:#fff}
 </head>
 <body>
 
-<!-- ① 言語選択 -->
-<div id="langScreen" class="screen active">
+<!-- ① 受験コード入力（認証） -->
+<div id="codeScreen" class="screen active">
   <div class="card">
     <div class="card-logo">🧠</div>
     <h1>特定技能 適性検査</h1>
     <p class="card-sub">300問版 × Tokutei Ginou</p>
     <div class="code-hints">
-      <p>🇯🇵 言語を選んでください</p>
-      <p>🇮🇩 Pilih bahasa Anda</p>
-      <p>🇲🇲 ဘာသာစကား ရွေးချယ်ပါ</p>
+      <p>🇯🇵 受験コードを入力してください</p>
+      <p>🇮🇩 Masukkan kode ujian Anda</p>
+      <p>🇲🇲 စစ်ဆေးမှုကုဒ်ကို ထည့်သွင်းပေးပါ</p>
     </div>
-    <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px">
-      <button class="btn-primary" onclick="selectLang('ja')">🇯🇵 日本語</button>
-      <button class="btn-primary" style="background:linear-gradient(135deg,#5BC8AF,#38a98e)" onclick="selectLang('id')">🇮🇩 Bahasa Indonesia</button>
-      <button class="btn-primary" style="background:linear-gradient(135deg,#E76F9A,#c45580)" onclick="selectLang('my')">🇲🇲 မြန်မာဘာသာ</button>
-    </div>
+    <input id="codeInput" class="code-input" placeholder="XXXX-XXXX-XXXX" maxlength="14"
+      oninput="this.value=this.value.toUpperCase()"
+      onkeydown="if(event.key==='Enter')handleCodeSubmit()">
+    <div id="codeError" class="error-msg" style="display:none"></div>
+    <button class="btn-primary" id="codeBtn" onclick="handleCodeSubmit()">開始する / Mulai / စတင်မည်</button>
   </div>
 </div>
 
@@ -316,30 +316,59 @@ let questions = [];
 let answers = {};
 let currentQ = 0;
 let candidateId = '';
+let codeObj = null;
 
-// ===== ① 言語選択 =====
-async function selectLang(l) {
-  lang = l;
-  ui = UI[lang] || UI.ja;
+// ===== ① 受験コード認証 =====
+async function handleCodeSubmit() {
+  const input = document.getElementById('codeInput');
+  const errDiv = document.getElementById('codeError');
+  const btn = document.getElementById('codeBtn');
+  const code = input ? input.value.trim().toUpperCase() : '';
 
-  // IDラベルを言語に合わせて更新
-  document.getElementById('idTitle').textContent = ui.idTitle;
-  document.getElementById('idDesc').textContent = ui.idDesc;
-  document.getElementById('idBtn').textContent = ui.idBtn;
-
-  // JSONロード
-  try {
-    const r = await fetch(`${l}.json`);
-    if (!r.ok) throw new Error('JSON load failed');
-    const jsonData = await r.json();
-    questions = jsonData.questions;
-  } catch (e) {
-    console.error(e);
-    alert('問題データを読み込めませんでした。ファイルを確認してください。');
+  if (!code) {
+    errDiv.textContent = 'コードを入力してください / Masukkan kode / ကုဒ်ထည့်ပါ';
+    errDiv.style.display = 'block';
     return;
   }
 
-  showScreen('idScreen');
+  btn.disabled = true;
+  btn.textContent = '確認中...';
+  errDiv.style.display = 'none';
+
+  try {
+    const { data, error } = await sb.from('codes').select('*').eq('code', code).single();
+    if (error || !data) {
+      errDiv.textContent = 'コードが無効です / Kode tidak valid / ကုဒ်မမှန်ကန်';
+      errDiv.style.display = 'block';
+      btn.disabled = false;
+      btn.textContent = '開始する / Mulai / စတင်မည်';
+      return;
+    }
+
+    // 認証成功
+    codeObj = data;
+    lang = data.lang || 'ja';
+    ui = UI[lang] || UI.ja;
+
+    // JSONロード
+    const r = await fetch(`${lang}.json`);
+    if (!r.ok) throw new Error('JSON load failed');
+    const jsonData = await r.json();
+    questions = jsonData.questions;
+
+    // ID入力画面へ
+    document.getElementById('idTitle').textContent = ui.idTitle;
+    document.getElementById('idDesc').textContent = ui.idDesc;
+    document.getElementById('idBtn').textContent = ui.idBtn;
+    showScreen('idScreen');
+
+  } catch (e) {
+    console.error(e);
+    errDiv.textContent = '読み込みエラーが発生しました。再度お試しください。';
+    errDiv.style.display = 'block';
+    btn.disabled = false;
+    btn.textContent = '開始する / Mulai / စတင်မည်';
+  }
 }
 
 // ===== ② ID入力 =====
@@ -599,6 +628,7 @@ async function submitQuiz() {
   renderResult(scores);
 
   const payload = {
+    code: codeObj ? codeObj.code : null,
     candidate_id: candidateId,
     lang: lang,
     answers_json: JSON.stringify(answers),
