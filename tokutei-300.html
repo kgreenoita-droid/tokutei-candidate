@@ -525,11 +525,18 @@ function refreshForced(idx) {
 
 function setAnswer(no, val) {
   answers[no] = val;
+  // scale5のラジオボタンはブラウザが選択状態を管理するのでそのまま
+  // forced選択肢はクラスを手動更新
+  const q = questions[currentQ];
+  if (q && q.type === 'forced') {
+    refreshForced(currentQ);
+  }
   updateNav();
   // 自動で次の問題へ（最終問題以外）
   if (currentQ < questions.length - 1) {
     setTimeout(() => gotoQ(currentQ + 1), 300);
   }
+  // 最終問題の場合はupdateNavで送信ボタンが表示される（追加処理不要）
 }
 
 function gotoQ(idx) {
@@ -538,6 +545,15 @@ function gotoQ(idx) {
   currentQ = idx;
   updateProgress();
   updateNav();
+  // scale5の選択済み状態を復元（ブラウザがリセットする場合に備え）
+  const q = questions[idx];
+  if (q && q.type === 'scale5' && answers[q.no] !== undefined) {
+    const radio = document.querySelector(`input[name="q${q.no}"][value="${answers[q.no]}"]`);
+    if (radio) radio.checked = true;
+  }
+  if (q && q.type === 'forced') {
+    refreshForced(idx);
+  }
   window.scrollTo(0, 0);
 }
 
