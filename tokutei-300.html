@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>特定技能 適性検査（300問）</title>
+<title>候補者適性検査（300問）</title>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -125,8 +125,8 @@ select option{background:#0d0d1a;color:#fff}
 <div id="codeScreen" class="screen active">
   <div class="card">
     <div class="card-logo">🧠</div>
-    <h1>特定技能 適性検査</h1>
-    <p class="card-sub">300問版 × Tokutei Ginou</p>
+    <h1>候補者適性検査</h1>
+    <p class="card-sub">300問版 / Tes Kesesuaian Kandidat / လျောက်ထားသူ ကိုက်ညီမှုစမ်းသပ်မှု</p>
     <div class="code-hints">
       <p>🇯🇵 受験コードを入力してください</p>
       <p>🇮🇩 Masukkan kode ujian Anda</p>
@@ -221,7 +221,7 @@ const UI = {
     idBtn: '次へ',
     idError: 'IDを入力してください',
     idFormatError: '使用できる文字は半角大文字英字・数字・ハイフン（-）のみです',
-    introTitle: '検査について',
+    introTitle: '候補者適性検査について',
     introItems: [
       '全300問あります（約60〜90分）',
       '正直に答えてください。正解・不正解はありません',
@@ -257,7 +257,7 @@ const UI = {
     idBtn: 'Lanjut',
     idError: 'Silakan masukkan ID Anda',
     idFormatError: 'Hanya huruf kapital (A-Z), angka (0-9), dan tanda hubung (-) yang diperbolehkan',
-    introTitle: 'Tentang Tes Ini',
+    introTitle: 'Tentang Tes Kesesuaian Kandidat',
     introItems: [
       'Total 300 pertanyaan (sekitar 60–90 menit)',
       'Jawablah dengan jujur. Tidak ada jawaban benar atau salah',
@@ -293,7 +293,7 @@ const UI = {
     idBtn: 'ရှေ့သို့',
     idError: 'ID ထည့်သွင်းပေးပါ',
     idFormatError: 'စာလုံးကြီး (A-Z)、ဂဏန်း (0-9)、ဆက်ကြောင်း (-) သာ သုံးနိုင်သည်',
-    introTitle: 'စစ်ဆေးမှုအကြောင်း',
+    introTitle: 'လျောက်ထားသူ ကိုက်ညီမှုစမ်းသပ်မှုအကြောင်း',
     introItems: [
       'မေးခွန်းစုစုပေါင်း ၃၀၀ ပါဝင်သည် (၆၀–၉၀ မိနစ်ခန့်)',
       'ရိုးသားစွာ ဖြေဆိုပါ။ မှန်ကန်ခြင်း၊ မှားကန်ခြင်း မရှိ',
@@ -695,16 +695,16 @@ async function submitQuiz() {
     candidate_name: candidateName,
     lang: lang,
     answers_json: JSON.stringify(answers),
-    surface_O: scores.surface.O,
-    surface_C: scores.surface.C,
-    surface_E: scores.surface.E,
-    surface_A: scores.surface.A,
-    surface_N: scores.surface.N,
-    corrected_O: scores.corrected.O,
-    corrected_C: scores.corrected.C,
-    corrected_E: scores.corrected.E,
-    corrected_A: scores.corrected.A,
-    corrected_N: scores.corrected.N,
+    surface_o: scores.surface.O,
+    surface_c: scores.surface.C,
+    surface_e: scores.surface.E,
+    surface_a: scores.surface.A,
+    surface_n: scores.surface.N,
+    corrected_o: scores.corrected.O,
+    corrected_c: scores.corrected.C,
+    corrected_e: scores.corrected.E,
+    corrected_a: scores.corrected.A,
+    corrected_n: scores.corrected.N,
     repeat_rate: Math.round(scores.repeatRate * 100),
     consistency: scores.avgConsistency,
     contra_rate: Math.round(scores.contraRate * 100),
@@ -712,16 +712,21 @@ async function submitQuiz() {
     submitted_at: new Date().toISOString()
   };
 
+  const errEl = document.getElementById('saveErrorMsg');
   try {
-    const { data, error } = await sb.from('results_300').insert(payload);
+    console.log('送信payload:', JSON.stringify(payload));
+    console.log('Supabase URL:', SUPABASE_URL);
+    console.log('Supabase KEY先頭:', SUPABASE_KEY ? SUPABASE_KEY.slice(0,20) : 'なし');
+    const { data, error } = await sb.from('results_300').insert(payload).select();
     if (error) {
       console.error('Supabase保存エラー:', JSON.stringify(error));
-      const errEl = document.getElementById('saveErrorMsg');
       if (errEl) errEl.textContent = '⚠️ 保存に失敗しました: ' + (error.message || JSON.stringify(error));
+    } else {
+      console.log('保存成功:', data);
+      if (errEl) errEl.textContent = '';
     }
   } catch (e) {
     console.error('保存例外:', e);
-    const errEl = document.getElementById('saveErrorMsg');
     if (errEl) errEl.textContent = '⚠️ 保存エラー: ' + e.message;
   }
 }
