@@ -140,15 +140,20 @@ select option{background:#0d0d1a;color:#fff}
   </div>
 </div>
 
-<!-- ② ID入力 -->
+<!-- ② ID・名前入力 -->
 <div id="idScreen" class="screen">
   <div class="card">
     <div class="card-logo" style="font-size:36px">🪪</div>
     <h1 id="idTitle" style="font-size:18px;margin-bottom:8px">受験者IDを入力してください</h1>
-    <p id="idDesc" style="color:rgba(255,255,255,0.45);font-size:12px;margin-bottom:20px;text-align:center;line-height:1.7"></p>
+    <p id="idDesc" style="color:rgba(255,255,255,0.45);font-size:12px;margin-bottom:16px;text-align:center;line-height:1.7"></p>
     <input id="idInput" class="code-input" placeholder="例：ABC-12345" maxlength="15"
       oninput="sanitizeId(this)"
-      onkeydown="if(event.key==='Enter')handleIdSubmit()">
+      onkeydown="if(event.key==='Enter')document.getElementById('nameInput').focus()"
+      style="margin-bottom:10px">
+    <input id="nameInput" class="code-input" placeholder="NAME (例：TANAKA TARO)" maxlength="40"
+      oninput="sanitizeName(this)"
+      onkeydown="if(event.key==='Enter')handleIdSubmit()"
+      style="margin-bottom:10px">
     <div id="idError" class="error-msg" style="display:none"></div>
     <button class="btn-primary" id="idBtn" onclick="handleIdSubmit()">次へ</button>
   </div>
@@ -176,15 +181,16 @@ select option{background:#0d0d1a;color:#fff}
     </div>
   </div>
   <div class="quiz-body" id="quizBody"></div>
-  <div class="quiz-nav">
+  <div class="quiz-nav" id="quizNav">
     <button class="btn-nav btn-prev" onclick="navQ(-1)" id="btnPrev">◀ 戻る</button>
-    <button class="btn-nav btn-next" onclick="navQ(1)" id="btnNext">次へ ▶</button>
+    <button class="btn-nav btn-next btn-submit" onclick="submitQuiz()" id="btnSubmit" style="display:none"></button>
   </div>
 </div>
 
 <!-- ⑤ 結果 -->
 <div id="resultScreen" class="screen">
   <div class="result-wrap" id="resultWrap"></div>
+  <div id="saveErrorMsg" style="color:#e76f9a;font-size:12px;margin-top:12px;text-align:center;padding:0 16px"></div>
 </div>
 
 <script>
@@ -316,6 +322,7 @@ let questions = [];
 let answers = {};
 let currentQ = 0;
 let candidateId = '';
+let candidateName = '';
 let codeObj = null;
 
 // ===== ① 受験コード認証 =====
@@ -379,25 +386,44 @@ function sanitizeId(input) {
   input.value = v;
 }
 
-function handleIdSubmit() {
-  const input = document.getElementById('idInput');
-  const errDiv = document.getElementById('idError');
-  const val = input ? input.value.trim() : '';
+// 名前サニタイズ：半角大文字英字・スペースのみ、最大40文字
+function sanitizeName(input) {
+  let v = input.value.toUpperCase().replace(/[^A-Z ]/g, '');
+  if (v.length > 40) v = v.slice(0, 40);
+  input.value = v;
+}
 
-  if (!val) {
-    errDiv.textContent = ui.idError;
+function handleIdSubmit() {
+  const idInput = document.getElementById('idInput');
+  const nameInput = document.getElementById('nameInput');
+  const errDiv = document.getElementById('idError');
+  const idVal = idInput ? idInput.value.trim() : '';
+  const nameVal = nameInput ? nameInput.value.trim() : '';
+
+  if (!idVal) {
+    errDiv.textContent = ui.idError || 'IDを入力してください';
     errDiv.style.display = 'block';
     return;
   }
-  // 形式チェック：半角大文字英字・数字・ハイフンのみ
-  if (!/^[A-Z0-9-]+$/.test(val)) {
-    errDiv.textContent = ui.idFormatError;
+  if (!/^[A-Z0-9-]+$/.test(idVal)) {
+    errDiv.textContent = ui.idFormatError || 'IDは半角大文字・数字・ハイフンのみです';
+    errDiv.style.display = 'block';
+    return;
+  }
+  if (!nameVal) {
+    errDiv.textContent = '名前を入力してください / Please enter your name';
+    errDiv.style.display = 'block';
+    return;
+  }
+  if (!/^[A-Z ]+$/.test(nameVal)) {
+    errDiv.textContent = '名前は半角大文字アルファベットのみです / Use uppercase letters only';
     errDiv.style.display = 'block';
     return;
   }
 
   errDiv.style.display = 'none';
-  candidateId = val;
+  candidateId = idVal;
+  candidateName = nameVal;
   showIntro();
 }
 
@@ -490,6 +516,10 @@ function refreshForced(idx) {
 function setAnswer(no, val) {
   answers[no] = val;
   updateNav();
+  // 自動で次の問題へ（最終問題以外）
+  if (currentQ < questions.length - 1) {
+    setTimeout(() => gotoQ(currentQ + 1), 300);
+  }
 }
 
 function gotoQ(idx) {
@@ -510,25 +540,18 @@ function updateProgress() {
 
 function updateNav() {
   const prev = document.getElementById('btnPrev');
-  const next = document.getElementById('btnNext');
+  const submitBtn = document.getElementById('btnSubmit');
   prev.textContent = ui.prevBtn;
   prev.disabled = currentQ === 0;
 
-  const q = questions[currentQ];
-  const answered = answers[q.no] !== undefined;
   const isLast = currentQ === questions.length - 1;
-
   if (isLast) {
     const allAnswered = questions.every(q2 => answers[q2.no] !== undefined);
-    next.textContent = ui.submitBtn;
-    next.className = 'btn-nav btn-next btn-submit';
-    next.onclick = allAnswered ? submitQuiz : null;
-    next.disabled = !allAnswered;
+    submitBtn.style.display = 'block';
+    submitBtn.textContent = ui.submitBtn;
+    submitBtn.disabled = !allAnswered;
   } else {
-    next.textContent = ui.nextBtn;
-    next.className = 'btn-nav btn-next';
-    next.onclick = () => navQ(1);
-    next.disabled = !answered;
+    submitBtn.style.display = 'none';
   }
 }
 
@@ -630,6 +653,7 @@ async function submitQuiz() {
   const payload = {
     code: codeObj ? codeObj.code : null,
     candidate_id: candidateId,
+    candidate_name: candidateName,
     lang: lang,
     answers_json: JSON.stringify(answers),
     surface_O: scores.surface.O,
@@ -650,9 +674,16 @@ async function submitQuiz() {
   };
 
   try {
-    await sb.from('results_300').insert(payload);
+    const { data, error } = await sb.from('results_300').insert(payload);
+    if (error) {
+      console.error('Supabase保存エラー:', JSON.stringify(error));
+      const errEl = document.getElementById('saveErrorMsg');
+      if (errEl) errEl.textContent = '⚠️ 保存に失敗しました: ' + (error.message || JSON.stringify(error));
+    }
   } catch (e) {
-    console.error('保存エラー', e);
+    console.error('保存例外:', e);
+    const errEl = document.getElementById('saveErrorMsg');
+    if (errEl) errEl.textContent = '⚠️ 保存エラー: ' + e.message;
   }
 }
 
