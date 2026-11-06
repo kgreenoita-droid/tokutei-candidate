@@ -1,0 +1,2709 @@
+{
+  "lang": "id",
+  "langName": "Indonesia",
+  "flag": "🇮🇩",
+  "version": "1.0",
+  "total": 300,
+  "questions": [
+    {
+      "no": 1,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 48,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya ingin mengerjakan pekerjaan dengan teliti dan tanpa kesalahan"
+    },
+    {
+      "no": 2,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 183,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya sering merasa jengkel dengan orang lain"
+    },
+    {
+      "no": 3,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 42,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya merasa stres di lingkungan yang banyak berubah"
+    },
+    {
+      "no": 4,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 225,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya tidak terlalu menyalahkan diri sendiri ketika melakukan kesalahan"
+    },
+    {
+      "no": 5,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 18,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya menghargai pendapat dan selera saya sendiri"
+    },
+    {
+      "no": 6,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 129,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya mudah lelah ketika lama bersama orang lain"
+    },
+    {
+      "no": 7,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 77,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya suka menunda pekerjaan ketika tidak ada motivasi"
+    },
+    {
+      "no": 8,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 74,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya sering hampir melewati tenggat waktu"
+    },
+    {
+      "no": 9,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 113,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya lebih banyak menghabiskan waktu bersama orang lain daripada sendirian"
+    },
+    {
+      "no": 10,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 116,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sering memulai topik pembicaraan"
+    },
+    {
+      "no": 11,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 146,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya sangat menghargai kerja tim"
+    },
+    {
+      "no": 12,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 175,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya kadang kesal dengan perilaku atau ucapan orang lain"
+    },
+    {
+      "no": 13,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 180,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang stres karena terlalu memperhatikan perasaan orang lain"
+    },
+    {
+      "no": 14,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 185,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya merasa stres ketika sesuatu tidak berjalan sesuai rencana"
+    },
+    {
+      "no": 15,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 139,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya bisa berempati dengan perasaan orang lain"
+    },
+    {
+      "no": 16,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 19,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya tertarik dengan pekerjaan yang bersifat kreatif"
+    },
+    {
+      "no": 17,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 99,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya lebih suka bekerja bersama orang lain daripada sendirian"
+    },
+    {
+      "no": 18,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 44,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya sering memilih cara yang sudah familiar daripada cara baru"
+    },
+    {
+      "no": 19,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 52,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya bertanggung jawab atas pekerjaan saya"
+    },
+    {
+      "no": 20,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 80,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya cenderung mengutamakan hal-hal langsung daripada rencana jangka panjang"
+    },
+    {
+      "no": 21,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 1,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya senang mempelajari hal-hal baru"
+    },
+    {
+      "no": 22,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 201,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya kadang terus-menerus memikirkan kesalahan dalam waktu lama"
+    },
+    {
+      "no": 23,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 155,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya sering mengutamakan orang lain daripada diri sendiri"
+    },
+    {
+      "no": 24,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 7,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya sering berpikir tentang cara meningkatkan cara kerja"
+    },
+    {
+      "no": 25,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 184,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya tidak merasa bersalah ketika menolak permintaan orang lain"
+    },
+    {
+      "no": 26,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 2,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya tertarik dengan seni, musik, dan sastra"
+    },
+    {
+      "no": 27,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 173,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya sering tidak mengubah pendapat saya meskipun dalam perdebatan"
+    },
+    {
+      "no": 28,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 115,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya aktif berdiskusi meskipun ada perbedaan pendapat"
+    },
+    {
+      "no": 29,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 16,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya mempertimbangkan berbagai sudut pandang, bukan hanya satu"
+    },
+    {
+      "no": 30,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 17,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya ingin mencoba teknologi dan alat baru lebih awal"
+    },
+    {
+      "no": 31,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 54,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya pandai mengatur dan menyelesaikan pekerjaan secara teratur"
+    },
+    {
+      "no": 32,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 220,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya cukup percaya diri"
+    },
+    {
+      "no": 33,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 227,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya percaya bisa tetap tenang dalam situasi apapun"
+    },
+    {
+      "no": 34,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 136,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya lebih nyaman komunikasi melalui teks daripada berbicara langsung"
+    },
+    {
+      "no": 35,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 86,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya sering memulai pekerjaan tanpa memikirkan persiapannya"
+    },
+    {
+      "no": 36,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 216,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya tidak terlalu peduli dengan kritikan"
+    },
+    {
+      "no": 37,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 60,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya mematuhi peraturan dan aturan dengan baik"
+    },
+    {
+      "no": 38,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 221,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya bisa bersikap positif dengan cepat setelah gagal"
+    },
+    {
+      "no": 39,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 82,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang kehilangan fokus di tengah pekerjaan"
+    },
+    {
+      "no": 40,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 107,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Ketika ada kesulitan, saya langsung meminta bantuan orang sekitar"
+    },
+    {
+      "no": 41,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 93,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya bisa langsung akrab dengan orang yang baru dikenal"
+    },
+    {
+      "no": 42,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 124,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya lebih nyaman ditanya orang daripada harus menyapa duluan"
+    },
+    {
+      "no": 43,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 207,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya kadang khawatir apakah yang saya katakan tadi sudah benar"
+    },
+    {
+      "no": 44,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 169,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya cenderung menyatakan pendapat saya dengan tegas"
+    },
+    {
+      "no": 45,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 191,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya mudah merasa cemas karena hal-hal kecil"
+    },
+    {
+      "no": 46,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 38,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "Saya lebih ingin melakukan hal yang sudah bisa daripada hal baru"
+    },
+    {
+      "no": 47,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 47,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "Saya menyelesaikan apa yang sudah saya putuskan untuk dikerjakan"
+    },
+    {
+      "no": 48,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 200,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya mudah terganggu dengan kesalahpahaman kecil dalam hubungan"
+    },
+    {
+      "no": 49,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 110,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya bisa terbuka membicarakan hal-hal tentang diri saya"
+    },
+    {
+      "no": 50,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 153,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sangat menghargai hubungan yang saling percaya"
+    },
+    {
+      "no": 51,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 76,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Kualitas pekerjaan saya kadang tidak konsisten tergantung suasana hati"
+    },
+    {
+      "no": 52,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 6,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya senang berbicara dengan orang yang memiliki cara pandang berbeda"
+    },
+    {
+      "no": 53,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 194,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya kadang merasakan gejala fisik ketika gugup (keringat, jantung berdebar, dll.)"
+    },
+    {
+      "no": 54,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 228,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya tidak terlalu terbebani perasaan negatif"
+    },
+    {
+      "no": 55,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 92,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya cenderung mengutamakan apa yang ingin saya lakukan daripada apa yang harus dilakukan"
+    },
+    {
+      "no": 56,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 121,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya lebih suka lingkungan yang ramai daripada yang tenang"
+    },
+    {
+      "no": 57,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 203,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya kadang merasa sulit mengendalikan emosi"
+    },
+    {
+      "no": 58,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 62,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya berusaha tidak menunda-nunda apa yang perlu dilakukan"
+    },
+    {
+      "no": 59,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 96,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya suka pekerjaan yang tampil di depan orang banyak"
+    },
+    {
+      "no": 60,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 179,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang merasa kelelahan dalam hubungan dengan orang lain"
+    },
+    {
+      "no": 61,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 213,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sangat terguncang ketika dimarahi atau ditegur oleh seseorang"
+    },
+    {
+      "no": 62,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 75,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya cenderung tidak mempermasalahkan detail dan lebih suka melanjutkan secara garis besar"
+    },
+    {
+      "no": 63,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 36,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang merasa bosan dengan pekerjaan yang sama terus-menerus"
+    },
+    {
+      "no": 64,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 182,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang ingin memaksakan pendapat saya"
+    },
+    {
+      "no": 65,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 85,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang merasa terlalu mudah memberi kelonggaran pada diri sendiri"
+    },
+    {
+      "no": 66,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 142,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya lebih suka mendengarkan orang lain dengan seksama"
+    },
+    {
+      "no": 67,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 197,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya kadang memikirkan sesuatu ke arah yang buruk"
+    },
+    {
+      "no": 68,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 32,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sering melihat sesuatu dari sudut pandang yang berbeda dari orang lain"
+    },
+    {
+      "no": 69,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 120,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya lebih suka menghubungi orang terlebih dahulu"
+    },
+    {
+      "no": 70,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 95,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya bisa berbicara dengan percaya diri di depan banyak orang"
+    },
+    {
+      "no": 71,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 166,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya berusaha memperhatikan kelebihan daripada kekurangan orang lain"
+    },
+    {
+      "no": 72,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 67,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya tidak keberatan bekerja keras demi tujuan jangka panjang"
+    },
+    {
+      "no": 73,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 50,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya selalu berusaha memenuhi tenggat waktu"
+    },
+    {
+      "no": 74,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 89,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Konsentrasi saya mudah pecah saat mengerjakan tugas detail yang panjang"
+    },
+    {
+      "no": 75,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 156,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya bisa menghormati orang lain meskipun berbeda pendapat"
+    },
+    {
+      "no": 76,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 11,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya bisa beradaptasi cukup cepat di lingkungan yang belum familiar"
+    },
+    {
+      "no": 77,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 122,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya sering merasa lelah setelah berbicara panjang dengan orang lain"
+    },
+    {
+      "no": 78,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 37,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya cenderung tidak ingin mengubah apa yang sudah saya putuskan"
+    },
+    {
+      "no": 79,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 149,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya percaya bisa berhubungan baik dengan siapa pun"
+    },
+    {
+      "no": 80,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 143,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya ingin menghindari pertengkaran sebisa mungkin"
+    },
+    {
+      "no": 81,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 215,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Emosi saya stabil dan saya jarang terguncang"
+    },
+    {
+      "no": 82,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 229,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya tidak terlalu peduli dengan pandangan orang lain"
+    },
+    {
+      "no": 83,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 56,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya tekun bekerja hingga mencapai tujuan"
+    },
+    {
+      "no": 84,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 177,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya akan bersikeras jika merasa pendapat saya benar"
+    },
+    {
+      "no": 85,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 65,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya bisa mengutamakan pekerjaan tanpa tergoda oleh hal lain"
+    },
+    {
+      "no": 86,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 160,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya senang bekerja saling bantu dengan rekan-rekan"
+    },
+    {
+      "no": 87,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 29,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya senang memikirkan masalah yang tidak memiliki satu jawaban pasti"
+    },
+    {
+      "no": 88,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 210,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Stres kadang mempengaruhi nafsu makan atau tidur saya"
+    },
+    {
+      "no": 89,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 148,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya memilih kata-kata dengan hati-hati agar tidak menyakiti orang lain"
+    },
+    {
+      "no": 90,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 61,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya merasa bisa bersikap disiplin terhadap diri sendiri"
+    },
+    {
+      "no": 91,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 114,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sering menunjukkan kepemimpinan"
+    },
+    {
+      "no": 92,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 193,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya mudah terpengaruh dan sedih ketika dikritik atau mendapat kata-kata negatif"
+    },
+    {
+      "no": 93,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 94,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya merasa bersemangat setelah berbicara dengan orang lain"
+    },
+    {
+      "no": 94,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 141,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya bisa mengalah demi kelancaran tim"
+    },
+    {
+      "no": 95,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 230,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Orang lain sering mengatakan bahwa emosi saya stabil"
+    },
+    {
+      "no": 96,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 117,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya mudah masuk ke lingkaran pergaulan orang lain"
+    },
+    {
+      "no": 97,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 102,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya merasa tergolong orang yang ramah dan suka bergaul"
+    },
+    {
+      "no": 98,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 69,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya ingin menyelesaikan pekerjaan yang dipercayakan melebihi harapan"
+    },
+    {
+      "no": 99,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 105,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya pandai membangun hubungan baru"
+    },
+    {
+      "no": 100,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 174,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya bisa menolak dengan jelas jika diminta sesuatu"
+    },
+    {
+      "no": 101,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 219,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya hampir tidak pernah emosional"
+    },
+    {
+      "no": 102,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 147,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya merasa senang ketika bisa bersikap baik kepada orang lain"
+    },
+    {
+      "no": 103,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 127,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kurang pandai berbicara di depan orang banyak"
+    },
+    {
+      "no": 104,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 30,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya berusaha menerapkan pengalaman dan pengetahuan saya di situasi lain"
+    },
+    {
+      "no": 105,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 199,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sering tidak percaya diri"
+    },
+    {
+      "no": 106,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 226,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya cukup pandai mengendalikan emosi"
+    },
+    {
+      "no": 107,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 66,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya mencatat dan mengatur pekerjaan dengan rapi"
+    },
+    {
+      "no": 108,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 73,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya sering mengubah rencana di tengah jalan"
+    },
+    {
+      "no": 109,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 31,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya lebih bisa menikmati perubahan daripada takut padanya"
+    },
+    {
+      "no": 110,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 189,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sering menyalahkan diri sendiri ketika gagal"
+    },
+    {
+      "no": 111,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 188,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Suasana hati saya cenderung naik turun"
+    },
+    {
+      "no": 112,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 158,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya berusaha mencairkan suasana ketika kelompok terasa kurang harmonis"
+    },
+    {
+      "no": 113,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 35,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya ingin memahami teori dan mekanisme sebelum bertindak"
+    },
+    {
+      "no": 114,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 208,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya kadang tidak bisa menjadi diri sendiri ketika di depan orang banyak karena gugup"
+    },
+    {
+      "no": 115,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 154,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya bisa tulus berbahagia atas keberhasilan orang lain"
+    },
+    {
+      "no": 116,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 8,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sering mendapat ide-ide baru"
+    },
+    {
+      "no": 117,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 126,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kurang suka menjadi pusat perhatian"
+    },
+    {
+      "no": 118,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 13,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya kadang meninjau ulang nilai dan cara pandang saya"
+    },
+    {
+      "no": 119,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 128,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Membangun hubungan baru membutuhkan banyak energi bagi saya"
+    },
+    {
+      "no": 120,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 140,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya tidak bisa membiarkan orang yang sedang kesulitan"
+    },
+    {
+      "no": 121,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 211,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Sulit bagi saya untuk beralih mood setelah mengalami hal yang tidak menyenangkan"
+    },
+    {
+      "no": 122,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 125,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya lebih suka bekerja sendiri dengan tekun"
+    },
+    {
+      "no": 123,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 167,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya bisa bersikap ramah bahkan kepada orang yang tidak saya sukai"
+    },
+    {
+      "no": 124,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 151,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya bisa mengungkapkan rasa terima kasih dengan tulus"
+    },
+    {
+      "no": 125,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 111,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya suka membuat orang tertawa dan mencairkan suasana"
+    },
+    {
+      "no": 126,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 24,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya mencoba pendekatan unik saat memecahkan masalah"
+    },
+    {
+      "no": 127,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 57,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya mempertimbangkan dampak tindakan saya terhadap orang lain sebelum bertindak"
+    },
+    {
+      "no": 128,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 3,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya merasa memiliki imajinasi yang kaya"
+    },
+    {
+      "no": 129,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 9,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Mencoba hal yang belum pernah dilakukan terasa menyenangkan"
+    },
+    {
+      "no": 130,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 46,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang sulit menerima ketika pandangan saya berubah"
+    },
+    {
+      "no": 131,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 164,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya bisa menerima dengan ikhlas meskipun pendapat saya tidak diterima"
+    },
+    {
+      "no": 132,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 15,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya memiliki beragam hobi dan minat selain pekerjaan"
+    },
+    {
+      "no": 133,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 10,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya cenderung memikirkan inti dan latar belakang suatu masalah secara mendalam"
+    },
+    {
+      "no": 134,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 41,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya merasa lebih nyaman bekerja sesuai prosedur"
+    },
+    {
+      "no": 135,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 81,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang lupa janji"
+    },
+    {
+      "no": 136,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 84,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang bertindak secara impulsif"
+    },
+    {
+      "no": 137,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 130,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya jarang menceritakan pikiran dan perasaan saya kepada orang lain"
+    },
+    {
+      "no": 138,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 104,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya tidak keberatan berkomunikasi melalui telepon atau video call"
+    },
+    {
+      "no": 139,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 112,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya merasa puas bekerja dengan banyak orang"
+    },
+    {
+      "no": 140,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 119,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya merasa kesepian ketika lama sendirian"
+    },
+    {
+      "no": 141,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 58,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya memperhatikan penggunaan waktu saya"
+    },
+    {
+      "no": 142,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 34,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sering tersentuh oleh hal-hal yang bernilai seni atau estetika"
+    },
+    {
+      "no": 143,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 100,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya senang berada di tempat ramai dan pertemuan yang besar"
+    },
+    {
+      "no": 144,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 161,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya mudah menyadari perubahan perasaan orang lain"
+    },
+    {
+      "no": 145,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 45,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya merasa tidak nyaman ketika menghadapi hal yang tidak diketahui"
+    },
+    {
+      "no": 146,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 27,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya cenderung ingin mendalami sesuatu secara mendalam"
+    },
+    {
+      "no": 147,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 135,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya merasa banyak menghabiskan energi untuk berinteraksi dengan orang"
+    },
+    {
+      "no": 148,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 123,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya merasa lelah mengikuti pertemuan dengan banyak orang"
+    },
+    {
+      "no": 149,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 132,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Dalam kelompok, saya sering menjadi pendengar"
+    },
+    {
+      "no": 150,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 209,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya mudah sedih ketika sesuatu tidak berjalan lancar"
+    },
+    {
+      "no": 151,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC36",
+      "zone": "ゾーン1",
+      "text_A": "Saya cenderung khawatir tentang penilaian orang lain",
+      "text_B": "Saya lebih mempercayai penilaian saya sendiri daripada penilaian orang lain"
+    },
+    {
+      "no": 152,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC10",
+      "zone": "ゾーン1",
+      "text_A": "Saya ingin menyelesaikan pekerjaan lebih awal dari batas waktu",
+      "text_B": "Saya mengutamakan ketelitian dan mau meluangkan waktu lebih lama"
+    },
+    {
+      "no": 153,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC27",
+      "zone": "ゾーン1",
+      "text_A": "Saya sulit menolak permintaan orang lain",
+      "text_B": "Saya bisa dengan jelas menolak jika tidak bisa menerimanya"
+    },
+    {
+      "no": 154,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC9",
+      "zone": "ゾーン1",
+      "text_A": "Apa yang sudah saya putuskan, saya selesaikan sampai tuntas",
+      "text_B": "Jika situasi berubah, saya fleksibel mengubah rencana"
+    },
+    {
+      "no": 155,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC18",
+      "zone": "ゾーン1",
+      "text_A": "Saya senang berkumpul ramai-ramai",
+      "text_B": "Saya lebih suka bicara mendalam dalam kelompok kecil"
+    },
+    {
+      "no": 156,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC26",
+      "zone": "ゾーン1",
+      "text_A": "Saya kadang mengalah agar tim tidak terganggu",
+      "text_B": "Jika saya merasa pendapat saya benar, saya menyatakannya dengan jelas"
+    },
+    {
+      "no": 157,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC28",
+      "zone": "ゾーン1",
+      "text_A": "Saya ingin menghindari pertengkaran sebisa mungkin",
+      "text_B": "Saya bisa menyatakan pendapat tanpa takut konflik jika diperlukan"
+    },
+    {
+      "no": 158,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC35",
+      "zone": "ゾーン1",
+      "text_A": "Saya merasa stres ketika sesuatu tidak berjalan sesuai rencana",
+      "text_B": "Ketika tidak lancar, saya memikirkan cara lain"
+    },
+    {
+      "no": 159,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC11",
+      "zone": "ゾーン1",
+      "text_A": "Saya memeriksa berulang kali agar tidak melewatkan kesalahan kecil",
+      "text_B": "Saya melihat keseluruhan alur dan menangkap poin-poin penting"
+    },
+    {
+      "no": 160,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC25",
+      "zone": "ゾーン1",
+      "text_A": "Saya memikirkan perasaan orang lain dan menyesuaikan cara bicara",
+      "text_B": "Saya pikir lebih baik menyampaikan secara langsung daripada berputar-putar"
+    },
+    {
+      "no": 161,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC34",
+      "zone": "ゾーン1",
+      "text_A": "Saya sering merasakan tekanan dari pekerjaan",
+      "text_B": "Saya bisa bekerja lebih baik ketika ada tekanan"
+    },
+    {
+      "no": 162,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC19",
+      "zone": "ゾーン1",
+      "text_A": "Saya menyatakan pendapat tanpa ragu-ragu",
+      "text_B": "Saya biasanya berpikir dengan matang sebelum berbicara"
+    },
+    {
+      "no": 163,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC2",
+      "zone": "ゾーン1",
+      "text_A": "Bertemu hal yang belum diketahui membuat saya bersemangat",
+      "text_B": "Saya lebih suka memperdalam apa yang sudah saya ketahui"
+    },
+    {
+      "no": 164,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC20",
+      "zone": "ゾーン1",
+      "text_A": "Saya pandai berbicara di depan umum dan melakukan presentasi",
+      "text_B": "Saya lebih cocok sebagai pendukung di balik layar"
+    },
+    {
+      "no": 165,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC3",
+      "zone": "ゾーン1",
+      "text_A": "Saya ingin bekerja dengan cara saya sendiri",
+      "text_B": "Saya ingin melanjutkan sesuai prosedur yang ditetapkan dengan tepat"
+    },
+    {
+      "no": 166,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC33",
+      "zone": "ゾーン1",
+      "text_A": "Ketika melakukan kesalahan, saya menerimanya dengan serius dan merenungkannya",
+      "text_B": "Saya cepat beralih pikiran bahwa kesalahan bisa dijadikan pelajaran"
+    },
+    {
+      "no": 167,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC12",
+      "zone": "ゾーン1",
+      "text_A": "Saya merasa lebih nyaman bertindak setelah membuat rencana",
+      "text_B": "Saya merasa lebih cocok bergerak sesuai situasi"
+    },
+    {
+      "no": 168,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC17",
+      "zone": "ゾーン1",
+      "text_A": "Saya bisa langsung akrab dengan orang baru",
+      "text_B": "Saya lebih suka membangun hubungan secara bertahap dengan perlahan"
+    },
+    {
+      "no": 169,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC1",
+      "zone": "ゾーン1",
+      "text_A": "Saya lebih suka mencoba cara baru",
+      "text_B": "Saya lebih suka cara yang sudah terbukti"
+    },
+    {
+      "no": 170,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC4",
+      "zone": "ゾーン1",
+      "text_A": "Saya bisa lebih berkembang di lingkungan yang berubah",
+      "text_B": "Saya bisa lebih berkembang di lingkungan yang stabil"
+    },
+    {
+      "no": 171,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 162,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya kadang mengutamakan keharmonisan di sekitar daripada kepentingan sendiri"
+    },
+    {
+      "no": 172,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 202,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya kadang tidak bisa bertindak karena khawatir tentang pandangan orang lain"
+    },
+    {
+      "no": 173,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 21,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya lebih suka pengalaman baru daripada pengulangan hal yang sama"
+    },
+    {
+      "no": 174,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 108,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sering menjadi pusat percakapan"
+    },
+    {
+      "no": 175,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 145,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya bisa mempertimbangkan sesuatu dari sudut pandang orang lain"
+    },
+    {
+      "no": 176,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 91,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya cenderung tidak terlalu menyesal ketika gagal"
+    },
+    {
+      "no": 177,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 134,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya sulit mengungkapkan pendapat saya"
+    },
+    {
+      "no": 178,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 109,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya merasa puas ketika bekerja dalam tim"
+    },
+    {
+      "no": 179,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 4,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Memecahkan masalah yang rumit sangat menarik bagi saya"
+    },
+    {
+      "no": 180,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 212,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya kadang dikendalikan oleh emosi saya sendiri"
+    },
+    {
+      "no": 181,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 106,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Presentasi dan berbicara di depan umum tidak membebani saya"
+    },
+    {
+      "no": 182,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 198,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya mudah terganggu dengan perubahan kecil"
+    },
+    {
+      "no": 183,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 101,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya aktif menyampaikan pendapat dan ide saya"
+    },
+    {
+      "no": 184,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 51,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya memperhatikan hal-hal kecil dengan seksama"
+    },
+    {
+      "no": 185,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 118,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya lebih suka kerja sama daripada bekerja sendiri"
+    },
+    {
+      "no": 186,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 90,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang mengutamakan penilaian sendiri daripada aturan"
+    },
+    {
+      "no": 187,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 137,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya merasa lebih efisien bekerja sendiri"
+    },
+    {
+      "no": 188,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 72,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya sering meninggalkan pekerjaan tanpa menyelesaikannya"
+    },
+    {
+      "no": 189,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 214,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya cenderung meremehkan diri sendiri"
+    },
+    {
+      "no": 190,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 49,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya lebih suka membuat rencana sebelum bertindak"
+    },
+    {
+      "no": 191,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 205,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Tekanan pekerjaan kadang membuat saya tidak bisa tidur"
+    },
+    {
+      "no": 192,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 40,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya cenderung tidak terlalu memikirkan sesuatu secara mendalam"
+    },
+    {
+      "no": 193,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 159,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya cenderung bisa bersikap toleran terhadap orang lain"
+    },
+    {
+      "no": 194,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 12,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya lebih suka hari-hari yang penuh perubahan daripada rutinitas tetap"
+    },
+    {
+      "no": 195,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 144,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya pandai menemukan sisi positif orang lain"
+    },
+    {
+      "no": 196,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 59,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya bisa mempertahankan konsentrasi saat bekerja"
+    },
+    {
+      "no": 197,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 152,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya memperhatikan agar orang di sekitar merasa nyaman bekerja"
+    },
+    {
+      "no": 198,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 222,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya bisa menghadapi situasi penting dengan tenang"
+    },
+    {
+      "no": 199,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 178,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang lebih mementingkan pencapaian individu daripada tim"
+    },
+    {
+      "no": 200,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 70,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya memisahkan pekerjaan dan kehidupan pribadi dengan jelas"
+    },
+    {
+      "no": 201,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 170,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang tidak mau mengikuti jika saya tidak setuju"
+    },
+    {
+      "no": 202,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 33,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya ingin mencari cara yang lebih efisien daripada cara yang sudah biasa"
+    },
+    {
+      "no": 203,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 172,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya pikir menjaga kepentingan diri sendiri juga penting"
+    },
+    {
+      "no": 204,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 5,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya senang bepergian dan mengunjungi tempat baru"
+    },
+    {
+      "no": 205,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 26,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya lebih suka pekerjaan yang memberi kebebasan daripada mengikuti prosedur yang kaku"
+    },
+    {
+      "no": 206,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 181,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya merasa memiliki jiwa kompetitif yang kuat"
+    },
+    {
+      "no": 207,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 150,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya tidak keberatan mendengarkan keluhan atau konsultasi orang lain"
+    },
+    {
+      "no": 208,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 98,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya lebih suka menyapa orang asing terlebih dahulu"
+    },
+    {
+      "no": 209,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 43,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya jarang mengkhayalkan atau berimajinasi"
+    },
+    {
+      "no": 210,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 131,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya lebih suka berinteraksi dalam kelompok kecil daripada besar"
+    },
+    {
+      "no": 211,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 88,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang tidak bisa menepati apa yang saya katakan"
+    },
+    {
+      "no": 212,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 79,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya sering mengutamakan penilaian situasional daripada mengikuti aturan"
+    },
+    {
+      "no": 213,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 196,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Ketika merasa tertekan, saya kadang tidak bisa menampilkan kemampuan terbaik"
+    },
+    {
+      "no": 214,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 68,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya merefleksikan tindakan saya dan berusaha untuk berkembang"
+    },
+    {
+      "no": 215,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 87,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang ingin menghindari pekerjaan yang penuh tanggung jawab"
+    },
+    {
+      "no": 216,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 218,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya bisa bekerja lebih baik ketika ada tekanan"
+    },
+    {
+      "no": 217,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 168,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya tidak berpikir bahwa hanya keuntungan saya sendiri yang penting"
+    },
+    {
+      "no": 218,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 186,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sering merasa gugup di situasi penting"
+    },
+    {
+      "no": 219,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 138,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya lebih suka menunggu orang menghubungi saya daripada menghubungi duluan"
+    },
+    {
+      "no": 220,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 206,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Perasaan marah atau sedih cenderung bertahan lama pada saya"
+    },
+    {
+      "no": 221,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC31",
+      "zone": "ゾーン2",
+      "text_A": "Saya cenderung mempertimbangkan sesuatu dari sudut pandang orang lain",
+      "text_B": "Saya cenderung menilai sesuatu secara objektif dan logis"
+    },
+    {
+      "no": 222,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC21",
+      "zone": "ゾーン2",
+      "text_A": "Saya aktif menyapa orang baru meskipun ada banyak orang yang tidak dikenal",
+      "text_B": "Saya lebih suka memahami suasana terlebih dahulu baru bergerak"
+    },
+    {
+      "no": 223,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC8",
+      "zone": "ゾーン2",
+      "text_A": "Saya merasa tertantang dengan pekerjaan yang belum pernah dilakukan sebelumnya",
+      "text_B": "Saya lebih cocok menyelesaikan pekerjaan yang sudah terbukti dengan pasti"
+    },
+    {
+      "no": 224,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC24",
+      "zone": "ゾーン2",
+      "text_A": "Jika ada kesulitan, saya langsung berkonsultasi dengan sekitar",
+      "text_B": "Saya memikirkan solusi sendiri dulu baru berkonsultasi"
+    },
+    {
+      "no": 225,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC23",
+      "zone": "ゾーン2",
+      "text_A": "Saya senang makan atau minum bersama rekan kerja setelah jam kerja",
+      "text_B": "Saya lebih suka menghabiskan waktu sendiri dengan tenang setelah kerja"
+    },
+    {
+      "no": 226,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC37",
+      "zone": "ゾーン2",
+      "text_A": "Saya sering gugup di situasi penting",
+      "text_B": "Justru di situasi penting saya bisa menghadapinya dengan tenang"
+    },
+    {
+      "no": 227,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC6",
+      "zone": "ゾーン2",
+      "text_A": "Saya senang bersentuhan dengan budaya dan nilai-nilai yang berbeda",
+      "text_B": "Saya ingin menjalani hidup dengan menghargai budaya dan nilai-nilai saya sendiri"
+    },
+    {
+      "no": 228,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC29",
+      "zone": "ゾーン2",
+      "text_A": "Saya tidak keberatan mendengarkan keluhan orang lain",
+      "text_B": "Saya pandai memikirkan solusi konkret bersama-sama"
+    },
+    {
+      "no": 229,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC14",
+      "zone": "ゾーン2",
+      "text_A": "Saya menunda hal pribadi selama bekerja",
+      "text_B": "Saya menyeimbangkan pekerjaan dan kehidupan pribadi dengan baik"
+    },
+    {
+      "no": 230,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC39",
+      "zone": "ゾーン2",
+      "text_A": "Perasaan saya mudah terlihat dari ekspresi dan sikap",
+      "text_B": "Saya bisa mengendalikan emosi dan tetap tenang"
+    },
+    {
+      "no": 231,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC7",
+      "zone": "ゾーン2",
+      "text_A": "Mengerjakan beberapa pekerjaan secara bersamaan tidak membuat saya bosan",
+      "text_B": "Saya lebih pandai berkonsentrasi pada satu hal dan menyelesaikannya"
+    },
+    {
+      "no": 232,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC5",
+      "zone": "ゾーン2",
+      "text_A": "Saya lebih suka mencoba dulu, lalu memperbaiki masalah yang muncul",
+      "text_B": "Saya lebih suka memeriksa dengan seksama sebelum bertindak"
+    },
+    {
+      "no": 233,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC13",
+      "zone": "ゾーン2",
+      "text_A": "Saya ingin menyelesaikan pekerjaan yang dipercayakan melebihi harapan",
+      "text_B": "Saya ingin menyelesaikan pekerjaan yang dipercayakan dengan pasti dan tanpa dipaksakan"
+    },
+    {
+      "no": 234,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC22",
+      "zone": "ゾーン2",
+      "text_A": "Saya sering menjadi pemimpin kelompok",
+      "text_B": "Saya lebih pandai melaksanakan peran masing-masing dengan baik"
+    },
+    {
+      "no": 235,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC32",
+      "zone": "ゾーン2",
+      "text_A": "Saya bisa bersabar demi menjaga hubungan baik",
+      "text_B": "Saya lebih suka komunikasi jujur daripada bersabar"
+    },
+    {
+      "no": 236,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC16",
+      "zone": "ゾーン2",
+      "text_A": "Sangat penting untuk mematuhi aturan dan prosedur",
+      "text_B": "Kadang perlu mengutamakan tujuan daripada aturan"
+    },
+    {
+      "no": 237,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC30",
+      "zone": "ゾーン2",
+      "text_A": "Saya senang mencari titik tengah yang bisa diterima semua pihak",
+      "text_B": "Saya pikir lebih penting untuk memperjelas apa yang benar"
+    },
+    {
+      "no": 238,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC40",
+      "zone": "ゾーン2",
+      "text_A": "Saya kadang lambat memutuskan karena terlalu berhati-hati",
+      "text_B": "Ketika bingung, saya mempercayai intuisi dan memutuskan lebih cepat"
+    },
+    {
+      "no": 239,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC15",
+      "zone": "ゾーン2",
+      "text_A": "Saya bertanggung jawab dan menyelesaikan pekerjaan sendiri sampai akhir",
+      "text_B": "Saya berkonsultasi dengan sekitar sambil melanjutkan bagian yang sulit"
+    },
+    {
+      "no": 240,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC38",
+      "zone": "ゾーン2",
+      "text_A": "Ketika ada hal yang mengkhawatirkan, sulit bagi saya untuk melupakannya",
+      "text_B": "Saya bisa menerima bahwa tidak ada gunanya khawatir"
+    },
+    {
+      "no": 241,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 14,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya tertarik dengan berbagai budaya dan kebiasaan"
+    },
+    {
+      "no": 242,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 223,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya bisa menerima bahwa tidak ada gunanya khawatir"
+    },
+    {
+      "no": 243,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 83,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kurang pandai menyelesaikan sesuatu hingga akhir dengan tekun"
+    },
+    {
+      "no": 244,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 187,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Ketika ada hal yang mengkhawatirkan, sulit bagi saya untuk melupakannya"
+    },
+    {
+      "no": 245,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 39,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya sulit terlibat sepenuhnya dalam hal yang tidak menarik minat saya"
+    },
+    {
+      "no": 246,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 133,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya lebih menghargai waktu sendiri daripada berkumpul"
+    },
+    {
+      "no": 247,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 78,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kurang pandai dalam merapikan dan mengorganisasi"
+    },
+    {
+      "no": 248,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 204,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sering merasa cemas memikirkan masa depan"
+    },
+    {
+      "no": 249,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 195,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya kadang terlalu memikirkan hal-hal negatif"
+    },
+    {
+      "no": 250,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 25,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya senang menambahkan sentuhan kreatif dalam pekerjaan dan kehidupan"
+    },
+    {
+      "no": 251,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 63,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sangat memperhatikan kualitas pekerjaan saya"
+    },
+    {
+      "no": 252,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 28,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya merasa bersemangat ketika memasuki lingkungan baru"
+    },
+    {
+      "no": 253,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 165,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya lebih suka kerja sama daripada bersaing"
+    },
+    {
+      "no": 254,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 217,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya bisa cepat beralih pikiran dari hal-hal yang tidak menyenangkan"
+    },
+    {
+      "no": 255,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 55,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya mempersiapkan dan mengatur pekerjaan dengan baik sebelum mulai"
+    },
+    {
+      "no": 256,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 171,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya termasuk orang yang berbicara terus terang"
+    },
+    {
+      "no": 257,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 163,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sulit menolak permintaan orang lain"
+    },
+    {
+      "no": 258,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 157,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya mengulurkan tangan ketika ada yang membutuhkan bantuan"
+    },
+    {
+      "no": 259,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 192,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Perasaan saya mudah terlihat dari ekspresi dan sikap"
+    },
+    {
+      "no": 260,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 20,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sering mendapat wawasan baru melalui diskusi dan tukar pendapat"
+    },
+    {
+      "no": 261,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 74,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya sering hampir melewati tenggat waktu"
+    },
+    {
+      "no": 262,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 44,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya sering memilih cara yang sudah familiar daripada cara baru"
+    },
+    {
+      "no": 263,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 183,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya sering merasa jengkel dengan orang lain"
+    },
+    {
+      "no": 264,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 93,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya bisa langsung akrab dengan orang yang baru dikenal"
+    },
+    {
+      "no": 265,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 176,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya kadang tidak bisa memaafkan kesalahan orang lain"
+    },
+    {
+      "no": 266,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 38,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya lebih ingin melakukan hal yang sudah bisa daripada hal baru"
+    },
+    {
+      "no": 267,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 169,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya cenderung menyatakan pendapat saya dengan tegas"
+    },
+    {
+      "no": 268,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 22,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya merasa senang ketika bisa memperluas pengetahuan"
+    },
+    {
+      "no": 269,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 115,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya aktif berdiskusi meskipun ada perbedaan pendapat"
+    },
+    {
+      "no": 270,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 190,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya cenderung khawatir tentang apa yang orang lain pikirkan tentang saya"
+    },
+    {
+      "no": 271,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 42,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya merasa stres di lingkungan yang banyak berubah"
+    },
+    {
+      "no": 272,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 146,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya sangat menghargai kerja tim"
+    },
+    {
+      "no": 273,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 201,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya kadang terus-menerus memikirkan kesalahan dalam waktu lama"
+    },
+    {
+      "no": 274,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 227,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya percaya bisa tetap tenang dalam situasi apapun"
+    },
+    {
+      "no": 275,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 124,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya lebih nyaman ditanya orang daripada harus menyapa duluan"
+    },
+    {
+      "no": 276,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 191,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya mudah merasa cemas karena hal-hal kecil"
+    },
+    {
+      "no": 277,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 77,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya suka menunda pekerjaan ketika tidak ada motivasi"
+    },
+    {
+      "no": 278,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 53,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya tidak meninggalkan pekerjaan yang sudah saya terima di tengah jalan"
+    },
+    {
+      "no": 279,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 103,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya senang berinteraksi dengan rekan kerja setelah jam kerja"
+    },
+    {
+      "no": 280,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 86,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya sering memulai pekerjaan tanpa memikirkan persiapannya"
+    },
+    {
+      "no": 281,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 224,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "Saya lebih mempercayai penilaian saya sendiri daripada penilaian orang lain"
+    },
+    {
+      "no": 282,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 136,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya lebih nyaman komunikasi melalui teks daripada berbicara langsung"
+    },
+    {
+      "no": 283,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 129,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya mudah lelah ketika lama bersama orang lain"
+    },
+    {
+      "no": 284,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 1,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya senang mempelajari hal-hal baru"
+    },
+    {
+      "no": 285,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 99,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya lebih suka bekerja bersama orang lain daripada sendirian"
+    },
+    {
+      "no": 286,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 71,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya bisa bertindak dengan tenang tanpa terbawa emosi"
+    },
+    {
+      "no": 287,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 7,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya sering berpikir tentang cara meningkatkan cara kerja"
+    },
+    {
+      "no": 288,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 60,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya mematuhi peraturan dan aturan dengan baik"
+    },
+    {
+      "no": 289,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 64,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya selalu melaksanakan apa yang sudah saya katakan"
+    },
+    {
+      "no": 290,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 139,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya bisa berempati dengan perasaan orang lain"
+    },
+    {
+      "no": 291,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 221,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya bisa bersikap positif dengan cepat setelah gagal"
+    },
+    {
+      "no": 292,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 185,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya merasa stres ketika sesuatu tidak berjalan sesuai rencana"
+    },
+    {
+      "no": 293,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 52,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya bertanggung jawab atas pekerjaan saya"
+    },
+    {
+      "no": 294,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 23,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya menghargai intuisi dan inspirasi mendadak"
+    },
+    {
+      "no": 295,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 97,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "Saya sering secara alami mengambil peran sebagai pemimpin kelompok"
+    },
+    {
+      "no": 296,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 155,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya sering mengutamakan orang lain daripada diri sendiri"
+    },
+    {
+      "no": 297,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 175,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya kadang kesal dengan perilaku atau ucapan orang lain"
+    },
+    {
+      "no": 298,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 216,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "Saya tidak terlalu peduli dengan kritikan"
+    },
+    {
+      "no": 299,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 47,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya menyelesaikan apa yang sudah saya putuskan untuk dikerjakan"
+    },
+    {
+      "no": 300,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 16,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "Saya mempertimbangkan berbagai sudut pandang, bukan hanya satu"
+    }
+  ]
+}

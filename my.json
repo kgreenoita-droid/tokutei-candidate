@@ -1,0 +1,2709 @@
+{
+  "lang": "my",
+  "langName": "မြန်မာ",
+  "flag": "🇲🇲",
+  "version": "1.0",
+  "total": 300,
+  "questions": [
+    {
+      "no": 1,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 48,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အလုပ်ကို သေချာနိပ်ညပ်၍ အမှားကင်းစွာ ပြုလုပ်ချင်သည်"
+    },
+    {
+      "no": 2,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 183,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "တစ်ဦးတစ်ယောက်ကြောင့် ဒေါသဖြစ်ရမကြာခဏ ဖြစ်သည်"
+    },
+    {
+      "no": 3,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 42,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "ပြောင်းလဲမှုများ ပိုသောပတ်ဝန်းကျင်ကို ဖိစီးမှုတစ်ခုအဖြစ် ခံစားသည်"
+    },
+    {
+      "no": 4,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 225,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မှားသွားသောအခါ မိမိကိုယ်ကို လွန်ကဲစွာ မကဲ့ရဲ့ပါ"
+    },
+    {
+      "no": 5,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 18,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ ထင်မြင်ချက်နှင့် ဆန္ဒကို တန်ဖိုးထားသည်"
+    },
+    {
+      "no": 6,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 129,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "သူများနှင့် ကြာမြင့်နေသောအခါ ပင်ပန်းမှု ခံစားရတတ်သည်"
+    },
+    {
+      "no": 7,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 77,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "ဆန္ဒမရှိသောအခါ အလုပ်ကို နောက်ဆက်တွဲလုပ်ပေးတတ်သည်"
+    },
+    {
+      "no": 8,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 74,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "သတ်မှတ်ရက်ကျနောက်ဆုံးမှ ဖြစ်တတ်သည်"
+    },
+    {
+      "no": 9,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 113,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ကိုယ်တည်းနေခြင်းထက် သူများနှင့် နေရချိန် ပိုကြာသည်"
+    },
+    {
+      "no": 10,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 116,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဆွေးနွေးမှုအတွင်း ကိုယ်တိုင် ခေါင်းစဉ်ပေးတတ်သည်"
+    },
+    {
+      "no": 11,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 146,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "အဖွဲ့ပူးပေါင်းမှုကို တန်ဖိုးထားသည်"
+    },
+    {
+      "no": 12,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 175,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "တစ်ဖက်သား၏ အမူအကျင့် ပြောဆိုမှုကြောင့် ဒေါသဖြစ်တတ်သည်"
+    },
+    {
+      "no": 13,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 180,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "တစ်ဖက်သားကို လွန်ကဲစွာ ဂရုထားရသည်ကြောင့် ဖိစီးမှု ဖြစ်တတ်သည်"
+    },
+    {
+      "no": 14,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 185,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "ကိစ္စများ ကြံစည်ထားသည်အတိုင်း မဖြစ်သောအခါ ဖိစီးမှု ခံစားရသည်"
+    },
+    {
+      "no": 15,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 139,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "သူများ၏ ခံစားချက်ကို ရင်ဆိုင်ဝင်ရောက်နိုင်သည်"
+    },
+    {
+      "no": 16,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 19,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဖန်တီးနိုင်သောအလုပ်ကို ဆွဲဆောင်မှုရှိသည်ဟု ထင်သည်"
+    },
+    {
+      "no": 17,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 99,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "တစ်ကိုယ်တည်းထက် သူများနှင့်ပူးပေါင်းအလုပ်ကို ပိုနှစ်သက်သည်"
+    },
+    {
+      "no": 18,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 44,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "နည်းသစ်ထက် ရင်းနှီးသောနည်းကို မကြာခဏ ရွေးသည်"
+    },
+    {
+      "no": 19,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 52,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "မိမိ၏အလုပ်ကို တာဝန်ခံ၍ ကြိုးပမ်းသည်"
+    },
+    {
+      "no": 20,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 80,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ရေရှည်စီမံချက်ထက် မျက်မှောက်ကိစ္စကို ဦးစားပေးသည်"
+    },
+    {
+      "no": 21,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 1,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "အသစ်အဆန်းများ သင်ယူနှစ်သက်သည်"
+    },
+    {
+      "no": 22,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 201,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "မှားသွားသည်ကို ကြာမြင့်စွာ ဆက်တိုက် တွေးတတ်သည်"
+    },
+    {
+      "no": 23,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 155,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "မိမိထက် တစ်ဖက်သားကို ဦးစားပေးတတ်သည်"
+    },
+    {
+      "no": 24,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 7,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "အလုပ်လုပ်ပုံကို ပိုကောင်းအောင် ပြင်ဆင်ရမည်ကို မကြာခဏ တွေးသည်"
+    },
+    {
+      "no": 25,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 184,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "တစ်ဖက်သား၏ တောင်းဆိုမှုကို ငြင်းဆိုသောအခါ အပြစ်တင်ခံစားမှု မရှိ"
+    },
+    {
+      "no": 26,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 2,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အနုပညာ၊ ဂီတနှင့် စာပေတို့ကို စိတ်ဝင်စားသည်"
+    },
+    {
+      "no": 27,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 173,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ငြင်းခုံမှုတွင်လည်း မိမိ၏ ထင်မြင်ချက်ကို မကြာခဏ မပြောင်းလဲပါ"
+    },
+    {
+      "no": 28,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 115,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "ထင်မြင်ချက်ကွဲပြားသော်လည်း တက်တက်ကြွကြွ ဆွေးနွေးသည်"
+    },
+    {
+      "no": 29,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 16,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "တစ်ဦးတည်းသောအမြင်မဟုတ်ဘဲ အမြင်မျိုးစုံဖြင့် တွေးသည်"
+    },
+    {
+      "no": 30,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 17,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "နည်းပညာနှင့် ကိရိယာအသစ်များကို အမြန်ဆုံးစမ်းကြည့်ချင်သည်"
+    },
+    {
+      "no": 31,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 54,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အရာများကို တစ်ဆင့်ချင်းစီ စီစဉ်၍ ဆောင်ရွက်ကောင်းသည်"
+    },
+    {
+      "no": 32,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 220,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မိမိကိုယ်ကို ယုံကြည်မှုရှိသည်"
+    },
+    {
+      "no": 33,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 227,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "မည်သည့်အချိန်တွင်မဆို တည်ငြိမ်ဆန်ဆန်ရှိနိုင်သည်ဟု ယုံကြည်သည်"
+    },
+    {
+      "no": 34,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 136,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "ပြောဆိုမည့်အစား စာဖြင့် ဆက်ဆံရသည် ပိုအဆင်ပြေသည်"
+    },
+    {
+      "no": 35,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 86,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "ပြင်ဆင်ခြင်းမရှိဘဲ အလုပ်ကို မကြာခဏ ဆောင်ရွက်သည်"
+    },
+    {
+      "no": 36,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 216,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "ဝေဖန်ချက်ကို ဂရုမပြုပါ"
+    },
+    {
+      "no": 37,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 60,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "စည်းမျဉ်းနှင့် ဥပဒေကို ကောင်းမွန်စွာ လိုက်နာသည်"
+    },
+    {
+      "no": 38,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 221,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "မှားသွားလျှင် မြန်ဆန်စွာ အပြုသဘောကို ဖန်တီးနိုင်သည်"
+    },
+    {
+      "no": 39,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 82,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "အလုပ်အတွင်း အာရုံပျံ့ကောက်တတ်သည်"
+    },
+    {
+      "no": 40,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 107,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ပြဿနာ ကြုံတိုင်း ပတ်ဝန်းကျင်ကို ချက်ပြင်း ဖိတ်ကြော်သည်"
+    },
+    {
+      "no": 41,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 93,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "မသိသေးသောသူနှင့်လည်း အတော်အသင့် ရင်းနှီးနိုင်သည်"
+    },
+    {
+      "no": 42,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 124,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "မိမိ ဦးစွာ မေးဆိုမည့်အစား ဖိတ်ကြော်ခံရသော ပိုကောင်းသည်"
+    },
+    {
+      "no": 43,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 207,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိ ပြောခဲ့သောအရာ ကောင်းကန်ကြောင်း နောက်ပြန်ဆင်ခြင်သည်"
+    },
+    {
+      "no": 44,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 169,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "မိမိ၏ ထင်မြင်ချက်ကို ရဲဝံ့စွာ ဖော်ပြသည်"
+    },
+    {
+      "no": 45,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 191,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "သေးငယ်သောကိစ္စများကြောင့်လည်း ထိတ်လန့်တတ်သည်"
+    },
+    {
+      "no": 46,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 38,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "အသစ်အဆန်းထက် ဖြစ်ဆဲသောအရာကိုသာ ပြုလုပ်ချင်သည်"
+    },
+    {
+      "no": 47,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 47,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "လုပ်ဖို့ဆုံးဖြတ်ထားသောအရာကို ပြီးဆုံးအောင် ပြုလုပ်သည်"
+    },
+    {
+      "no": 48,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 200,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဆက်ဆံရေးတွင် ကလေးကလပ် ချိုင့်ပြဲမှုကို ဂရုပြုသည်"
+    },
+    {
+      "no": 49,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 110,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ အကြောင်းကို ပေါ်လွင်စွာ ပြောဆိုနိုင်သည်"
+    },
+    {
+      "no": 50,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 153,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ယုံကြည်မှုဆက်ဆံရေး တည်ဆောက်ခြင်းကို တန်ဖိုးထားသည်"
+    },
+    {
+      "no": 51,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 76,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "စိတ်အနေအထားအပေါ် အလုပ်အရည်အသွေး ဝမ်းနည်းဝမ်းနည်းဖြစ်တတ်သည်"
+    },
+    {
+      "no": 52,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 6,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိနှင့်မတူသောသူများနှင့် ပြောဆိုဆက်ဆံရသည် နှစ်သက်သည်"
+    },
+    {
+      "no": 53,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 194,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တုန်ကပ်သောအခါ ကိုယ်ခန္ဓာ ဆိုင်ရာ ရောဂါများ ဖြစ်တတ်သည် (ချွေးထွက်ခြင်း၊ နှလုံးခုန်ဆူပြားခြင်း)"
+    },
+    {
+      "no": 54,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 228,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ဆိုးသောခံစားချက်ကို ဆွဲဆောင်မလောက်ပါ"
+    },
+    {
+      "no": 55,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 92,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ပြုလုပ်ရမည်အရာထက် ပြုလုပ်ချင်သောအရာကို ဦးစားပေးသည်"
+    },
+    {
+      "no": 56,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 121,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တိတ်ဆိတ်သောပတ်ဝန်းကျင်ထက် ဝင်သြသောပတ်ဝန်းကျင်ကို ပိုနှစ်သက်သည်"
+    },
+    {
+      "no": 57,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 203,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ခံစားချက်ကို ထိန်းသိမ်းရသည် ခက်ကြမ်းသည်ဟု ခံစားတွေ့ရတတ်သည်"
+    },
+    {
+      "no": 58,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 62,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ပြုလုပ်ရမည့်အရာများကို နောက်ဆက်တွဲမပြုဆောင်ရွက်ရန် ကြိုးစားသည်"
+    },
+    {
+      "no": 59,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 96,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "လူများ ရှေ့၌ ဆောင်ရွက်ရသောအလုပ်ကို နှစ်သက်သည်"
+    },
+    {
+      "no": 60,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 179,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ဆက်ဆံရေးတွင် ပင်ပန်းမှု ခံစားရတတ်သည်"
+    },
+    {
+      "no": 61,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 213,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ဦးတစ်ယောက် ဒေါသမောင်ပြသောအခါ လွန်ကဲစွာ ပူပန်သည်"
+    },
+    {
+      "no": 62,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 75,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "အသေးစိတ်ကို ဂရုမစိုက်ဘဲ ကျယ်ပြန့်သောနည်းဖြင့် ဆောင်ရွက်တတ်သည်"
+    },
+    {
+      "no": 63,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 36,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "တူညီသောအလုပ်ကို ကြာမြင့်စွာ ဆက်လုပ်ရသည်ကို ပျင်းနိုင်သည်"
+    },
+    {
+      "no": 64,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 182,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ ထင်မြင်ချက်ကို တွန်းအားပေးချင်တတ်သည်"
+    },
+    {
+      "no": 65,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 85,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မိမိကိုယ်ကို လွန်စွာ ပေးဆပ်သည်ဟု ခံစားတွေ့ရတတ်သည်"
+    },
+    {
+      "no": 66,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 142,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "သူများ၏ ပြောဆိုမှုကို ဂရုတစိုက် ကြားနာသည်"
+    },
+    {
+      "no": 67,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 197,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ခုခုကို ဆိုးရွားသောဘက် တွေးတတ်သည်"
+    },
+    {
+      "no": 68,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 32,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "သူများနှင့်မတူသောအမြင်ဖြင့် မကြာခဏ မြင်သည်"
+    },
+    {
+      "no": 69,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 120,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ကိုယ်တိုင် ဆက်သွယ်ချင်သောသူဆီ ဆက်သွယ်တတ်သည်"
+    },
+    {
+      "no": 70,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 95,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "လူအများ ပါဝင်နေသောနေရာ၌ မဆင်ဆင်ဟောပြောနိုင်သည်"
+    },
+    {
+      "no": 71,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 166,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ဖက်သား၏ မကောင်းသောအချက်ထက် ကောင်းသောအချက်ကို ဂရုထားသည်"
+    },
+    {
+      "no": 72,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 67,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ရေရှည်ပန်းတိုင်အတွက် ယနေ့ကြိုးစားမှုကို မနှောင့်ရှောင်ချမည်"
+    },
+    {
+      "no": 73,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 50,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "သတ်မှတ်ရက်ကို မပြတ်လွတ်အောင် ကျင့်သုံးသည်"
+    },
+    {
+      "no": 74,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 89,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "အသေးစိတ်အလုပ်ဆက်တိုက်ရာတွင် အာရုံပြတ်တတ်သည်"
+    },
+    {
+      "no": 75,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 156,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ထင်မြင်ချက်ကွဲပြားသော်လည်း တစ်ဖက်သားကို လေးစားနိုင်သည်"
+    },
+    {
+      "no": 76,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 11,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မသိကျွမ်းသောနေရာတွင် အတော်ပဲ မြန်မြန်ဆန်ဆန် ကျင့်သားရနိုင်သည်"
+    },
+    {
+      "no": 77,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 122,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "သူများနှင့် ကြာမြင့်စွာ ပြောဆိုပြီးနောက် ပင်ပန်းမှု ခံစားရတတ်သည်"
+    },
+    {
+      "no": 78,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 37,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "တစ်ကြိမ်ဆုံးဖြတ်ပြီးသားကို မပြောင်းလဲချင်တတ်သည်"
+    },
+    {
+      "no": 79,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 149,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မည်သူနှင့်မဆို ကောင်းစွာ ဆက်ဆံနိုင်မည်ဟု ယုံကြည်သည်"
+    },
+    {
+      "no": 80,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 143,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ရန်ဖြစ်မှုကို တတ်နိုင်သမျှ ရှောင်ကြဉ်ချင်သည်"
+    },
+    {
+      "no": 81,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 215,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ခံစားချက် တည်ငြိမ်ပြီး ပူပင်ချမ်းသာ မဖြစ်ပါ"
+    },
+    {
+      "no": 82,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 229,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "တစ်ဦးတည်းမြင်ကွင်း ဂရုမပြုပါ"
+    },
+    {
+      "no": 83,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 56,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ရည်မှန်းချက်ပန်းတိုင်သို့ ရောက်သည်အထိ ကြိုးစားနှီးနဲ ကြိုးစားသည်"
+    },
+    {
+      "no": 84,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 177,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ ထင်မြင်ချက်မှန်ကန်ဟု ထင်ပါက ရဲရဲဝံ့ဝံ့ ဆောင်ရွက်သည်"
+    },
+    {
+      "no": 85,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 65,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဆွဲဆောင်မှုများကို ခုခံ၍ ပြုလုပ်ရမည့်အရာကို ဦးစားပေးနိုင်သည်"
+    },
+    {
+      "no": 86,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 160,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "လုပ်ဖော်ကိုင်ဖက်နှင့် ကူညီပူးပေါင်းအလုပ်ကို နှစ်သက်သည်"
+    },
+    {
+      "no": 87,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 29,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ဖြေသာမဟုတ်သော ပြဿနာများကို တွေးရသည် နှစ်သက်သည်"
+    },
+    {
+      "no": 88,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 210,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဖိစီးမှုကြောင့် မိမိ၏ အစာစားချင်မှုနှင့် အိပ်ငိုက်ပျော်ခြင်းကို သက်ရောက်တတ်သည်"
+    },
+    {
+      "no": 89,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 148,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ဖက်သားကို ထိနာစေမည်မဟုတ်ဟု မှောင်မိုက်ဖြင့် ဖော်ပြ ပိုကောင်းအောင် ကြိုးစားသည်"
+    },
+    {
+      "no": 90,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 61,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိကိုယ်ကို ဆိုင်ရာ ပိုကြမ်းနိုင်သည်ဟု ထင်သည်"
+    },
+    {
+      "no": 91,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 114,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဦးဆောင်မှုဆိုင်ရာ ရပ်တည်ချက်ကို မကြာခဏ ပြသည်"
+    },
+    {
+      "no": 92,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 193,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဝေဖန်ချက် ဤမဟုတ် နုတ်ကပဲနှိမ်နိမ့်ချသောစကားကြားရသောအခါ နှလုံးကျသည်"
+    },
+    {
+      "no": 93,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 94,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "သူများနှင့် ပြောဆိုပြီးနောက် စွမ်းသတ္တိ ဝင်တတ်သည်"
+    },
+    {
+      "no": 94,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 141,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အဖွဲ့အတွက် မိမိ၏ ထင်မြင်ချက်ကို နောက်ဆုတ်နိုင်သည်"
+    },
+    {
+      "no": 95,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 230,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ခံစားချက် တည်ငြိမ်သည်ဟု သူများက မကြာခဏ ပြောသည်"
+    },
+    {
+      "no": 96,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 117,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဆက်ဆံရေးအုပ်စုထဲ ပုံမှန်အားဖြင့် ဝင်ရောက်နိုင်သည်"
+    },
+    {
+      "no": 97,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 102,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ပြင်ပဆန်သည်ဟု ထင်သည်"
+    },
+    {
+      "no": 98,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 69,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တာဝန်ပေးသောအလုပ်ကို မျှော်မှန်းချက်ထက် ပိုကောင်းစွာ ပြုလုပ်ချင်သည်"
+    },
+    {
+      "no": 99,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 105,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဆက်ဆံရေးအသစ် တည်ဆောက်ရာ ကောင်းသည်"
+    },
+    {
+      "no": 100,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 174,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "တောင်းဆိုမှုကို ရှင်းလင်းစွာ ငြင်းဆိုနိုင်သည်"
+    },
+    {
+      "no": 101,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 219,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ခံစားချက်ပြင်ပဆန်သောကိစ္စ မဖြစ်ပါ"
+    },
+    {
+      "no": 102,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 147,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "သူများကို ကောင်းကောင်းဆက်ဆံရသည် ဝမ်းသာချင်သည်"
+    },
+    {
+      "no": 103,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 127,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "လူများ ရှေ့ပြောဆိုရသည် ကျွမ်းကျင်မှုမရှိ"
+    },
+    {
+      "no": 104,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 30,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ အတွေ့အကြုံနှင့် ဗဟုသုတကို အခြားအခြေအနေများတွင်လည်း အသုံးချရန် ကြိုးစားသည်"
+    },
+    {
+      "no": 105,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 199,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိကိုယ်ကို ယုံကြည်မှု မကြာခဏ မရှိ"
+    },
+    {
+      "no": 106,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 226,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ခံစားချက်ကို ကောင်းစွာ ထိန်းသိမ်းနိုင်သည်"
+    },
+    {
+      "no": 107,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 66,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မှတ်တမ်းမှတ်ရာနှင့် စီမံချက်ကို ကောင်းစွာ ပြုစုသည်"
+    },
+    {
+      "no": 108,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 73,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "စီမံချက်ချသော်လည်း လယ်လတ်တွင် မကြာခဏ ပြောင်းလဲသည်"
+    },
+    {
+      "no": 109,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 31,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ပြောင်းလဲမှုကို ကြောက်မည့်အစား ပြောင်းလဲမှုကို ပျော်ရွှင်စွာနှင့် ကျင့်သုံးနိုင်သည်"
+    },
+    {
+      "no": 110,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 189,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မှားသွားသောအခါ မိမိကိုယ်ကို မကြာခဏ ကဲ့ရဲ့သည်"
+    },
+    {
+      "no": 111,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 188,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ငြိမ်ဆန်ဆန်ရှိသောအပေါ် ကွဲပြားနေတတ်သည်"
+    },
+    {
+      "no": 112,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 158,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အုပ်စုပုံမကောင်းသောအခါ ချောင်ပေးရန် ကြိုးစားသည်"
+    },
+    {
+      "no": 113,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 35,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "သဘောတရားနှင့် ယန္တယားကို နားလည်မှသာ လုပ်ဆောင်ချင်သည်"
+    },
+    {
+      "no": 114,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 208,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တုန်ကပ်ခြင်းကြောင့် လူများ ရှေ့တွင် မိမိ၏ ပုံမှန်ကိုယ်ကို ဖော်မပြနိုင်စစ်ကောင်းသည်"
+    },
+    {
+      "no": 115,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 154,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "သူများ၏ ကောင်းကြောင်းမှာ သဘာဝကျကျ ဝမ်းနူးနိုင်သည်"
+    },
+    {
+      "no": 116,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 8,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အကြံဥာဏ်အသစ်များ မကြာခဏ ရတတ်သည်"
+    },
+    {
+      "no": 117,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 126,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "အာရုံကြည်ဖြစ်သောနေရာ မအိမ်မရောက်ပါ"
+    },
+    {
+      "no": 118,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 13,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိ၏တန်ဖိုးများနှင့် ကိုယ်ကျင့်တရားကို ပြန်လည်ဆန်းစစ်တတ်သည်"
+    },
+    {
+      "no": 119,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 128,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ဆက်ဆံရေးအသစ် တည်ဆောက်ရန် အင်အားပေးရသည်"
+    },
+    {
+      "no": 120,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 140,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အခက်ကြုံနေသောသူ မြင်သောအခါ ချန်ထားရန် မဖြစ်နိုင်"
+    },
+    {
+      "no": 121,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 211,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မကောင်းသောတစ်ရက်ကို ကျော်ဖြတ်ရသောအခါ ပြောင်းလဲသည် ခက်ချိန်သည်"
+    },
+    {
+      "no": 122,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 125,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "တစ်ကိုယ်တည်း ကိုယ်တိုင်ဆန်ဆန် အလုပ်ကို ပိုနှစ်သက်သည်"
+    },
+    {
+      "no": 123,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 167,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မနှစ်မြို့သောသူကိုလည်း တည်ငြိမ်ဆန်ဆန် ဆက်ဆံနိုင်သည်"
+    },
+    {
+      "no": 124,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 151,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ကျေးဇူးတင်ကြောင်းကို သဘာဝကျကျ ဖော်ပြနိုင်သည်"
+    },
+    {
+      "no": 125,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 111,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "သူများ ရယ်စေရန်နှင့် ပတ်ဝန်းကျင်ကို ပျော်ရွှင်ပေးရသည် နှစ်သက်သည်"
+    },
+    {
+      "no": 126,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 24,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ပြဿနာဖြေရှင်းရာတွင် မိမိ၏နည်းလမ်းကို စမ်းသည်"
+    },
+    {
+      "no": 127,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 57,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိ၏လုပ်ဆောင်ချက်က ပတ်ဝန်းကျင်ကို ဘာမျှ သက်ရောက်မည်ကို ကြိုတင်တွေးသည်"
+    },
+    {
+      "no": 128,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 3,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဆန်ပြာနိုင်သောစိတ်ကူးပေများသည်ဟု ထင်သည်"
+    },
+    {
+      "no": 129,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 9,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မသိသေးသောအရာများကို စမ်းကြည့်ရသည် ပျော်ဖွယ်ရာဖြစ်သည်"
+    },
+    {
+      "no": 130,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 46,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ တွေးခေါ်မှုကို ပြောင်းလဲသောအခါ ဆန့်ကျင်မှုခံစားနိုင်သည်"
+    },
+    {
+      "no": 131,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 164,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ ထင်မြင်ချက်ကို လက်မခံသော်လည်း သဘာဝကျကျ လက်ခံနိုင်သည်"
+    },
+    {
+      "no": 132,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 15,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အလုပ်မှတပါး ကျယ်ပြန့်သောဝါသနာနှင့် စိတ်ဝင်စားမှုများ ရှိသည်"
+    },
+    {
+      "no": 133,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 10,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အရာဝတ္ထုများ၏ အနှစ်သာရနှင့် နောက်ကွယ်ကို နက်နဲစွာ တွေးသည်"
+    },
+    {
+      "no": 134,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 41,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "စီမံချက်အတိုင်း တက်ကြွသောအလုပ်ကို ပိုနှစ်သက်သည်"
+    },
+    {
+      "no": 135,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 81,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ချိန်းဆိုမှုကို မေ့တတ်သည်"
+    },
+    {
+      "no": 136,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 84,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ရုတ်တရက် လှုပ်ဆောင်တတ်သည်"
+    },
+    {
+      "no": 137,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 130,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ တွေးခေါ်မှုနှင့် ခံစားချက်ကို သူများထံ ဖော်ပြသည် နည်းသည်"
+    },
+    {
+      "no": 138,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 104,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဖုန်းနှင့် ဗွီဒီယိုကော်လ်ဖြင့် ဆက်သွယ်ရသည် ဝန်မလေးပါ"
+    },
+    {
+      "no": 139,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 112,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "လူများနှင့် ဆက်ဆံရာ အလုပ်တွင် ဝမ်းသာစိတ်ရသည်"
+    },
+    {
+      "no": 140,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 119,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ကိုယ်တည်း ကြာမြင့်နေသောအခါ ကိုင်းကိုင်းဆိုင်ဆိုင် ခံစားရသည်"
+    },
+    {
+      "no": 141,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 58,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အချိန်ကို ဂရုစိုက်၍ အသုံးချတတ်သည်"
+    },
+    {
+      "no": 142,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 34,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အနုပညာ / အလှဆင်ဆိုင်ရာ အရာများကို ကြည်နူးတတ်သည်"
+    },
+    {
+      "no": 143,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 100,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဆူညံသောနေရာနှင့် လူထုစုဝေးမှုကို နှစ်သက်သည်"
+    },
+    {
+      "no": 144,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 161,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ဖက်သား၏ ခံစားချက်ပြောင်းလဲမှုကို လွယ်ကူစွာ သိသည်"
+    },
+    {
+      "no": 145,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 45,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မသိသောအရာကို ရင်ဆိုင်ရသောအခါ စိုးရိမ်ပူပန်မှု ခံစားရသည်"
+    },
+    {
+      "no": 146,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 27,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ခုခုကို နက်နဲစွာ လေ့လာချင်သောသဘောသဘာဝ ရှိသည်"
+    },
+    {
+      "no": 147,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 135,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "သူများနှင့် ဆက်ဆံရာ အင်အားပိုပေးရသည်ဟု ခံစားသည်"
+    },
+    {
+      "no": 148,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 123,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "လူအများနှင့် ကျင်းပပွဲများ၌ ပင်ပန်းနိုင်သည်ဟု ခံစားသည်"
+    },
+    {
+      "no": 149,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 132,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "အုပ်စုထဲတွင် ကြားနာသူ ဖြစ်တတ်သည်"
+    },
+    {
+      "no": 150,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 209,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ခုခု မကောင်းစွာ ဖြစ်သောအခါ နှလုံးကျသည်"
+    },
+    {
+      "no": 151,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC36",
+      "zone": "ゾーン1",
+      "text_A": "တစ်ဖက်သားမြင်ကွင်းကို ဂရုပြုသည်",
+      "text_B": "တစ်ဖက်သားမြင်ကွင်းထက် မိမိ ဆုံးဖြတ်ချက်ကို ပိုယုံကြည်သည်"
+    },
+    {
+      "no": 152,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC10",
+      "zone": "ゾーン1",
+      "text_A": "သတ်မှတ်ရက်ထက် ကြိုတင်ပြီးဆုံးချင်သည်",
+      "text_B": "တိတိကျကျ ဦးစားပေးပြီး အချိန်ပိုမျှ ပေးနိုင်သည်"
+    },
+    {
+      "no": 153,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC27",
+      "zone": "ゾーン1",
+      "text_A": "ခိုင်းစေမှုကို ငြင်းဆိုရန် ခက်ချိန်သည်",
+      "text_B": "ပြုလုပ်မရနိုင်ပါက ရှင်းလင်းစွာ ငြင်းဆိုနိုင်သည်"
+    },
+    {
+      "no": 154,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC9",
+      "zone": "ゾーン1",
+      "text_A": "ဆုံးဖြတ်ပြီးသောကိစ္စကို ပြီးဆုံးသောအထိ ဆောင်ရွက်သည်",
+      "text_B": "အခြေအနေပြောင်းသောအခါ ပြောင်းလဲသောနည်းလမ်းကို ကျင့်သုံးသည်"
+    },
+    {
+      "no": 155,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC18",
+      "zone": "ゾーン1",
+      "text_A": "လူမျိုးစုဝေးမှု နှစ်သက်သည်",
+      "text_B": "နည်းနည်းသောသူနှင့် နက်နဲသောဆွေးနွေးမှုကို နှစ်သက်သည်"
+    },
+    {
+      "no": 156,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC26",
+      "zone": "ゾーン1",
+      "text_A": "အဖွဲ့ကို မပြုပိုက်ရန် မိမိ ဆင်းသက်တတ်သည်",
+      "text_B": "မိမိ ထင်မြင်ချက်မှန်ကန်ပါက ပြသည်"
+    },
+    {
+      "no": 157,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC28",
+      "zone": "ゾーン1",
+      "text_A": "ရန်ဖြစ်မှုကို တတ်နိုင်သမျှ ရှောင်ကြဉ်ချင်သည်",
+      "text_B": "လိုအပ်ပါက ရန်မကြောက်ဘဲ ထင်မြင်ချက်ပြောနိုင်သည်"
+    },
+    {
+      "no": 158,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC35",
+      "zone": "ゾーン1",
+      "text_A": "တစ်ခုခု ကြံစည်သည်အတိုင်းမဖြစ်သောအခါ ဖိစီးမှုခံစားရသည်",
+      "text_B": "ကောင်းကောင်းမဖြစ်သောအခါ အခြားနည်းလမ်းကို တွေးသည်"
+    },
+    {
+      "no": 159,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC11",
+      "zone": "ゾーン1",
+      "text_A": "သေးငယ်သောမှားယွင်းချက်မပျောက်ရန် ထပ်ခါထပ်ခါ စစ်ဆေးသည်",
+      "text_B": "အလုံးစုံ ကြည့်ပြီး အဓိကများ ဖမ်းဆုပ်သည်"
+    },
+    {
+      "no": 160,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC25",
+      "zone": "ゾーン1",
+      "text_A": "တစ်ဖက်သား၏ ခံစားချက်ကြည်ပြီး ပြောဆိုပုံ ပြင်ဆင်သည်",
+      "text_B": "တဝဲလည်လည်ပြောသည်ထက် တိုက်ရိုက်ပြောသည် ကောင်းသည်ဟု ထင်သည်"
+    },
+    {
+      "no": 161,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC34",
+      "zone": "ゾーン1",
+      "text_A": "အလုပ်ဖိစီးမှု မကြာခဏ ခံစားရသည်",
+      "text_B": "ဖိစီးမှုရှိသောအခါ ပိုကောင်းသောအလုပ်ပြုလုပ်နိုင်သည်"
+    },
+    {
+      "no": 162,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC19",
+      "zone": "ゾーン1",
+      "text_A": "မတွေးဘဲ ထင်မြင်ချက်ပြောတတ်သည်",
+      "text_B": "ကောင်းစွာ တွေးဆပြီးမှ ပြောတတ်သည်"
+    },
+    {
+      "no": 163,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC2",
+      "zone": "ゾーン1",
+      "text_A": "မသိသောနယ်ပယ်ကြုံလျှင် ရင်ကြက်တတ်သည်",
+      "text_B": "မသိပြီးသောအရာကို နက်ရှိုင်းစွာ လေ့လာချင်သည်"
+    },
+    {
+      "no": 164,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC20",
+      "zone": "ゾーン1",
+      "text_A": "လူများ ရှေ့ မဟောပြောနိုင် ကောင်းသည်",
+      "text_B": "နောက်ကွယ် ထောက်ပံ့သောနေရာ ပိုသင့်တော်သည်"
+    },
+    {
+      "no": 165,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC3",
+      "zone": "ゾーン1",
+      "text_A": "မိမိ၏နည်းဖြင့် ဆောင်ရွက်ချင်သည်",
+      "text_B": "စီမံကိန်းထားသော ဆောင်ရွက်မှုနည်းလမ်းသတ်မှတ်ချက်အတိုင်း တိတိကျကျ ဆောင်ရွက်ချင်သည်"
+    },
+    {
+      "no": 166,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC33",
+      "zone": "ゾーン1",
+      "text_A": "မှားသောအချိန်တွင် ဂရုတစိုက် နောင်တရပြီး ဆင်ခြင်သည်",
+      "text_B": "မှားလျှင် ဆက်လက်ကြိုးစားနိုင်ရန် မြန်မြန်ဆန်ဆန် ကျော်သည်"
+    },
+    {
+      "no": 167,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC12",
+      "zone": "ゾーン1",
+      "text_A": "ကြိုတင်ကြံစည်ပြီးမှ ဆောင်ရွက်ရသည် အဆင်ပြေသည်",
+      "text_B": "ပတ်ဝန်းကျင်နှင့်ဆိုင်သော ဆောင်ရွက်မှုကို ပိုသင့်တော်သည်"
+    },
+    {
+      "no": 168,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC17",
+      "zone": "ゾーン1",
+      "text_A": "မသိသောသူနှင့်လည်း လွယ်ကူစွာ ရင်းနှီးနိုင်သည်",
+      "text_B": "ပုံမှန်အတြဲကနေ ဆက်ဆံရေး တည်ဆောက်ချင်သည်"
+    },
+    {
+      "no": 169,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC1",
+      "zone": "ゾーン1",
+      "text_A": "နည်းလမ်းအသစ်ကို ကြိုးစားနှစ်သက်သည်",
+      "text_B": "တည်ငြိမ်ပြီးသားနည်းဖြင့် ပြီးမြောက်ချင်သည်"
+    },
+    {
+      "no": 170,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC4",
+      "zone": "ゾーン1",
+      "text_A": "ပြောင်းလဲသောပတ်ဝန်းကျင်တွင် ပိုစွမ်းဆောင်နိုင်သည်",
+      "text_B": "တည်ငြိမ်သောပတ်ဝန်းကျင်တွင် ပိုစွမ်းဆောင်နိုင်သည်"
+    },
+    {
+      "no": 171,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 162,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ ဆန္ဒထက် ပတ်ဝန်းကျင် ရေငုပ်ရေပေါ်ကို ဦးစားပေးတတ်သည်"
+    },
+    {
+      "no": 172,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 202,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ဦးတစ်ယောက်၏ မြင်ကွင်းမကြောင့် မိမိ ဆောင်ရွက်မရနိုင်တတ်သည်"
+    },
+    {
+      "no": 173,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 21,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တူညီသောအရာထပ်ခါထပ်ခါထက် အသစ်အဆန်း အတွေ့အကြုံကို ပိုနှစ်သက်သည်"
+    },
+    {
+      "no": 174,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 108,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဆွေးနွေးမှုတွင် မကြာခဏ ဗဟိုဖြစ်သည်"
+    },
+    {
+      "no": 175,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 145,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ဖက်သား၏ ရပ်တည်ချက်မှ တွေးနိုင်သည်"
+    },
+    {
+      "no": 176,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 91,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မှားသွားသည့်အခါ နက်နဲစွာ မနောင်တရသောဘက်ဖြစ်သည်"
+    },
+    {
+      "no": 177,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 134,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ ထင်မြင်ချက်ကို ဖော်ပြရန် ခက်ချိန်သည်"
+    },
+    {
+      "no": 178,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 109,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အသင်းအဖွဲ့ ပူးပေါင်းဆောင်ရွက်မှု၌ ဝမ်းသာစိတ်ခံစားသည်"
+    },
+    {
+      "no": 179,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 4,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ရှုပ်ထွေးသောပြဿနာများကို တွေးဆရသည် မျှော်မှန်းသည်"
+    },
+    {
+      "no": 180,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 212,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ ခံစားချက်ကြောင့် ဆွဲသွားတတ်သည်"
+    },
+    {
+      "no": 181,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 106,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တင်ပြချက်နှင့် တင်ဆက်ပွဲများ မဝန်ထုတ်ပါ"
+    },
+    {
+      "no": 182,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 198,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "သေးငယ်သော ပြောင်းလဲမှုများကြောင့်လည်း ဂရုပြုသည်"
+    },
+    {
+      "no": 183,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 101,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ ထင်မြင်ချက်နှင့် ကြံစည်ချက်ကို တက်တက်ကြွကြွ ဝေမျှသည်"
+    },
+    {
+      "no": 184,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 51,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "သေးငယ်သောအသေးစိတ်ကိုလည်း ဂရုထားသည်"
+    },
+    {
+      "no": 185,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 118,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ကိုယ်တည်းအလုပ်ထက် ပူးပေါင်းဆောင်ရွက်ချင်သည်"
+    },
+    {
+      "no": 186,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 90,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ဥပဒေထက် မိမိ၏ ဆုံးဖြတ်ချက်ကို ဦးစားပေးတတ်သည်"
+    },
+    {
+      "no": 187,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 137,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "တစ်ကိုယ်တည်းဆောင်ရွက်ရသောအခါ ပိုထိရောက်သည်ဟု ခံစားသည်"
+    },
+    {
+      "no": 188,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 72,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "အလုပ်တွေကို ပြီးဆုံးသွားစေခြင်းမရှိဘဲ မကြာခဏ ချန်ထားတတ်သည်"
+    },
+    {
+      "no": 189,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 214,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိကိုယ်ကို လွန်ကဲစွာ မနိမ့်ကျပါ"
+    },
+    {
+      "no": 190,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 49,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "လုပ်ဆောင်မည်မဟုတ်မီ ကြိုတင်ကြံစည်သည်"
+    },
+    {
+      "no": 191,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 205,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အလုပ်ဖိစီးမှုကြောင့် မအိပ်နိုင်တတ်သည်"
+    },
+    {
+      "no": 192,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 40,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "တစ်ခုခုကို နက်နဲစွာ မတွေးသော အမျိုးအစားဖြစ်သည်"
+    },
+    {
+      "no": 193,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 159,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ဖက်သားကို လွတ်ဆိုင်ရာ ဖြစ်နိုင်သည်"
+    },
+    {
+      "no": 194,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 12,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ပုံမှန်မပြောင်းလဲသောနေ့ရက်ထက် ပြောင်းလဲသောနေ့ရက်ကို ပိုနှစ်သက်သည်"
+    },
+    {
+      "no": 195,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 144,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "သူများ၏ ကောင်းသောအချက်ကို ရှာတွေ့ကောင်းသည်"
+    },
+    {
+      "no": 196,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 59,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အလုပ်လုပ်နေစဉ်တွင် အာရုံစူးစိုက်မှုကို ထိန်းသိမ်းနိုင်သည်"
+    },
+    {
+      "no": 197,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 152,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ပတ်ဝန်းကျင်၌ ကောင်းစွာ ဆောင်ရွက်နိုင်ရန် ဂရုထားသည်"
+    },
+    {
+      "no": 198,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 222,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "အရေးကြီးသောအချိန်ကို တည်ငြိမ်ဆန်ဆန် ကိုင်တွယ်နိုင်သည်"
+    },
+    {
+      "no": 199,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 178,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "အဖွဲ့ကောင်းထက် ကိုယ်တိုင်ကောင်းကြောင်းကို ဦးစားပေးတတ်သည်"
+    },
+    {
+      "no": 200,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 70,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အလုပ်နှင့် ကိုယ်ရေးသာမန်ကိုင်ကွပ်ချက်ကို ရှင်းလင်းစွာ ခွဲခြားသည်"
+    },
+    {
+      "no": 201,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 170,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မသဘောတူသောအခါ မလိုက်နာဘဲ ဆောင်ရွက်တတ်သည်"
+    },
+    {
+      "no": 202,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 33,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ထုံးစံနည်းထက် ထိရောက်သောနည်းကို ရှာချင်သည်"
+    },
+    {
+      "no": 203,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 172,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ ဆန္ဒကို ကာကွယ်ခြင်းလည်း အရေးကြီးသည်ဟု ထင်သည်"
+    },
+    {
+      "no": 204,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 5,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ခရီးသွားရန်နှင့် နေရာအသစ်များ သွားရောက်ရန် ဝါသနာပါသည်"
+    },
+    {
+      "no": 205,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 26,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ကန့်သတ်ချက်ရှိသောအလုပ်ထက် လွတ်လပ်သောအလုပ်ကို ပိုနှစ်သက်သည်"
+    },
+    {
+      "no": 206,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 181,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ပြိုင်ဆိုင်မှုစိတ် ကြီးသည်ဟု ထင်သည်"
+    },
+    {
+      "no": 207,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 150,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "သူများ၏ ဝေဒနာနှင့် တိုင်ပင်မှုကို ကြားနာရသည် ဝန်မလေးပါ"
+    },
+    {
+      "no": 208,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 98,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မသိသောသူနှင့် မိမိ ဦးစွာ ပြောဆိုတတ်သည်"
+    },
+    {
+      "no": 209,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 43,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ကိုယ်ကြိုက်ဆန်းသစ်ခြင်းမျိုး မကြာခဏ မဖြစ်သည်"
+    },
+    {
+      "no": 210,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 131,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "လူများနှင့်ဆက်ဆံမှုထက် နည်းနည်းသောအုပ်စုကို ပိုနှစ်သက်သည်"
+    },
+    {
+      "no": 211,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 88,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ပြောသောအရာကို မကြာခဏ ဆောင်ရွက်မပြီးနိုင်တတ်သည်"
+    },
+    {
+      "no": 212,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 79,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "စည်းမျဉ်းထက် အခြေအနေပေါ်ကြည့်၍ ဆုံးဖြတ်ချင်တတ်သည်"
+    },
+    {
+      "no": 213,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 196,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဖိစီးမှုအောက်ရောက်သောအခါ မိမိ၏ အကောင်းဆုံးသော်ကန်ကို ဖော်ပြ မရနိုင်တတ်သည်"
+    },
+    {
+      "no": 214,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 68,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ လုပ်ဆောင်ချက်ကို ပြန်လည်သုံးသပ်၍ မြှင့်တင်ရန် ကြိုးစားသည်"
+    },
+    {
+      "no": 215,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 87,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "တာဝန်ကြီးသောအလုပ်ကို ရှောင်ကြဉ်ချင်တတ်သည်"
+    },
+    {
+      "no": 216,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 218,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ဖိအားရှိသောအခါ ပိုကောင်းသောအလုပ်ကို ပြုလုပ်နိုင်သည်"
+    },
+    {
+      "no": 217,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 168,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိသာကောင်းဖို့ မဟုတ်ဟု မတွေးသည်"
+    },
+    {
+      "no": 218,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 186,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အရေးကြီးသောအချိန်တွင် မကြာခဏ တုန်ကပ်တတ်သည်"
+    },
+    {
+      "no": 219,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 138,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မိမိ ဆက်သွယ်သည်ထက် ဆက်သွယ်ခံရသောနည်းကို ဆန္ဒပြသည်"
+    },
+    {
+      "no": 220,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 206,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဒေါသနှင့် ဝမ်းနည်းမှုခံစားချက် ကြာမြင့်ပြုစုနိုင်သည်"
+    },
+    {
+      "no": 221,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC31",
+      "zone": "ゾーン2",
+      "text_A": "တစ်ဖက်သားရပ်တည်ချက်မှ တွေးသည်",
+      "text_B": "ကိစ္စတွေကို ဓမ္မဓိဋ္ဌာန်ကျကျနှင့် ယုတ္တိနည်းကျကျ ဆုံးဖြတ်သည်"
+    },
+    {
+      "no": 222,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC21",
+      "zone": "ゾーン2",
+      "text_A": "မသိသောသူများ ပါဝင်သောနေရာ၌ ပိုကြိုးဆောင်ကျင်ပြောတတ်သည်",
+      "text_B": "အရင် ပတ်ဝန်းကျင်ကြည့်ပြီးမှ လုပ်တတ်သည်"
+    },
+    {
+      "no": 223,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC8",
+      "zone": "ゾーン2",
+      "text_A": "မပြီးသောအလုပ်ကို ကြိုးစားလုပ်ရသည် မျှော်မှန်းသည်",
+      "text_B": "ပြီးမြောက်ပြင်ဆင်ပြီးသားအလုပ်ကို တိကျစွာ ဆောင်ရွက်ရသည် ပိုကောင်းသည်"
+    },
+    {
+      "no": 224,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC24",
+      "zone": "ゾーン2",
+      "text_A": "ပြဿနာ ကြုံတိုင်း ပတ်ဝန်းကျင်ကို ချက်ပြင်း ပြောသည်",
+      "text_B": "မိမိ ဦးစွာ အဖြေ ရှာပြီးမှ ပြောသည်"
+    },
+    {
+      "no": 225,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC23",
+      "zone": "ゾーン2",
+      "text_A": "ပြီးနောက် လုပ်ဖော်ကိုင်ဖက်နှင့် ချိန်းဆိုစားသောက်ရသည် နှစ်သက်သည်",
+      "text_B": "ပြီးနောက် တစ်ကိုယ်တည်း တိတ်ဆိတ်ဆန်ဆန် ဆောင်ရွက်ချင်သည်"
+    },
+    {
+      "no": 226,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC37",
+      "zone": "ゾーン2",
+      "text_A": "အရေးကြီးသောနေရာ မကြာခဏ တုန်ကပ်တတ်သည်",
+      "text_B": "အရေးကြီးသောနေရာပင် တည်ငြိမ်ဆန်ဆန် ကိုင်တွယ်နိုင်သည်"
+    },
+    {
+      "no": 227,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC6",
+      "zone": "ゾーン2",
+      "text_A": "မတူကွဲပြားသောယဉ်ကျေးမှုနှင့် တန်ဖိုးများကို ကျင့်ကြံနှစ်သက်သည်",
+      "text_B": "မိမိ၏ ယဉ်ကျေးမှုနှင့် တန်ဖိုးများကို ချစ်မြတ်နိုးသော ဘဝနေထိုင်ချင်သည်"
+    },
+    {
+      "no": 228,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC29",
+      "zone": "ゾーン2",
+      "text_A": "တစ်ဖက်သား မာနကို ကြားနာရသည် ဝန်မလေးပါ",
+      "text_B": "ကိုင်တွယ်မည့်နည်းလမ်းတိကျ ကူညီဆောင်ရွက်နိုင်ကောင်းသည်"
+    },
+    {
+      "no": 229,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC14",
+      "zone": "ゾーン2",
+      "text_A": "ဆောင်ရွက်နေစဉ်တွင် ကိုယ်ရေးကိစ္စကို နောက်ဆက်တွဲထားသည်",
+      "text_B": "အလုပ်နှင့် ကိုယ်ရေးကိစ္စကို ကောင်းကောင်းညီမျှ ဆောင်ရွက်သည်"
+    },
+    {
+      "no": 230,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC39",
+      "zone": "ゾーン2",
+      "text_A": "ခံစားချက်ကို မျက်နှာသွင်ပြင်နှင့် အမူအကျင့်မှ မြင်ရနိုင်သည်",
+      "text_B": "ခံစားချက်ကို ထိန်းချုပ်ပြီး တည်ငြိမ်ဆန်ဆန် ဆောင်ရွက်နိုင်သည်"
+    },
+    {
+      "no": 231,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC7",
+      "zone": "ゾーン2",
+      "text_A": "တစ်ချိန်ချင်း အလုပ်အမျိုးမျိုး ဆောင်ရွက်သည် ပြောင်ပင်မဖြစ်",
+      "text_B": "တစ်ခုတည်းနှင့် ဂရုတစိုက် ကောင်းစွာ ဆောင်ရွက်ရသည် ကျွမ်းကျင်သည်"
+    },
+    {
+      "no": 232,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC5",
+      "zone": "ゾーン2",
+      "text_A": "ဦးစွာစမ်းကြည့်ပြီး ပြဿနာတွေ့ပါက ပြင်ဆင်မည်",
+      "text_B": "ကောင်းစွာ စစ်ဆေးပြီးမှ ဆောင်ရွက်သည်"
+    },
+    {
+      "no": 233,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC13",
+      "zone": "ゾーン2",
+      "text_A": "တာဝန်ပေးသောကိစ္စကို မျှော်မှန်းထားသည်ထက် ပိုကောင်းစွာ ပြုလုပ်ချင်သည်",
+      "text_B": "တာဝန်ပေးသောကိစ္စကို ဖိမည့်အကျပ်မဆိုဘဲ ပြုလုပ်ချင်သည်"
+    },
+    {
+      "no": 234,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC22",
+      "zone": "ゾーン2",
+      "text_A": "အုပ်စုဦးဆောင်သောနေရာ မကြာခဏ ဖြစ်တတ်သည်",
+      "text_B": "မိမိ၏ တာဝန်ကို ကောင်းစွာ ဆောင်ရွက်ရသည် ပိုသင့်တော်သည်"
+    },
+    {
+      "no": 235,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC32",
+      "zone": "ゾーン2",
+      "text_A": "ဆက်ဆံရေး ကောင်းစေရန် ကန့်သတ်ချက်အချို့ကို ရင်ဆိုင်သည်",
+      "text_B": "ကန့်သတ်ချက်ထက် ရဲရဲဝံ့ဝံ့ ဆက်ဆံမှုကို ပိုနှစ်သက်သည်"
+    },
+    {
+      "no": 236,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC16",
+      "zone": "ゾーン2",
+      "text_A": "စည်းမျဉ်းနှင့် ဆောင်ရွက်မှုနည်းလမ်းကို ကောင်းမွန်စွာ လိုက်နာရသည် အရေးကြီးသည်",
+      "text_B": "ဥပဒေထက် ရည်မှန်းချက်ကို ဦးစားပေးသည်"
+    },
+    {
+      "no": 237,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC30",
+      "zone": "ゾーン2",
+      "text_A": "မည်သူမဆိုသဘောတူ ကွဲပြားမှုကို ရှာချင်သည်",
+      "text_B": "မှန်ကန်သောအရာကို ရှင်းလင်းစွာ ပြသည် ပိုအရေးကြီးသည်"
+    },
+    {
+      "no": 238,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC40",
+      "zone": "ゾーン2",
+      "text_A": "လွန်ကဲစွာ ဂရုတစိုက် တွေးသောကြောင့် ဆုံးဖြတ်ချက်နှောင့်နှေးတောင်သည်",
+      "text_B": "မမှန်တသည့်ကိစ္စတွင် ဟေ့မှတ်ကိုယုံပြီး မြန်မြန်ဆုံးဖြတ်သည်"
+    },
+    {
+      "no": 239,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC15",
+      "zone": "ゾーン2",
+      "text_A": "မိမိ တာဝန်ယူ၍ ပြီးဆုံးသောအထိ ကိုယ်တိုင် ဆောင်ရွက်သည်",
+      "text_B": "ခက်ချိန်တွင် ပတ်ဝန်းကျင်နှင့် တိုင်ပင်ဆွေးနွေး ဆောင်ရွက်သည်"
+    },
+    {
+      "no": 240,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC38",
+      "zone": "ゾーン2",
+      "text_A": "စိုးရိမ်ဖွယ်ရာ ရှိသောအခါ ဦးနှောက်မှ မပျောက်ပါ",
+      "text_B": "ပူပန်သည်ကြောင့် အကျိုးမရှိဟု ရင်ဆိုင်နိုင်သည်"
+    },
+    {
+      "no": 241,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 14,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မတူကွဲပြားသောယဉ်ကျေးမှုများနှင့် ဓလေ့များကို စိတ်ဝင်စားသည်"
+    },
+    {
+      "no": 242,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 223,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ပူပင်သည်ကြောင့် မည်သည့်အကျိုးမျှ မရှိဟု ဆုံးဖြတ်နိုင်သည်"
+    },
+    {
+      "no": 243,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 83,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "တစ်ခုခုကို နောက်ဆုံးအထိ ကြိုးပမ်းစွာ ပြီးဆုံးစေရန် ညံ့ဖျင်းသည်"
+    },
+    {
+      "no": 244,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 187,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "စိုးရိမ်ဖွယ်ရာ ရှိသောအခါ ဦးနှောက်မှ မပျောက်နိုင်ခဲ"
+    },
+    {
+      "no": 245,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 39,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "စိတ်ဝင်စားမှုမရှိသောအရာများတွင် နက်နဲစွာ ပါဝင်ရန် ခက်ချိန်သည်"
+    },
+    {
+      "no": 246,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 133,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "လူစုဝေးမည့်နေရာထက် တစ်ကိုယ်တည်းချိန်ကို ပိုတန်ဖိုးထားသည်"
+    },
+    {
+      "no": 247,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 78,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "စီမံကြပ်ချုပ်ရာ ညံ့ဖျင်းသောဘက်ဖြစ်သည်"
+    },
+    {
+      "no": 248,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 204,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အနာဂတ်ကို တွေးသောအခါ ထိတ်လန့်တတ်သည်"
+    },
+    {
+      "no": 249,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 195,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဆိုးသောအပြင်အဆင်ကို လွန်ကဲစွာ တွေးတတ်သည်"
+    },
+    {
+      "no": 250,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 25,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အလုပ်နှင့် ဘဝတွင် မိမိ၏ဆန်းသစ်မှုကို ထည့်သွင်းရသည် နှစ်သက်သည်"
+    },
+    {
+      "no": 251,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 63,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိ၏အလုပ်အရည်အသွေးကို ဂရုပြုသည်"
+    },
+    {
+      "no": 252,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 28,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ပတ်ဝန်းကျင်အသစ်ထဲသို့ ဝင်ရောက်ရသည် ရင်ကြက်သည်"
+    },
+    {
+      "no": 253,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 165,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ပြိုင်ဆိုင်မှုထက် ပူးပေါင်းဆောင်ရွက်မှုကို ပိုနှစ်သက်သည်"
+    },
+    {
+      "no": 254,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 217,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "မကောင်းသောအရာများ ကြုံတိုင်း လွယ်ကူစွာ ကျော်ဖြတ်နိုင်သည်"
+    },
+    {
+      "no": 255,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 55,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မစတင်မီ အလုပ်ကြိုတင်ပြင်ဆင်ခြင်းနှင့် စီမံချက်ကို ကောင်းမွန်စွာ ရေးဆွဲသည်"
+    },
+    {
+      "no": 256,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 171,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ရဲရဲဝံ့ဝံ့ ပြောဆိုသောသဘာဝ ရှိသည်"
+    },
+    {
+      "no": 257,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 163,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ဖက်သား တောင်းဆိုမှုကို ငြင်းဆိုရန် ခက်ချိန်သည်"
+    },
+    {
+      "no": 258,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 157,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ဦးတစ်ယောက် ကြုံတိုင်း လက်ဆန့်ဆောင်ရွက်သည်"
+    },
+    {
+      "no": 259,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 192,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ခံစားချက်ကို မျက်နှာသွင်ပြင်နှင့် အမူအကျင့်မှ မြင်ရနိုင်သည်"
+    },
+    {
+      "no": 260,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 20,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဆွေးနွေးတိုင်ပင်ခြင်းမှတဆင့် နားလည်မှုနက်မြင့်တတ်သည်"
+    },
+    {
+      "no": 261,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 74,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "သတ်မှတ်ရက်ကျနောက်ဆုံးမှ ဖြစ်တတ်သည်"
+    },
+    {
+      "no": 262,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 44,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "နည်းသစ်ထက် ရင်းနှီးသောနည်းကို မကြာခဏ ရွေးသည်"
+    },
+    {
+      "no": 263,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 183,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "တစ်ဦးတစ်ယောက်ကြောင့် ဒေါသဖြစ်ရမကြာခဏ ဖြစ်သည်"
+    },
+    {
+      "no": 264,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 93,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "မသိသေးသောသူနှင့်လည်း အတော်အသင့် ရင်းနှီးနိုင်သည်"
+    },
+    {
+      "no": 265,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 176,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "တစ်ဖက်သား၏ မှားသောအချက်ကို ခွင့်မလွှတ်နိုင်တတ်သည်"
+    },
+    {
+      "no": 266,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 38,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "အသစ်အဆန်းထက် ဖြစ်ဆဲသောအရာကိုသာ ပြုလုပ်ချင်သည်"
+    },
+    {
+      "no": 267,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 169,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "မိမိ၏ ထင်မြင်ချက်ကို ရဲဝံ့စွာ ဖော်ပြသည်"
+    },
+    {
+      "no": 268,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 22,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ဗဟုသုတကျယ်ပြန့်ရသည်ကို ဝမ်းသာစိတ်ဖြင့် ခံစားသည်"
+    },
+    {
+      "no": 269,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 115,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "ထင်မြင်ချက်ကွဲပြားသော်လည်း တက်တက်ကြွကြွ ဆွေးနွေးသည်"
+    },
+    {
+      "no": 270,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 190,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ဖက်သားက မည်သို့မည်ဆိုကြည့်မည်ကို ဂရုပြုသည်"
+    },
+    {
+      "no": 271,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 42,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "ပြောင်းလဲမှုများ ပိုသောပတ်ဝန်းကျင်ကို ဖိစီးမှုတစ်ခုအဖြစ် ခံစားသည်"
+    },
+    {
+      "no": 272,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 146,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "အဖွဲ့ပူးပေါင်းမှုကို တန်ဖိုးထားသည်"
+    },
+    {
+      "no": 273,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 201,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "မှားသွားသည်ကို ကြာမြင့်စွာ ဆက်တိုက် တွေးတတ်သည်"
+    },
+    {
+      "no": 274,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 227,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "မည်သည့်အချိန်တွင်မဆို တည်ငြိမ်ဆန်ဆန်ရှိနိုင်သည်ဟု ယုံကြည်သည်"
+    },
+    {
+      "no": 275,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 124,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "မိမိ ဦးစွာ မေးဆိုမည့်အစား ဖိတ်ကြော်ခံရသော ပိုကောင်းသည်"
+    },
+    {
+      "no": 276,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 191,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "သေးငယ်သောကိစ္စများကြောင့်လည်း ထိတ်လန့်တတ်သည်"
+    },
+    {
+      "no": 277,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 77,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "ဆန္ဒမရှိသောအခါ အလုပ်ကို နောက်ဆက်တွဲလုပ်ပေးတတ်သည်"
+    },
+    {
+      "no": 278,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 53,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တစ်ကြိမ်တာဝန်ယူပြီးသောအလုပ်ကို လယ်လတ်တွင် မချန်ထားချမည်မဟုတ်"
+    },
+    {
+      "no": 279,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 103,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အလုပ်ချိန်ပြီးနောက် လုပ်ဖော်ကိုင်ဖက်နှင့် ပေါင်းဆောင်ပြောဆိုရသည် ပျော်ဖွယ်ရာဖြစ်သည်"
+    },
+    {
+      "no": 280,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 86,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "ပြင်ဆင်ခြင်းမရှိဘဲ အလုပ်ကို မကြာခဏ ဆောင်ရွက်သည်"
+    },
+    {
+      "no": 281,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 224,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "တစ်ဖက်သားထက် မိမိ၏ ဆုံးဖြတ်ချက်ကို ပိုယုံကြည်သည်"
+    },
+    {
+      "no": 282,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 136,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "ပြောဆိုမည့်အစား စာဖြင့် ဆက်ဆံရသည် ပိုအဆင်ပြေသည်"
+    },
+    {
+      "no": 283,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 129,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "သူများနှင့် ကြာမြင့်နေသောအခါ ပင်ပန်းမှု ခံစားရတတ်သည်"
+    },
+    {
+      "no": 284,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 1,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "အသစ်အဆန်းများ သင်ယူနှစ်သက်သည်"
+    },
+    {
+      "no": 285,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 99,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "တစ်ကိုယ်တည်းထက် သူများနှင့်ပူးပေါင်းအလုပ်ကို ပိုနှစ်သက်သည်"
+    },
+    {
+      "no": 286,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 71,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "မိမိ၏ ခံစားချက်ကို မလိုက်ဘဲ တည်တည်ငြိမ်ငြိမ် ဆောင်ရွက်နိုင်သည်"
+    },
+    {
+      "no": 287,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 7,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "အလုပ်လုပ်ပုံကို ပိုကောင်းအောင် ပြင်ဆင်ရမည်ကို မကြာခဏ တွေးသည်"
+    },
+    {
+      "no": 288,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 60,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "စည်းမျဉ်းနှင့် ဥပဒေကို ကောင်းမွန်စွာ လိုက်နာသည်"
+    },
+    {
+      "no": 289,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 64,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ပြောသောအရာကို မပြတ်ကျင့်သုံးသည်"
+    },
+    {
+      "no": 290,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 139,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "သူများ၏ ခံစားချက်ကို ရင်ဆိုင်ဝင်ရောက်နိုင်သည်"
+    },
+    {
+      "no": 291,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 221,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "မှားသွားလျှင် မြန်ဆန်စွာ အပြုသဘောကို ဖန်တီးနိုင်သည်"
+    },
+    {
+      "no": 292,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 185,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "ကိစ္စများ ကြံစည်ထားသည်အတိုင်း မဖြစ်သောအခါ ဖိစီးမှု ခံစားရသည်"
+    },
+    {
+      "no": 293,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 52,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "မိမိ၏အလုပ်ကို တာဝန်ခံ၍ ကြိုးပမ်းသည်"
+    },
+    {
+      "no": 294,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 23,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "တိုက်ရိုက်ရောက်လာသော ဆင်ခြင်တုံတရားကို တန်ဖိုးထားသည်"
+    },
+    {
+      "no": 295,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 97,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "အုပ်စုကို ဦးဆောင်ရသောနေရာကို ပုံမှန်အားဖြင့် ကျင်သင်တတ်သည်"
+    },
+    {
+      "no": 296,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 155,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "မိမိထက် တစ်ဖက်သားကို ဦးစားပေးတတ်သည်"
+    },
+    {
+      "no": 297,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 175,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "တစ်ဖက်သား၏ အမူအကျင့် ပြောဆိုမှုကြောင့် ဒေါသဖြစ်တတ်သည်"
+    },
+    {
+      "no": 298,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 216,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "ဝေဖန်ချက်ကို ဂရုမပြုပါ"
+    },
+    {
+      "no": 299,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 47,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "လုပ်ဖို့ဆုံးဖြတ်ထားသောအရာကို ပြီးဆုံးအောင် ပြုလုပ်သည်"
+    },
+    {
+      "no": 300,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 16,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "တစ်ဦးတည်းသောအမြင်မဟုတ်ဘဲ အမြင်မျိုးစုံဖြင့် တွေးသည်"
+    }
+  ]
+}

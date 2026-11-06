@@ -1,0 +1,2709 @@
+{
+  "lang": "ja",
+  "langName": "日本語",
+  "flag": "🇯🇵",
+  "version": "1.0",
+  "total": 300,
+  "questions": [
+    {
+      "no": 1,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 48,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "仕事は丁寧に、ミスなくこなしたい"
+    },
+    {
+      "no": 2,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 183,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "人に対してイライラすることが多い"
+    },
+    {
+      "no": 3,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 42,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "変化が多い環境はストレスに感じる"
+    },
+    {
+      "no": 4,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 225,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ミスをしても必要以上に自分を責めない"
+    },
+    {
+      "no": 5,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 18,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分の意見や感性を大切にしている"
+    },
+    {
+      "no": 6,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 129,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "人と長時間一緒にいると疲れを感じる"
+    },
+    {
+      "no": 7,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 77,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "やる気が出ないと仕事を先延ばしにしてしまう"
+    },
+    {
+      "no": 8,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 74,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "締め切りギリギリになることが多い"
+    },
+    {
+      "no": 9,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 113,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "一人で過ごすより人と一緒にいる時間が長い"
+    },
+    {
+      "no": 10,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 116,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "会話の中で自分から話題を提供することが多い"
+    },
+    {
+      "no": 11,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 146,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "チームワークを大切にしている"
+    },
+    {
+      "no": 12,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 175,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "人の行動や言動に腹が立つことがある"
+    },
+    {
+      "no": 13,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 180,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "人に気を使いすぎてストレスになることがある"
+    },
+    {
+      "no": 14,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 185,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "物事が思い通りにいかないとストレスを感じる"
+    },
+    {
+      "no": 15,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 139,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "人の気持ちに寄り添うことができる"
+    },
+    {
+      "no": 16,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 19,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "創造的な仕事に魅力を感じる"
+    },
+    {
+      "no": 17,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 99,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "人と一緒に仕事をするほうが一人より好きだ"
+    },
+    {
+      "no": 18,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 44,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "新しいやり方より慣れたやり方を選ぶことが多い"
+    },
+    {
+      "no": 19,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 52,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "自分の仕事に責任を持って取り組む"
+    },
+    {
+      "no": 20,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 80,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "長期的な計画より目先のことを優先しがちだ"
+    },
+    {
+      "no": 21,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 1,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "新しいことを学ぶのが好きだ"
+    },
+    {
+      "no": 22,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 201,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "ミスをすると長時間引きずることがある"
+    },
+    {
+      "no": 23,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 155,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "自分より相手を優先することが多い"
+    },
+    {
+      "no": 24,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 7,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "仕事のやり方を改善しようとよく考える"
+    },
+    {
+      "no": 25,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 184,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "人の頼みを断るとき罪悪感を感じない"
+    },
+    {
+      "no": 26,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 2,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "芸術や音楽、文学に興味がある"
+    },
+    {
+      "no": 27,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 173,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "議論になっても自分の意見を曲げないことが多い"
+    },
+    {
+      "no": 28,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 115,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "意見が違っても積極的に議論するほうだ"
+    },
+    {
+      "no": 29,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 16,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "物事を一つの角度だけでなく様々な角度から考える"
+    },
+    {
+      "no": 30,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 17,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "新しい技術やツールをいち早く試したい"
+    },
+    {
+      "no": 31,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 54,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "物事を順序立てて進めるのが得意だ"
+    },
+    {
+      "no": 32,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 220,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "自分に自信があるほうだ"
+    },
+    {
+      "no": 33,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 227,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "どんな状況でも冷静でいられる自信がある"
+    },
+    {
+      "no": 34,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 136,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "会話より文章でのやり取りのほうが楽だ"
+    },
+    {
+      "no": 35,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 86,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "仕事の段取りを考えずに始めることが多い"
+    },
+    {
+      "no": 36,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 216,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "批判されても気にしないほうだ"
+    },
+    {
+      "no": 37,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 60,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "規則やルールはきちんと守るほうだ"
+    },
+    {
+      "no": 38,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 221,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "失敗してもすぐに前向きになれる"
+    },
+    {
+      "no": 39,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 82,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "仕事の途中で注意が散漫になることがある"
+    },
+    {
+      "no": 40,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 107,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "困ったことがあればすぐ周囲に声をかけるほうだ"
+    },
+    {
+      "no": 41,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 93,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "初対面の人ともすぐに打ち解けられる"
+    },
+    {
+      "no": 42,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 124,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "自分から話しかけるより話しかけられるほうが楽だ"
+    },
+    {
+      "no": 43,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 207,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分の発言が正しかったか後から気になる"
+    },
+    {
+      "no": 44,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 169,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "自分の意見をはっきり主張するほうだ"
+    },
+    {
+      "no": 45,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 191,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "ちょっとしたことでも不安になりやすい"
+    },
+    {
+      "no": 46,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 38,
+      "reverse": true,
+      "repeat_tag": "RE",
+      "text": "新しいことより確実にできることをやりたい"
+    },
+    {
+      "no": 47,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 47,
+      "reverse": false,
+      "repeat_tag": "RE",
+      "text": "やると決めたことはきちんとやり遂げる"
+    },
+    {
+      "no": 48,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 200,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人間関係での小さなすれ違いが気になる"
+    },
+    {
+      "no": 49,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 110,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分のことをオープンに話せるほうだ"
+    },
+    {
+      "no": 50,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 153,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "信頼関係を築くことを大切にしている"
+    },
+    {
+      "no": 51,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 76,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "気分によって仕事の質がばらつくことがある"
+    },
+    {
+      "no": 52,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 6,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分とは違う考え方の人と話すのが好きだ"
+    },
+    {
+      "no": 53,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 194,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "緊張すると体に症状が出ることがある（汗・動悸など）"
+    },
+    {
+      "no": 54,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 228,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ネガティブな気持ちを引きずらないほうだ"
+    },
+    {
+      "no": 55,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 92,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "やらなければならないことより、やりたいことを優先する"
+    },
+    {
+      "no": 56,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 121,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "静かな環境より活気のある環境のほうが好きだ"
+    },
+    {
+      "no": 57,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 203,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "感情をコントロールするのが難しいと感じることがある"
+    },
+    {
+      "no": 58,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 62,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "やるべきことを後回しにしないようにしている"
+    },
+    {
+      "no": 59,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 96,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人前に出る仕事が好きだ"
+    },
+    {
+      "no": 60,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 179,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "人間関係に疲れを感じることがある"
+    },
+    {
+      "no": 61,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 213,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "誰かに怒られたり叱られたりすると必要以上に動揺する"
+    },
+    {
+      "no": 62,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 75,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "細かいことを気にしすぎず大まかに進めるほうだ"
+    },
+    {
+      "no": 63,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 36,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "同じ仕事を長く続けることに飽きを感じることがある"
+    },
+    {
+      "no": 64,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 182,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "自分の意見を押し通したいと思うことがある"
+    },
+    {
+      "no": 65,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 85,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "自分に甘いと感じることがある"
+    },
+    {
+      "no": 66,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 142,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人の話をじっくり聞くほうだ"
+    },
+    {
+      "no": 67,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 197,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "物事を悪い方向に考えてしまうことがある"
+    },
+    {
+      "no": 68,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 32,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人と違う視点から物事を見ることが多い"
+    },
+    {
+      "no": 69,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 120,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人に自分から連絡を取るほうだ"
+    },
+    {
+      "no": 70,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 95,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "大勢の場でも臆せず発言できる"
+    },
+    {
+      "no": 71,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 166,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人の短所より長所に目を向けるようにしている"
+    },
+    {
+      "no": 72,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 67,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "長期的な目標のために今の努力を惜しまない"
+    },
+    {
+      "no": 73,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 50,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "期限は必ず守るようにしている"
+    },
+    {
+      "no": 74,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 89,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "細かい作業が続くと集中力が途切れる"
+    },
+    {
+      "no": 75,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 156,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "意見の違いがあっても相手を尊重できる"
+    },
+    {
+      "no": 76,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 11,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "慣れない環境でも比較的すぐに適応できる"
+    },
+    {
+      "no": 77,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 122,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "人と話した後に疲れを感じることが多い"
+    },
+    {
+      "no": 78,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 37,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "一度決めたことは変えたくないほうだ"
+    },
+    {
+      "no": 79,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 149,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "誰とでも仲良くやっていける自信がある"
+    },
+    {
+      "no": 80,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 143,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "争いごとはできるだけ避けたい"
+    },
+    {
+      "no": 81,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 215,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "感情が安定していて滅多に動揺しない"
+    },
+    {
+      "no": 82,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 229,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "他人の目が気にならないほうだ"
+    },
+    {
+      "no": 83,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 56,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "目標を決めたら達成するまで粘り強く取り組む"
+    },
+    {
+      "no": 84,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 177,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "自分の考えが正しいと思えば強く主張する"
+    },
+    {
+      "no": 85,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 65,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "目の前の誘惑に負けず、やるべきことを優先できる"
+    },
+    {
+      "no": 86,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 160,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "仲間と助け合いながら仕事をするのが好きだ"
+    },
+    {
+      "no": 87,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 29,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "答えが一つではない問題を考えるのが好きだ"
+    },
+    {
+      "no": 88,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 210,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ストレスを感じると食欲や睡眠に影響が出ることがある"
+    },
+    {
+      "no": 89,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 148,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "言葉を選んで相手を傷つけないよう気をつける"
+    },
+    {
+      "no": 90,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 61,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分に厳しくできるほうだと思う"
+    },
+    {
+      "no": 91,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 114,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "リーダーシップを発揮することが多い"
+    },
+    {
+      "no": 92,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 193,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "批判や否定的な言葉を受けると落ち込みやすい"
+    },
+    {
+      "no": 93,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 94,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人と話すことでエネルギーが湧いてくる"
+    },
+    {
+      "no": 94,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 141,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "チームのために自分の意見を引っ込めることができる"
+    },
+    {
+      "no": 95,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 230,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "感情が安定していると人からよく言われる"
+    },
+    {
+      "no": 96,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 117,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人の輪の中に自然と入っていけるほうだ"
+    },
+    {
+      "no": 97,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 102,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "社交的なほうだと思う"
+    },
+    {
+      "no": 98,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 69,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "任された仕事は期待以上にこなしたい"
+    },
+    {
+      "no": 99,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 105,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "新しい人間関係を築くのが得意だ"
+    },
+    {
+      "no": 100,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 174,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "人に頼まれてもはっきり断れるほうだ"
+    },
+    {
+      "no": 101,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 219,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "感情的になることはほとんどない"
+    },
+    {
+      "no": 102,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 147,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人に親切にすることに喜びを感じる"
+    },
+    {
+      "no": 103,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 127,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "人前で話すのは得意ではない"
+    },
+    {
+      "no": 104,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 30,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分の経験や知識を他の場面にも応用しようとする"
+    },
+    {
+      "no": 105,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 199,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分に自信が持てないことが多い"
+    },
+    {
+      "no": 106,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 226,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "感情を上手にコントロールできるほうだ"
+    },
+    {
+      "no": 107,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 66,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "仕事の記録や整理をきちんとするほうだ"
+    },
+    {
+      "no": 108,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 73,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "計画を立てても途中で変えてしまうことが多い"
+    },
+    {
+      "no": 109,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 31,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "変化を恐れるより、変化を楽しめるほうだ"
+    },
+    {
+      "no": 110,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 189,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "失敗したときに自分を責めることが多い"
+    },
+    {
+      "no": 111,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 188,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "気分の浮き沈みが激しいほうだ"
+    },
+    {
+      "no": 112,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 158,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "グループの雰囲気が悪くなったときに場を和ませようとする"
+    },
+    {
+      "no": 113,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 35,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "理論や仕組みを理解したうえで行動したい"
+    },
+    {
+      "no": 114,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 208,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人前では緊張して本来の自分が出せないことがある"
+    },
+    {
+      "no": 115,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 154,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人の成功を素直に喜べる"
+    },
+    {
+      "no": 116,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 8,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "新しいアイデアを思いつくことが多い"
+    },
+    {
+      "no": 117,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 126,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "注目を浴びることは苦手だ"
+    },
+    {
+      "no": 118,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 13,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分の価値観や考え方を見直すことがある"
+    },
+    {
+      "no": 119,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 128,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "新しい人間関係を築くのにエネルギーが要る"
+    },
+    {
+      "no": 120,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 140,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "困っている人を見ると放っておけない"
+    },
+    {
+      "no": 121,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 211,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "嫌なことがあった日は切り替えが難しい"
+    },
+    {
+      "no": 122,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 125,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "一人で黙々と作業するほうが好きだ"
+    },
+    {
+      "no": 123,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 167,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "嫌いな人とも穏やかに接することができる"
+    },
+    {
+      "no": 124,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 151,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "感謝の気持ちを素直に表現できる"
+    },
+    {
+      "no": 125,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 111,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人を笑わせたり場を和ませたりするのが好きだ"
+    },
+    {
+      "no": 126,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 24,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "問題を解決するとき独自のアプローチを試みる"
+    },
+    {
+      "no": 127,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 57,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分の行動が周囲に与える影響を考えてから動く"
+    },
+    {
+      "no": 128,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 3,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "想像力が豊かなほうだと思う"
+    },
+    {
+      "no": 129,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 9,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "未知のことに挑戦するのは楽しい"
+    },
+    {
+      "no": 130,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 46,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "自分の考えを変えることに抵抗を感じることがある"
+    },
+    {
+      "no": 131,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 164,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分の意見が通らなくても怒らずに受け入れられる"
+    },
+    {
+      "no": 132,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 15,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "仕事以外にも幅広い趣味や関心がある"
+    },
+    {
+      "no": 133,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 10,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "物事の本質や背景を深く考えるほうだ"
+    },
+    {
+      "no": 134,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 41,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "手順通りに進める仕事のほうが安心する"
+    },
+    {
+      "no": 135,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 81,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "約束を忘れてしまうことがある"
+    },
+    {
+      "no": 136,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 84,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "衝動的に行動してしまうことがある"
+    },
+    {
+      "no": 137,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 130,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "自分の考えや気持ちはあまり人に話さない"
+    },
+    {
+      "no": 138,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 104,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "電話やビデオ通話でのやり取りが苦にならない"
+    },
+    {
+      "no": 139,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 112,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "多くの人と関わる仕事にやりがいを感じる"
+    },
+    {
+      "no": 140,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 119,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "一人でいる時間が長くなると寂しく感じる"
+    },
+    {
+      "no": 141,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 58,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "時間の使い方に気をつけているほうだ"
+    },
+    {
+      "no": 142,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 34,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "芸術的・美的なものに感動することが多い"
+    },
+    {
+      "no": 143,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 100,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "にぎやかな場所や集まりが好きだ"
+    },
+    {
+      "no": 144,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 161,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人の気持ちの変化に気づきやすいほうだ"
+    },
+    {
+      "no": 145,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 45,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "知らないことに直面すると不安を感じる"
+    },
+    {
+      "no": 146,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 27,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "物事を深く追求したくなる性質がある"
+    },
+    {
+      "no": 147,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 135,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "人と関わることにエネルギーを使いすぎると感じる"
+    },
+    {
+      "no": 148,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 123,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "大人数での集まりは疲れると感じる"
+    },
+    {
+      "no": 149,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 132,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "グループの中では聞き役になることが多い"
+    },
+    {
+      "no": 150,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 209,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "物事がうまくいかないと気持ちが落ち込みやすい"
+    },
+    {
+      "no": 151,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC36",
+      "zone": "ゾーン1",
+      "text_A": "人にどう思われているか気になるほうだ",
+      "text_B": "人の評価より自分の判断を信じるほうだ"
+    },
+    {
+      "no": 152,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC10",
+      "zone": "ゾーン1",
+      "text_A": "仕事は期限より早めに終わらせたい",
+      "text_B": "仕事は丁寧さを優先して時間をかけたい"
+    },
+    {
+      "no": 153,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC27",
+      "zone": "ゾーン1",
+      "text_A": "頼まれたことは断りにくい",
+      "text_B": "引き受けられないことははっきり断る"
+    },
+    {
+      "no": 154,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC9",
+      "zone": "ゾーン1",
+      "text_A": "やると決めたことは最後までやり遂げる",
+      "text_B": "状況が変わったら柔軟に方針を変える"
+    },
+    {
+      "no": 155,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC18",
+      "zone": "ゾーン1",
+      "text_A": "大勢でわいわいする場が好きだ",
+      "text_B": "少人数でじっくり話す場が好きだ"
+    },
+    {
+      "no": 156,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC26",
+      "zone": "ゾーン1",
+      "text_A": "チームの和を乱さないよう自分が折れることもある",
+      "text_B": "自分の考えが正しければきちんと主張する"
+    },
+    {
+      "no": 157,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC28",
+      "zone": "ゾーン1",
+      "text_A": "争いごとはできるだけ避けたい",
+      "text_B": "必要な場面では対立を恐れずに意見を言う"
+    },
+    {
+      "no": 158,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC35",
+      "zone": "ゾーン1",
+      "text_A": "物事が思い通りにいかないとストレスを感じる",
+      "text_B": "うまくいかないときは別の方法を考える"
+    },
+    {
+      "no": 159,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC11",
+      "zone": "ゾーン1",
+      "text_A": "細かいミスも見逃さないよう何度も確認する",
+      "text_B": "全体の流れを見ながら要点を押さえる"
+    },
+    {
+      "no": 160,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC25",
+      "zone": "ゾーン1",
+      "text_A": "相手の気持ちを考えて言い方を工夫する",
+      "text_B": "遠回しより率直に伝えるほうが親切だと思う"
+    },
+    {
+      "no": 161,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC34",
+      "zone": "ゾーン1",
+      "text_A": "仕事のプレッシャーを感じることが多い",
+      "text_B": "プレッシャーがあるほうがよい仕事ができる"
+    },
+    {
+      "no": 162,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC19",
+      "zone": "ゾーン1",
+      "text_A": "自分の意見はためらわず発言する",
+      "text_B": "よく考えてから発言するようにしている"
+    },
+    {
+      "no": 163,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC2",
+      "zone": "ゾーン1",
+      "text_A": "知らないことに出会うとわくわくする",
+      "text_B": "よく知っていることを深めるのが好きだ"
+    },
+    {
+      "no": 164,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC20",
+      "zone": "ゾーン1",
+      "text_A": "人前で話したり発表したりするのは得意だ",
+      "text_B": "裏方として支える役割のほうが向いている"
+    },
+    {
+      "no": 165,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC3",
+      "zone": "ゾーン1",
+      "text_A": "仕事のやり方を自分なりに工夫したい",
+      "text_B": "決められた手順通りに正確に進めたい"
+    },
+    {
+      "no": 166,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC33",
+      "zone": "ゾーン1",
+      "text_A": "ミスをしたときは深刻に受け止めて反省する",
+      "text_B": "ミスは次に活かせばいいと切り替えが早い"
+    },
+    {
+      "no": 167,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC12",
+      "zone": "ゾーン1",
+      "text_A": "計画を立てて行動するほうが安心する",
+      "text_B": "その場の状況に応じて動くほうが自分らしい"
+    },
+    {
+      "no": 168,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC17",
+      "zone": "ゾーン1",
+      "text_A": "初対面の人ともすぐに打ち解けられる",
+      "text_B": "時間をかけて少しずつ関係を深めるほうが好きだ"
+    },
+    {
+      "no": 169,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC1",
+      "zone": "ゾーン1",
+      "text_A": "新しいやり方を試すのが好きだ",
+      "text_B": "慣れたやり方で確実にこなすのが好きだ"
+    },
+    {
+      "no": 170,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC4",
+      "zone": "ゾーン1",
+      "text_A": "変化のある環境のほうが力を発揮できる",
+      "text_B": "安定した環境のほうが力を発揮できる"
+    },
+    {
+      "no": 171,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 162,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分の利益より周囲の調和を優先することがある"
+    },
+    {
+      "no": 172,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 202,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "周囲の目が気になって行動できないことがある"
+    },
+    {
+      "no": 173,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 21,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "同じことの繰り返しより新鮮な体験を好む"
+    },
+    {
+      "no": 174,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 108,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "会話の中心にいることが多い"
+    },
+    {
+      "no": 175,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 145,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "相手の立場に立って物事を考えられる"
+    },
+    {
+      "no": 176,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 91,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "失敗しても深く反省しないほうだ"
+    },
+    {
+      "no": 177,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 134,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "自分の意見はなかなか口に出せないほうだ"
+    },
+    {
+      "no": 178,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 109,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "チームで取り組む仕事に喜びを感じる"
+    },
+    {
+      "no": 179,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 4,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "複雑な問題を考えるのが面白い"
+    },
+    {
+      "no": 180,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 212,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分の感情に振り回されることがある"
+    },
+    {
+      "no": 181,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 106,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "プレゼンや発表の場は苦にならない"
+    },
+    {
+      "no": 182,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 198,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ちょっとした変化でも気になってしまう"
+    },
+    {
+      "no": 183,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 101,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分の意見や考えを積極的に発信する"
+    },
+    {
+      "no": 184,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 51,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "細かいことにも注意を払うほうだ"
+    },
+    {
+      "no": 185,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 118,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "一人での作業より共同作業のほうが好きだ"
+    },
+    {
+      "no": 186,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 90,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ルールより自分の判断を優先することがある"
+    },
+    {
+      "no": 187,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 137,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "仕事は一人でこなすほうが効率がいいと感じる"
+    },
+    {
+      "no": 188,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 72,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "物事を中途半端に終わらせることが多い"
+    },
+    {
+      "no": 189,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 214,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分のことを過小評価しがちだ"
+    },
+    {
+      "no": 190,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 49,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "計画を立ててから行動するほうだ"
+    },
+    {
+      "no": 191,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 205,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "仕事のプレッシャーで眠れないことがある"
+    },
+    {
+      "no": 192,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 40,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "物事をあまり深く考えないほうだ"
+    },
+    {
+      "no": 193,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 159,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人に対して寛容でいられるほうだ"
+    },
+    {
+      "no": 194,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 12,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "決まったルーティンより変化のある毎日が好きだ"
+    },
+    {
+      "no": 195,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 144,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人の良いところを見つけるのが得意だ"
+    },
+    {
+      "no": 196,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 59,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "仕事中は集中力を維持できる"
+    },
+    {
+      "no": 197,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 152,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "周囲の人が気持ちよく働けるよう気を配る"
+    },
+    {
+      "no": 198,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 222,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "大事な場面でも落ち着いて対処できる"
+    },
+    {
+      "no": 199,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 178,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "チームより個人の成果を重視することがある"
+    },
+    {
+      "no": 200,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 70,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "仕事とプライベートをきちんと区別している"
+    },
+    {
+      "no": 201,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 170,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "納得できないことには従わないことがある"
+    },
+    {
+      "no": 202,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 33,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "慣れた方法より効率的な方法を探したくなる"
+    },
+    {
+      "no": 203,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 172,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "自分の利益を守ることも大切だと思う"
+    },
+    {
+      "no": 204,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 5,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "旅行や新しい場所に行くのが好きだ"
+    },
+    {
+      "no": 205,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 26,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "手順が決まった作業より自由度の高い仕事が好きだ"
+    },
+    {
+      "no": 206,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 181,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "競争心が強いほうだと思う"
+    },
+    {
+      "no": 207,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 150,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人の悩みや相談に乗るのが苦にならない"
+    },
+    {
+      "no": 208,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 98,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "知らない人に自分から話しかけるほうだ"
+    },
+    {
+      "no": 209,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 43,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "想像したり空想したりすることはあまりない"
+    },
+    {
+      "no": 210,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 131,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "大勢より少人数での交流のほうが好きだ"
+    },
+    {
+      "no": 211,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 88,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "言ったことを実行できないことが時々ある"
+    },
+    {
+      "no": 212,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 79,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "ルールより状況に応じた判断を優先することが多い"
+    },
+    {
+      "no": 213,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 196,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "プレッシャーを感じると実力が出せないことがある"
+    },
+    {
+      "no": 214,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 68,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分の行動を振り返り、改善しようとする"
+    },
+    {
+      "no": 215,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 87,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "責任のある仕事は避けたいと思うことがある"
+    },
+    {
+      "no": 216,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 218,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "プレッシャーがあるほうがよい仕事ができる"
+    },
+    {
+      "no": 217,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 168,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分さえよければいいとは思わない"
+    },
+    {
+      "no": 218,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 186,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "大事な場面では緊張することが多い"
+    },
+    {
+      "no": 219,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 138,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "自分から連絡を取るより、来るのを待つほうだ"
+    },
+    {
+      "no": 220,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 206,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "怒りや悲しみの感情が長く続くほうだ"
+    },
+    {
+      "no": 221,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC31",
+      "zone": "ゾーン2",
+      "text_A": "相手の立場に立って物事を考えるほうだ",
+      "text_B": "物事を客観的・論理的に判断するほうだ"
+    },
+    {
+      "no": 222,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC21",
+      "zone": "ゾーン2",
+      "text_A": "知らない人が多い場でも積極的に話しかける",
+      "text_B": "まず場の雰囲気をつかんでから動く"
+    },
+    {
+      "no": 223,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC8",
+      "zone": "ゾーン2",
+      "text_A": "前例のない仕事に挑戦するのは面白い",
+      "text_B": "実績のある仕事を着実にこなすほうが向いている"
+    },
+    {
+      "no": 224,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC24",
+      "zone": "ゾーン2",
+      "text_A": "困ったことがあればすぐ周囲に相談する",
+      "text_B": "まず自分で解決策を考えてから相談する"
+    },
+    {
+      "no": 225,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC23",
+      "zone": "ゾーン2",
+      "text_A": "仕事の後に同僚と食事や飲みに行くのが好きだ",
+      "text_B": "仕事の後は一人で静かに過ごすのが好きだ"
+    },
+    {
+      "no": 226,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC37",
+      "zone": "ゾーン2",
+      "text_A": "大事な場面では緊張することが多い",
+      "text_B": "大事な場面ほど落ち着いて対処できる"
+    },
+    {
+      "no": 227,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC6",
+      "zone": "ゾーン2",
+      "text_A": "異なる文化や価値観に触れるのが好きだ",
+      "text_B": "自分の文化や価値観を大切にして生きたい"
+    },
+    {
+      "no": 228,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC29",
+      "zone": "ゾーン2",
+      "text_A": "人の悩みを聞くのは苦にならない",
+      "text_B": "具体的な解決策を一緒に考えることが得意だ"
+    },
+    {
+      "no": 229,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC14",
+      "zone": "ゾーン2",
+      "text_A": "仕事中は私的なことは後回しにする",
+      "text_B": "仕事とプライベートはうまくバランスをとる"
+    },
+    {
+      "no": 230,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC39",
+      "zone": "ゾーン2",
+      "text_A": "感情が表情や態度に出やすいほうだ",
+      "text_B": "感情をコントロールして冷静でいられるほうだ"
+    },
+    {
+      "no": 231,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC7",
+      "zone": "ゾーン2",
+      "text_A": "複数の仕事を同時に進めるほうが飽きない",
+      "text_B": "一つのことに集中して仕上げるほうが得意だ"
+    },
+    {
+      "no": 232,
+      "type": "forced",
+      "dim": "O",
+      "source_id": "FC5",
+      "zone": "ゾーン2",
+      "text_A": "まず試してみて、問題があれば直す",
+      "text_B": "十分に確認してから行動する"
+    },
+    {
+      "no": 233,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC13",
+      "zone": "ゾーン2",
+      "text_A": "頼まれた仕事は必ず期待以上にこなしたい",
+      "text_B": "頼まれた仕事は無理なく確実にこなしたい"
+    },
+    {
+      "no": 234,
+      "type": "forced",
+      "dim": "E",
+      "source_id": "FC22",
+      "zone": "ゾーン2",
+      "text_A": "グループのまとめ役になることが多い",
+      "text_B": "それぞれの役割をきちんとこなすほうが得意だ"
+    },
+    {
+      "no": 235,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC32",
+      "zone": "ゾーン2",
+      "text_A": "人間関係を大切にするためなら多少の我慢はする",
+      "text_B": "我慢より率直なコミュニケーションを好む"
+    },
+    {
+      "no": 236,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC16",
+      "zone": "ゾーン2",
+      "text_A": "ルールや手順はきちんと守ることが大切だ",
+      "text_B": "ルールより目的を優先することも必要だ"
+    },
+    {
+      "no": 237,
+      "type": "forced",
+      "dim": "A",
+      "source_id": "FC30",
+      "zone": "ゾーン2",
+      "text_A": "みんなが納得できる落としどころを探すのが好きだ",
+      "text_B": "正しいことを明確にするほうが大切だと思う"
+    },
+    {
+      "no": 238,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC40",
+      "zone": "ゾーン2",
+      "text_A": "慎重に考えすぎて決断が遅くなることがある",
+      "text_B": "迷ったときは直感を信じて早めに決める"
+    },
+    {
+      "no": 239,
+      "type": "forced",
+      "dim": "C",
+      "source_id": "FC15",
+      "zone": "ゾーン2",
+      "text_A": "自分の仕事は責任を持って最後まで自分でやる",
+      "text_B": "難しい部分は周囲に相談しながら進める"
+    },
+    {
+      "no": 240,
+      "type": "forced",
+      "dim": "N",
+      "source_id": "FC38",
+      "zone": "ゾーン2",
+      "text_A": "心配事があると頭から離れにくい",
+      "text_B": "心配してもしかたないと割り切れるほうだ"
+    },
+    {
+      "no": 241,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 14,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "多様な文化や習慣に興味がある"
+    },
+    {
+      "no": 242,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 223,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "心配してもしかたないと割り切れるほうだ"
+    },
+    {
+      "no": 243,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 83,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "物事を最後まで粘り強くやり遂げることが苦手だ"
+    },
+    {
+      "no": 244,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 187,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "心配事があると頭から離れにくい"
+    },
+    {
+      "no": 245,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 39,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "興味のないことには深く関われない"
+    },
+    {
+      "no": 246,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 133,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "社交的な場よりも一人の時間を大切にする"
+    },
+    {
+      "no": 247,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 78,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "整理整頓が苦手なほうだ"
+    },
+    {
+      "no": 248,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 204,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "将来のことを考えると不安になることが多い"
+    },
+    {
+      "no": 249,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 195,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "ネガティブなことを考えすぎてしまうことがある"
+    },
+    {
+      "no": 250,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 25,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "仕事や生活に自分なりの工夫を加えるのが好きだ"
+    },
+    {
+      "no": 251,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 63,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "仕事の品質にはこだわりがある"
+    },
+    {
+      "no": 252,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 28,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "新しい環境に飛び込むことにワクワクする"
+    },
+    {
+      "no": 253,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 165,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "競争より協力のほうが好きだ"
+    },
+    {
+      "no": 254,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 217,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "嫌なことがあってもすぐ切り替えられる"
+    },
+    {
+      "no": 255,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 55,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "仕事の準備や段取りをしっかり整えてから始める"
+    },
+    {
+      "no": 256,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 171,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "言いたいことははっきり言うタイプだ"
+    },
+    {
+      "no": 257,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 163,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "頼まれたことは断りにくいほうだ"
+    },
+    {
+      "no": 258,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 157,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "誰かが困っていたら手を差し伸べる"
+    },
+    {
+      "no": 259,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 192,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "感情が表情や態度に出やすいほうだ"
+    },
+    {
+      "no": 260,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 20,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "議論や意見交換を通じて考えが深まることが多い"
+    },
+    {
+      "no": 261,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 74,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "締め切りギリギリになることが多い"
+    },
+    {
+      "no": 262,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 44,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "新しいやり方より慣れたやり方を選ぶことが多い"
+    },
+    {
+      "no": 263,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 183,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "人に対してイライラすることが多い"
+    },
+    {
+      "no": 264,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 93,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "初対面の人ともすぐに打ち解けられる"
+    },
+    {
+      "no": 265,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 176,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "人の失敗を許せないことがある"
+    },
+    {
+      "no": 266,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 38,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "新しいことより確実にできることをやりたい"
+    },
+    {
+      "no": 267,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 169,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "自分の意見をはっきり主張するほうだ"
+    },
+    {
+      "no": 268,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 22,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "知識を広げることに喜びを感じる"
+    },
+    {
+      "no": 269,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 115,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "意見が違っても積極的に議論するほうだ"
+    },
+    {
+      "no": 270,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 190,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "人にどう思われているか気になるほうだ"
+    },
+    {
+      "no": 271,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 42,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "変化が多い環境はストレスに感じる"
+    },
+    {
+      "no": 272,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 146,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "チームワークを大切にしている"
+    },
+    {
+      "no": 273,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 201,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "ミスをすると長時間引きずることがある"
+    },
+    {
+      "no": 274,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 227,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "どんな状況でも冷静でいられる自信がある"
+    },
+    {
+      "no": 275,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 124,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "自分から話しかけるより話しかけられるほうが楽だ"
+    },
+    {
+      "no": 276,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 191,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "ちょっとしたことでも不安になりやすい"
+    },
+    {
+      "no": 277,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 77,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "やる気が出ないと仕事を先延ばしにしてしまう"
+    },
+    {
+      "no": 278,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 53,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "一度引き受けた仕事は途中で投げ出さない"
+    },
+    {
+      "no": 279,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 103,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "仕事の後に同僚と交流するのが楽しい"
+    },
+    {
+      "no": 280,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 86,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "仕事の段取りを考えずに始めることが多い"
+    },
+    {
+      "no": 281,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 224,
+      "reverse": true,
+      "repeat_tag": "N",
+      "text": "人の評価より自分の判断を信じるほうだ"
+    },
+    {
+      "no": 282,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 136,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "会話より文章でのやり取りのほうが楽だ"
+    },
+    {
+      "no": 283,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 129,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "人と長時間一緒にいると疲れを感じる"
+    },
+    {
+      "no": 284,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 1,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "新しいことを学ぶのが好きだ"
+    },
+    {
+      "no": 285,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 99,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "人と一緒に仕事をするほうが一人より好きだ"
+    },
+    {
+      "no": 286,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 71,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "自分の感情に流されず冷静に行動できる"
+    },
+    {
+      "no": 287,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 7,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "仕事のやり方を改善しようとよく考える"
+    },
+    {
+      "no": 288,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 60,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "規則やルールはきちんと守るほうだ"
+    },
+    {
+      "no": 289,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 64,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "言ったことは必ず実行するようにしている"
+    },
+    {
+      "no": 290,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 139,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "人の気持ちに寄り添うことができる"
+    },
+    {
+      "no": 291,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 221,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "失敗してもすぐに前向きになれる"
+    },
+    {
+      "no": 292,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 185,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "物事が思い通りにいかないとストレスを感じる"
+    },
+    {
+      "no": 293,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 52,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "自分の仕事に責任を持って取り組む"
+    },
+    {
+      "no": 294,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 23,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "直感的なひらめきを大切にしている"
+    },
+    {
+      "no": 295,
+      "type": "scale5",
+      "dim": "E",
+      "source_id": 97,
+      "reverse": false,
+      "repeat_tag": "N",
+      "text": "グループをまとめる役割を自然と担うことが多い"
+    },
+    {
+      "no": 296,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 155,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "自分より相手を優先することが多い"
+    },
+    {
+      "no": 297,
+      "type": "scale5",
+      "dim": "A",
+      "source_id": 175,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "人の行動や言動に腹が立つことがある"
+    },
+    {
+      "no": 298,
+      "type": "scale5",
+      "dim": "N",
+      "source_id": 216,
+      "reverse": true,
+      "repeat_tag": "RL",
+      "text": "批判されても気にしないほうだ"
+    },
+    {
+      "no": 299,
+      "type": "scale5",
+      "dim": "C",
+      "source_id": 47,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "やると決めたことはきちんとやり遂げる"
+    },
+    {
+      "no": 300,
+      "type": "scale5",
+      "dim": "O",
+      "source_id": 16,
+      "reverse": false,
+      "repeat_tag": "RL",
+      "text": "物事を一つの角度だけでなく様々な角度から考える"
+    }
+  ]
+}

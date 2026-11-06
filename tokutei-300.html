@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>特定技能 適性検査（300問）</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Noto Sans JP','Hiragino Sans',sans-serif;background:#0d0d1a;color:#e8e8f0;min-height:100vh}
+.screen{display:none;min-height:100vh}
+.screen.active{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 16px}
+
+/* ===== CODE INPUT (認証) ===== */
+#codeScreen{background:linear-gradient(135deg,#0c0a24 0%,#16113a 55%,#091520 100%)}
+.card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.09);border-radius:24px;padding:40px 36px;max-width:540px;width:100%;box-shadow:0 40px 80px rgba(0,0,0,0.5)}
+.card h1{color:#fff;font-weight:800;font-size:22px;margin-bottom:6px;text-align:center}
+.card-logo{font-size:52px;margin-bottom:14px;text-align:center}
+.card-sub{color:rgba(255,255,255,0.4);font-size:13px;margin-bottom:24px;text-align:center}
+.code-hints{background:rgba(255,255,255,0.04);border-radius:12px;padding:12px 16px;margin-bottom:20px}
+.code-hints p{color:rgba(255,255,255,0.55);font-size:13px;margin:3px 0}
+.code-input{width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:12px 16px;color:#fff;font-size:20px;font-family:inherit;outline:none;margin-bottom:8px;text-align:center;letter-spacing:3px;font-weight:700}
+.code-input::placeholder{color:rgba(255,255,255,0.3);font-size:14px;letter-spacing:1px}
+.error-msg{color:#F4A261;font-size:12px;margin:0 0 8px;text-align:center}
+.btn-primary{width:100%;border:none;border-radius:12px;padding:14px 32px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;margin-top:4px;background:linear-gradient(135deg,#6C9BF7,#4a7af5);color:#fff;transition:.2s}
+.btn-primary:hover{opacity:.9}
+.btn-primary:disabled{opacity:.5;cursor:not-allowed}
+
+/* ===== NUMBER SELECT ===== */
+#numberScreen{background:linear-gradient(135deg,#0d0d1a 0%,#1a1440 100%)}
+.num-card{background:#1a1440;border:1px solid #3d3680;border-radius:16px;padding:32px 24px;width:100%;max-width:400px}
+.num-card h2{font-size:1.1rem;color:#7c6fff;margin-bottom:6px}
+.num-card p{font-size:.85rem;color:#aaa;margin-bottom:20px;line-height:1.6}
+select{width:100%;padding:12px;background:#0d0d1a;color:#fff;border:1.5px solid #3d3680;border-radius:8px;font-size:1rem;margin-bottom:20px;appearance:none;-webkit-appearance:none}
+select option{background:#0d0d1a;color:#fff}
+.btn-purple{width:100%;padding:14px;background:#7c6fff;color:#fff;border:none;border-radius:10px;font-size:1rem;font-weight:700;cursor:pointer;transition:.2s}
+.btn-purple:hover{background:#6058e0}
+.btn-purple:disabled{background:#3d3680;cursor:not-allowed;opacity:.6}
+
+/* ===== INTRO ===== */
+#introScreen{background:linear-gradient(135deg,#0d0d1a 0%,#1a1440 100%)}
+#introScreen .num-card{text-align:left;max-width:480px}
+#introScreen .num-card ul{padding-left:20px;color:#ccc;font-size:.9rem;line-height:2}
+#introScreen .num-card ul li{margin-bottom:4px}
+#introScreen .num-card .notice{margin-top:16px;padding:12px;background:#2a1f4f;border-left:3px solid #7c6fff;border-radius:4px;font-size:.82rem;color:#ccc;line-height:1.6}
+
+/* ===== QUIZ ===== */
+#quizScreen{background:#0d0d1a;padding:0;justify-content:flex-start}
+.quiz-header{position:sticky;top:0;z-index:10;background:#0d0d1a;border-bottom:1px solid #2a2460;padding:12px 16px;width:100%}
+.progress-row{display:flex;align-items:center;gap:10px}
+.progress-label{font-size:.75rem;color:#aaa;white-space:nowrap}
+.progress-bar{flex:1;height:6px;background:#1e1b4b;border-radius:3px;overflow:hidden}
+.progress-fill{height:100%;background:#7c6fff;border-radius:3px;transition:.3s}
+.q-counter{font-size:.75rem;color:#7c6fff;white-space:nowrap}
+
+.quiz-body{flex:1;padding:20px 16px 100px;max-width:640px;margin:0 auto;width:100%}
+.q-block{display:none}
+.q-block.active{display:block;animation:fadein .25s ease}
+@keyframes fadein{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+.q-no{font-size:.75rem;color:#7c6fff;margin-bottom:6px}
+.q-type-badge{display:inline-block;font-size:.65rem;padding:2px 8px;border-radius:10px;margin-bottom:10px}
+.badge-scale{background:#1e3a5f;color:#5bc8af}
+.badge-forced{background:#3a1e3a;color:#e06bff}
+.q-text{font-size:1rem;line-height:1.7;color:#e8e8f0;margin-bottom:20px}
+
+/* Scale5 */
+.scale-wrap{display:flex;flex-direction:column;gap:10px}
+.scale-row{display:flex;align-items:center;gap:0;background:#1a1440;border:1.5px solid #2a2460;border-radius:10px;overflow:hidden;transition:.2s}
+.scale-row:has(input:checked){border-color:#7c6fff;background:#2a2060}
+.scale-row label{flex:1;padding:12px 14px;cursor:pointer;font-size:.9rem;color:#ccc;display:flex;align-items:center;gap:10px;transition:.2s}
+.scale-row label:hover{color:#fff}
+.scale-row input[type=radio]{display:none}
+.scale-dot{width:14px;height:14px;border-radius:50%;border:2px solid #3d3680;flex-shrink:0;transition:.2s}
+.scale-row:has(input:checked) .scale-dot{background:#7c6fff;border-color:#7c6fff}
+
+/* Forced */
+.forced-wrap{display:flex;flex-direction:column;gap:12px}
+.forced-opt{background:#1a1440;border:1.5px solid #2a2460;border-radius:10px;padding:14px 16px;cursor:pointer;font-size:.9rem;color:#ccc;line-height:1.6;transition:.2s;display:flex;align-items:flex-start;gap:10px}
+.forced-opt:hover{border-color:#7c6fff;color:#fff}
+.forced-opt.selected{border-color:#e06bff;background:#2a1040;color:#fff}
+.forced-opt input{display:none}
+.opt-label{font-weight:700;font-size:.85rem;color:#7c6fff;flex-shrink:0;margin-top:1px}
+.forced-opt.selected .opt-label{color:#e06bff}
+
+/* Nav */
+.quiz-nav{position:fixed;bottom:0;left:0;right:0;background:#0d0d1a;border-top:1px solid #2a2460;padding:14px 16px;display:flex;gap:12px;width:100%;max-width:640px;margin:0 auto;left:50%;transform:translateX(-50%)}
+.btn-nav{flex:1;padding:13px;border:none;border-radius:10px;font-size:.95rem;font-weight:600;cursor:pointer;transition:.2s}
+.btn-prev{background:#1e1b4b;color:#aaa}
+.btn-prev:hover{background:#2a2460;color:#fff}
+.btn-next{background:#7c6fff;color:#fff}
+.btn-next:hover{background:#6058e0}
+.btn-next:disabled{background:#3d3680;cursor:not-allowed;opacity:.6}
+.btn-submit{background:#5bc8af;color:#0d0d1a;font-weight:700}
+.btn-submit:hover{background:#4ab89f}
+
+/* ===== RESULT ===== */
+#resultScreen{background:#0d0d1a;padding:24px 16px 60px;justify-content:flex-start}
+.result-wrap{max-width:640px;width:100%}
+.result-wrap h2{font-size:1.3rem;color:#7c6fff;margin-bottom:4px}
+.result-wrap .r-sub{font-size:.82rem;color:#aaa;margin-bottom:24px}
+.dim-card{background:#1a1440;border:1px solid #2a2460;border-radius:12px;padding:16px;margin-bottom:12px}
+.dim-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.dim-name{font-size:1rem;font-weight:700;color:#e8e8f0}
+.dim-score{font-size:1.3rem;font-weight:800}
+.dim-bar-bg{height:8px;background:#0d0d1a;border-radius:4px;overflow:hidden;margin-bottom:6px}
+.dim-bar{height:100%;border-radius:4px;transition:.8s}
+.dim-label{font-size:.75rem;color:#aaa}
+.reliability-box{background:#1a1440;border:1px solid #2a2460;border-radius:12px;padding:16px;margin-bottom:12px}
+.rel-title{font-size:.9rem;font-weight:700;color:#e8e8f0;margin-bottom:12px}
+.rel-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.rel-label{font-size:.82rem;color:#aaa}
+.rel-val{font-size:.9rem;font-weight:700}
+.rel-overall{text-align:center;padding:12px;background:#0d0d1a;border-radius:8px;margin-top:8px}
+.rel-overall-label{font-size:.75rem;color:#aaa;margin-bottom:4px}
+.rel-overall-val{font-size:1.6rem;font-weight:800}
+.badge-ok{color:#5bc8af}.badge-warn{color:#f4c430}.badge-ng{color:#e63946}
+.result-note{font-size:.78rem;color:#888;line-height:1.6;margin-top:16px;padding:12px;background:#1a1440;border-radius:8px}
+.btn-done{width:100%;padding:14px;background:#2a2460;color:#aaa;border:none;border-radius:10px;font-size:.95rem;cursor:pointer;margin-top:20px}
+</style>
+</head>
+<body>
+
+<!-- ① 言語選択 -->
+<div id="langScreen" class="screen active">
+  <div class="card">
+    <div class="card-logo">🧠</div>
+    <h1>特定技能 適性検査</h1>
+    <p class="card-sub">300問版 × Tokutei Ginou</p>
+    <div class="code-hints">
+      <p>🇯🇵 言語を選んでください</p>
+      <p>🇮🇩 Pilih bahasa Anda</p>
+      <p>🇲🇲 ဘာသာစကား ရွေးချယ်ပါ</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px">
+      <button class="btn-primary" onclick="selectLang('ja')">🇯🇵 日本語</button>
+      <button class="btn-primary" style="background:linear-gradient(135deg,#5BC8AF,#38a98e)" onclick="selectLang('id')">🇮🇩 Bahasa Indonesia</button>
+      <button class="btn-primary" style="background:linear-gradient(135deg,#E76F9A,#c45580)" onclick="selectLang('my')">🇲🇲 မြန်မာဘာသာ</button>
+    </div>
+  </div>
+</div>
+
+<!-- ② ID入力 -->
+<div id="idScreen" class="screen">
+  <div class="card">
+    <div class="card-logo" style="font-size:36px">🪪</div>
+    <h1 id="idTitle" style="font-size:18px;margin-bottom:8px">受験者IDを入力してください</h1>
+    <p id="idDesc" style="color:rgba(255,255,255,0.45);font-size:12px;margin-bottom:20px;text-align:center;line-height:1.7"></p>
+    <input id="idInput" class="code-input" placeholder="例：ABC-12345" maxlength="15"
+      oninput="sanitizeId(this)"
+      onkeydown="if(event.key==='Enter')handleIdSubmit()">
+    <div id="idError" class="error-msg" style="display:none"></div>
+    <button class="btn-primary" id="idBtn" onclick="handleIdSubmit()">次へ</button>
+  </div>
+</div>
+
+<!-- ③ 説明 -->
+<div id="introScreen" class="screen">
+  <div class="num-card">
+    <h2 id="introTitle">検査について</h2>
+    <ul id="introList"></ul>
+    <div class="notice" id="introNotice"></div>
+    <button class="btn-purple" style="margin-top:24px" onclick="startQuiz()">
+      <span id="startBtnText">開始する</span>
+    </button>
+  </div>
+</div>
+
+<!-- ④ 問題 -->
+<div id="quizScreen" class="screen">
+  <div class="quiz-header">
+    <div class="progress-row">
+      <span class="progress-label" id="pLabel">問題</span>
+      <div class="progress-bar"><div class="progress-fill" id="pFill" style="width:0%"></div></div>
+      <span class="q-counter" id="pCounter">0/300</span>
+    </div>
+  </div>
+  <div class="quiz-body" id="quizBody"></div>
+  <div class="quiz-nav">
+    <button class="btn-nav btn-prev" onclick="navQ(-1)" id="btnPrev">◀ 戻る</button>
+    <button class="btn-nav btn-next" onclick="navQ(1)" id="btnNext">次へ ▶</button>
+  </div>
+</div>
+
+<!-- ⑤ 結果 -->
+<div id="resultScreen" class="screen">
+  <div class="result-wrap" id="resultWrap"></div>
+</div>
+
+<script>
+// ═══════════════════════════════════════════
+// ★ ここにSupabaseの情報を入力してください ★
+// ═══════════════════════════════════════════
+const SUPABASE_URL = 'https://uaxyxphvtouadfonmwzp.supabase.co';
+const SUPABASE_KEY = 'sb_publishable_OfDj1GzXoYXOWErBUK-ooQ_VHSF6YfZ';
+// ═══════════════════════════════════════════
+
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+// ===== UI テキスト =====
+const UI = {
+  ja: {
+    idTitle: '受験者IDを入力してください',
+    idDesc: '送り出し機関から付与されたIDを入力してください。\n半角大文字英字・数字・ハイフン（-）のみ、最大15文字。',
+    idBtn: '次へ',
+    idError: 'IDを入力してください',
+    idFormatError: '使用できる文字は半角大文字英字・数字・ハイフン（-）のみです',
+    introTitle: '検査について',
+    introItems: [
+      '全300問あります（約60〜90分）',
+      '正直に答えてください。正解・不正解はありません',
+      '5段階評価：1=全くあてはまらない ～ 5=非常にあてはまる',
+      '強制選択問題（A/B）はより近い方を選んでください',
+      '問題をとばすことはできません',
+    ],
+    introNotice: '回答はすべて保存されます。途中で中断した場合は最初からやり直しとなります。',
+    startBtn: '開始する',
+    scale: ['全くあてはまらない','あてはまらない','どちらとも言えない','あてはまる','非常にあてはまる'],
+    prevBtn: '◀ 戻る',
+    nextBtn: '次へ ▶',
+    submitBtn: '送信する',
+    pLabel: '問題',
+    dimNames: {O:'開放性',C:'誠実性',E:'外向性',A:'協調性',N:'神経症傾向'},
+    relTitle: '信頼性スコア',
+    relConsistency: '一貫性スコア',
+    relRepeat: '再掲一致率',
+    relContra: '矛盾率（強制選択）',
+    relOverall: '総合信頼性',
+    relBadges: ['高い','やや注意','要注意'],
+    corrLabel: '補正後',
+    resultTitle: '検査結果',
+    resultSub: '回答ありがとうございました',
+    resultNote: '※このスコアは採用判断の参考資料の一つです。スタッフが詳細を確認します。',
+    doneBtn: '完了',
+    codeError: 'コードが無効です',
+    codeEmpty: 'コードを入力してください',
+  },
+  id: {
+    idTitle: 'Masukkan ID peserta ujian',
+    idDesc: 'Masukkan ID yang diberikan oleh lembaga pengirim.\nHanya huruf kapital, angka, dan tanda hubung (-). Maks. 15 karakter.',
+    idBtn: 'Lanjut',
+    idError: 'Silakan masukkan ID Anda',
+    idFormatError: 'Hanya huruf kapital (A-Z), angka (0-9), dan tanda hubung (-) yang diperbolehkan',
+    introTitle: 'Tentang Tes Ini',
+    introItems: [
+      'Total 300 pertanyaan (sekitar 60–90 menit)',
+      'Jawablah dengan jujur. Tidak ada jawaban benar atau salah',
+      'Skala 5 poin: 1=Sangat tidak setuju ～ 5=Sangat setuju',
+      'Pertanyaan pilihan paksa (A/B): pilih yang lebih mendekati diri Anda',
+      'Pertanyaan tidak bisa dilewati',
+    ],
+    introNotice: 'Semua jawaban akan disimpan. Jika tes dihentikan di tengah, harus diulang dari awal.',
+    startBtn: 'Mulai',
+    scale: ['Sangat tidak setuju','Tidak setuju','Netral','Setuju','Sangat setuju'],
+    prevBtn: '◀ Kembali',
+    nextBtn: 'Lanjut ▶',
+    submitBtn: 'Kirim',
+    pLabel: 'Pertanyaan',
+    dimNames: {O:'Keterbukaan',C:'Ketelitian',E:'Ekstraversi',A:'Keramahan',N:'Neurotisisme'},
+    relTitle: 'Skor Reliabilitas',
+    relConsistency: 'Skor Konsistensi',
+    relRepeat: 'Tingkat Kecocokan Pengulangan',
+    relContra: 'Tingkat Kontradiksi (Pilihan Paksa)',
+    relOverall: 'Reliabilitas Total',
+    relBadges: ['Tinggi','Perlu Perhatian','Hati-hati'],
+    corrLabel: 'Terkoreksi',
+    resultTitle: 'Hasil Tes',
+    resultSub: 'Terima kasih atas jawaban Anda',
+    resultNote: '※Skor ini adalah salah satu bahan referensi keputusan perekrutan. Staf akan memeriksa detailnya.',
+    doneBtn: 'Selesai',
+    codeError: 'Kode tidak valid / コードが無効です',
+    codeEmpty: 'Masukkan kode ujian Anda',
+  },
+  my: {
+    idTitle: 'စစ်ဆေးသူ ID ထည့်သွင်းပါ',
+    idDesc: 'ပို့ဆောင်ရေးအဖွဲ့မှ ပေးသော ID ကို ထည့်သွင်းပါ။\nစာလုံးကြီး (A-Z)、ဂဏန်း (0-9)、ဆက်ကြောင်း (-) သာ ခွင့်ပြု။ အများဆုံး ၁၅ လုံး။',
+    idBtn: 'ရှေ့သို့',
+    idError: 'ID ထည့်သွင်းပေးပါ',
+    idFormatError: 'စာလုံးကြီး (A-Z)、ဂဏန်း (0-9)、ဆက်ကြောင်း (-) သာ သုံးနိုင်သည်',
+    introTitle: 'စစ်ဆေးမှုအကြောင်း',
+    introItems: [
+      'မေးခွန်းစုစုပေါင်း ၃၀၀ ပါဝင်သည် (၆၀–၉၀ မိနစ်ခန့်)',
+      'ရိုးသားစွာ ဖြေဆိုပါ။ မှန်ကန်ခြင်း၊ မှားကန်ခြင်း မရှိ',
+      '5 အဆင့် နှင့် ဖြေဆိုပါ: 1=လုံးဝ မမှန် ～ 5=အလွန်မှန်',
+      'A/B ရွေးချယ်မေးခွန်း: မိမိနှင့်ပိုနီးသောဘက် ရွေးချယ်ပါ',
+      'မေးခွန်းများကို ကျော်၍မဖြေနိုင်',
+    ],
+    introNotice: 'ဖြေဆိုမှုများ သိမ်းဆည်းထားသည်။ အလယ်တွင် ရပ်သောအခါ အစမှ ပြန်စရမည်ဖြစ်သည်',
+    startBtn: 'စတင်သည်',
+    scale: ['လုံးဝ မမှန်','မမှန်','မဆုံးဖြတ်နိုင်','မှန်သည်','အလွန်မှန်'],
+    prevBtn: '◀ နောက်သို့',
+    nextBtn: 'ရှေ့သို့ ▶',
+    submitBtn: 'တင်သွင်းသည်',
+    pLabel: 'မေးခွန်း',
+    dimNames: {O:'ပွင့်လင်းမှု',C:'သမာဓိ',E:'ပြင်ပဆန်ဆန်',A:'ကိုက်ညီမှု',N:'Neuroticism'},
+    relTitle: 'ယုံကြည်မှုစွမ်းရည်',
+    relConsistency: 'ကိုက်ညီမှုရမှတ်',
+    relRepeat: 'ထပ်ဆင့်မေးခွန်း ကိုက်ညီမှုနှုန်း',
+    relContra: 'ကန့်လန့်ဆန်ဆန်မှုနှုန်း',
+    relOverall: 'စုစုပေါင်းယုံကြည်နိုင်မှု',
+    relBadges: ['မြင့်မားသည်','ဂရုပြုပါ','သတိပြုပါ'],
+    corrLabel: 'ပြင်ဆင်ပြီး',
+    resultTitle: 'စစ်ဆေးမှုရလဒ်',
+    resultSub: 'ဖြေဆိုသည့်အတွက် ကျေးဇူးတင်ပါသည်',
+    resultNote: '※ ဤရမှတ်သည် ခေါ်ယူဆုံးဖြတ်ရာတွင် ကိုးကား အထောက်အကူပြုသောအရာဖြစ်သည်။ ဝန်ထမ်းများ အသေးစိတ်စစ်ဆေးပါမည်',
+    doneBtn: 'ပြီးဆုံးသည်',
+    codeError: 'ကုဒ်မမှန်ကန် / コードが無効です',
+    codeEmpty: 'စစ်ဆေးမှုကုဒ်ကို ထည့်သွင်းပေးပါ',
+  }
+};
+
+// ===== State =====
+let lang = 'ja';
+let ui = UI.ja;
+let questions = [];
+let answers = {};
+let currentQ = 0;
+let candidateId = '';
+
+// ===== ① 言語選択 =====
+async function selectLang(l) {
+  lang = l;
+  ui = UI[lang] || UI.ja;
+
+  // IDラベルを言語に合わせて更新
+  document.getElementById('idTitle').textContent = ui.idTitle;
+  document.getElementById('idDesc').textContent = ui.idDesc;
+  document.getElementById('idBtn').textContent = ui.idBtn;
+
+  // JSONロード
+  try {
+    const r = await fetch(`${l}.json`);
+    if (!r.ok) throw new Error('JSON load failed');
+    const jsonData = await r.json();
+    questions = jsonData.questions;
+  } catch (e) {
+    console.error(e);
+    alert('問題データを読み込めませんでした。ファイルを確認してください。');
+    return;
+  }
+
+  showScreen('idScreen');
+}
+
+// ===== ② ID入力 =====
+// 入力サニタイズ：半角大文字英字・数字・ハイフンのみ、最大15文字
+function sanitizeId(input) {
+  let v = input.value.toUpperCase().replace(/[^A-Z0-9-]/g, '');
+  if (v.length > 15) v = v.slice(0, 15);
+  input.value = v;
+}
+
+function handleIdSubmit() {
+  const input = document.getElementById('idInput');
+  const errDiv = document.getElementById('idError');
+  const val = input ? input.value.trim() : '';
+
+  if (!val) {
+    errDiv.textContent = ui.idError;
+    errDiv.style.display = 'block';
+    return;
+  }
+  // 形式チェック：半角大文字英字・数字・ハイフンのみ
+  if (!/^[A-Z0-9-]+$/.test(val)) {
+    errDiv.textContent = ui.idFormatError;
+    errDiv.style.display = 'block';
+    return;
+  }
+
+  errDiv.style.display = 'none';
+  candidateId = val;
+  showIntro();
+}
+
+function showIntro() {
+  const il = document.getElementById('introList');
+  il.innerHTML = '';
+  ui.introItems.forEach(t => {
+    const li = document.createElement('li');
+    li.textContent = t;
+    il.appendChild(li);
+  });
+  document.getElementById('introTitle').textContent = ui.introTitle;
+  document.getElementById('introNotice').textContent = ui.introNotice;
+  document.getElementById('startBtnText').textContent = ui.startBtn;
+  showScreen('introScreen');
+}
+
+// ===== ③ クイズ =====
+function startQuiz() {
+  buildQuiz();
+  showScreen('quizScreen');
+  gotoQ(0);
+}
+
+function buildQuiz() {
+  const body = document.getElementById('quizBody');
+  body.innerHTML = '';
+  questions.forEach((q, idx) => {
+    const div = document.createElement('div');
+    div.className = 'q-block';
+    div.id = `qb${idx}`;
+
+    const badge = q.type === 'forced'
+      ? `<span class="q-type-badge badge-forced">A/B</span>`
+      : `<span class="q-type-badge badge-scale">1-5</span>`;
+
+    let inner = `
+      <div class="q-no">${ui.pLabel} ${q.no}</div>
+      ${badge}
+      <div class="q-text">${q.text || ''}</div>
+    `;
+
+    if (q.type === 'scale5') {
+      inner += `<div class="scale-wrap">`;
+      ui.scale.forEach((label, si) => {
+        const val = si + 1;
+        const checked = answers[q.no] === val ? 'checked' : '';
+        inner += `
+          <div class="scale-row">
+            <label>
+              <input type="radio" name="q${q.no}" value="${val}" ${checked}
+                onchange="setAnswer(${q.no},${val})">
+              <span class="scale-dot"></span>
+              <span>${val}. ${label}</span>
+            </label>
+          </div>`;
+      });
+      inner += `</div>`;
+    } else {
+      const selA = answers[q.no] === 'A' ? 'selected' : '';
+      const selB = answers[q.no] === 'B' ? 'selected' : '';
+      inner += `
+        <div class="forced-wrap">
+          <div class="forced-opt ${selA}" onclick="setAnswer(${q.no},'A'); refreshForced(${idx})">
+            <input type="radio" name="q${q.no}" value="A">
+            <span class="opt-label">A</span>
+            <span>${q.text_A}</span>
+          </div>
+          <div class="forced-opt ${selB}" onclick="setAnswer(${q.no},'B'); refreshForced(${idx})">
+            <input type="radio" name="q${q.no}" value="B">
+            <span class="opt-label">B</span>
+            <span>${q.text_B}</span>
+          </div>
+        </div>`;
+    }
+
+    div.innerHTML = inner;
+    body.appendChild(div);
+  });
+}
+
+function refreshForced(idx) {
+  const q = questions[idx];
+  const div = document.getElementById(`qb${idx}`);
+  const opts = div.querySelectorAll('.forced-opt');
+  opts[0].className = 'forced-opt' + (answers[q.no] === 'A' ? ' selected' : '');
+  opts[1].className = 'forced-opt' + (answers[q.no] === 'B' ? ' selected' : '');
+}
+
+function setAnswer(no, val) {
+  answers[no] = val;
+  updateNav();
+}
+
+function gotoQ(idx) {
+  document.querySelectorAll('.q-block').forEach(b => b.classList.remove('active'));
+  document.getElementById(`qb${idx}`).classList.add('active');
+  currentQ = idx;
+  updateProgress();
+  updateNav();
+  window.scrollTo(0, 0);
+}
+
+function updateProgress() {
+  const pct = Math.round((currentQ / questions.length) * 100);
+  document.getElementById('pFill').style.width = pct + '%';
+  document.getElementById('pCounter').textContent = `${currentQ + 1}/${questions.length}`;
+  document.getElementById('pLabel').textContent = ui.pLabel;
+}
+
+function updateNav() {
+  const prev = document.getElementById('btnPrev');
+  const next = document.getElementById('btnNext');
+  prev.textContent = ui.prevBtn;
+  prev.disabled = currentQ === 0;
+
+  const q = questions[currentQ];
+  const answered = answers[q.no] !== undefined;
+  const isLast = currentQ === questions.length - 1;
+
+  if (isLast) {
+    const allAnswered = questions.every(q2 => answers[q2.no] !== undefined);
+    next.textContent = ui.submitBtn;
+    next.className = 'btn-nav btn-next btn-submit';
+    next.onclick = allAnswered ? submitQuiz : null;
+    next.disabled = !allAnswered;
+  } else {
+    next.textContent = ui.nextBtn;
+    next.className = 'btn-nav btn-next';
+    next.onclick = () => navQ(1);
+    next.disabled = !answered;
+  }
+}
+
+function navQ(dir) {
+  const q = questions[currentQ];
+  if (dir > 0 && answers[q.no] === undefined) return;
+  const next = currentQ + dir;
+  if (next < 0 || next >= questions.length) return;
+  gotoQ(next);
+}
+
+// ===== スコア計算 =====
+function calcScores() {
+  const dims = ['O', 'C', 'E', 'A', 'N'];
+  const surface = {};
+  const corrected = {};
+
+  // source_id ごとにグループ化
+  const bySource = {};
+  questions.forEach(q => {
+    if (q.type !== 'scale5') return;
+    const sid = q.source_id;
+    if (!bySource[sid]) bySource[sid] = {};
+    bySource[sid][q.repeat_tag] = { no: q.no, ans: answers[q.no], dim: q.dim, reverse: q.reverse };
+  });
+
+  // 疲労後(RL)優先: RL > RE > N
+  dims.forEach(dim => {
+    let total = 0, count = 0;
+    Object.values(bySource).forEach(tags => {
+      const entry = tags['RL'] || tags['RE'] || tags['N'];
+      if (!entry || entry.dim !== dim) return;
+      let v = entry.ans;
+      if (entry.reverse) v = 6 - v;
+      total += v;
+      count++;
+    });
+    surface[dim] = count ? Math.round((total / (count * 5)) * 100) : 50;
+  });
+
+  // 強制選択矛盾補正
+  const contraCount = { O: 0, C: 0, E: 0, A: 0, N: 0 };
+  const fcTotal     = { O: 0, C: 0, E: 0, A: 0, N: 0 };
+
+  questions.filter(q => q.type === 'forced').forEach(q => {
+    fcTotal[q.dim]++;
+    const ans = answers[q.no];
+    if (ans === 'B' && surface[q.dim] >= 60) contraCount[q.dim]++;
+    else if (ans === 'A' && surface[q.dim] <= 40) contraCount[q.dim]++;
+  });
+
+  dims.forEach(dim => {
+    const rate = fcTotal[dim] ? contraCount[dim] / fcTotal[dim] : 0;
+    corrected[dim] = Math.round(surface[dim] * (1 - rate * 0.3));
+  });
+
+  // 再掲一致率
+  let repeatTotal = 0, repeatMatch = 0;
+  Object.values(bySource).forEach(tags => {
+    if (!tags['RE'] || !tags['RL']) return;
+    repeatTotal++;
+    const diff = Math.abs((tags['RE'].ans || 0) - (tags['RL'].ans || 0));
+    if (diff <= 1) repeatMatch++;
+  });
+  const repeatRate = repeatTotal ? repeatMatch / repeatTotal : 1;
+
+  // 一貫性スコア（同次元内の分散逆数）
+  const consistencyScores = {};
+  dims.forEach(dim => {
+    const vals = [];
+    Object.values(bySource).forEach(tags => {
+      const e = tags['N'] || tags['RE'];
+      if (e && e.dim === dim && e.ans != null) vals.push(e.reverse ? 6 - e.ans : e.ans);
+    });
+    if (!vals.length) { consistencyScores[dim] = 100; return; }
+    const mean = vals.reduce((a, b) => a + b, 0) / vals.length;
+    const variance = vals.reduce((s, v) => s + (v - mean) ** 2, 0) / vals.length;
+    consistencyScores[dim] = Math.max(0, Math.round(100 - (variance / 4) * 100));
+  });
+  const avgConsistency = Math.round(dims.reduce((s, d) => s + consistencyScores[d], 0) / dims.length);
+
+  // 矛盾率
+  const totalFC = Object.values(fcTotal).reduce((a, b) => a + b, 0);
+  const totalContra = Object.values(contraCount).reduce((a, b) => a + b, 0);
+  const contraRate = totalFC ? totalContra / totalFC : 0;
+
+  // 総合信頼性
+  const reliability = Math.round(avgConsistency * 0.4 + repeatRate * 100 * 0.3 + (1 - contraRate) * 100 * 0.3);
+
+  return { surface, corrected, repeatRate, avgConsistency, contraRate, reliability };
+}
+
+// ===== 送信 =====
+async function submitQuiz() {
+  showScreen('resultScreen');
+  const scores = calcScores();
+  renderResult(scores);
+
+  const payload = {
+    candidate_id: candidateId,
+    lang: lang,
+    answers_json: JSON.stringify(answers),
+    surface_O: scores.surface.O,
+    surface_C: scores.surface.C,
+    surface_E: scores.surface.E,
+    surface_A: scores.surface.A,
+    surface_N: scores.surface.N,
+    corrected_O: scores.corrected.O,
+    corrected_C: scores.corrected.C,
+    corrected_E: scores.corrected.E,
+    corrected_A: scores.corrected.A,
+    corrected_N: scores.corrected.N,
+    repeat_rate: Math.round(scores.repeatRate * 100),
+    consistency: scores.avgConsistency,
+    contra_rate: Math.round(scores.contraRate * 100),
+    reliability: scores.reliability,
+    submitted_at: new Date().toISOString()
+  };
+
+  try {
+    await sb.from('results_300').insert(payload);
+  } catch (e) {
+    console.error('保存エラー', e);
+  }
+}
+
+// ===== 結果描画 =====
+function renderResult(scores) {
+  const wrap = document.getElementById('resultWrap');
+  const dims = ['O', 'C', 'E', 'A', 'N'];
+  const colors = { O: '#f4a261', C: '#5bc8af', E: '#7c6fff', A: '#e06bff', N: '#e63946' };
+
+  const rel = scores.reliability;
+  const relClass = rel >= 70 ? 'badge-ok' : rel >= 50 ? 'badge-warn' : 'badge-ng';
+  const relLabel = rel >= 70 ? ui.relBadges[0] : rel >= 50 ? ui.relBadges[1] : ui.relBadges[2];
+
+  let html = `
+    <h2>${ui.resultTitle}</h2>
+    <div class="r-sub">${ui.resultSub}</div>`;
+
+  dims.forEach(dim => {
+    const sc = scores.corrected[dim];
+    const sf = scores.surface[dim];
+    html += `
+      <div class="dim-card">
+        <div class="dim-header">
+          <span class="dim-name">${ui.dimNames[dim]}</span>
+          <span class="dim-score" style="color:${colors[dim]}">${sc}</span>
+        </div>
+        <div class="dim-bar-bg">
+          <div class="dim-bar" style="width:${sc}%;background:${colors[dim]}"></div>
+        </div>
+        <div class="dim-label">${ui.corrLabel}: ${sc}　（表面: ${sf}）</div>
+      </div>`;
+  });
+
+  html += `
+    <div class="reliability-box">
+      <div class="rel-title">${ui.relTitle}</div>
+      <div class="rel-row">
+        <span class="rel-label">${ui.relConsistency}</span>
+        <span class="rel-val">${scores.avgConsistency}</span>
+      </div>
+      <div class="rel-row">
+        <span class="rel-label">${ui.relRepeat}</span>
+        <span class="rel-val">${Math.round(scores.repeatRate * 100)}%</span>
+      </div>
+      <div class="rel-row">
+        <span class="rel-label">${ui.relContra}</span>
+        <span class="rel-val">${Math.round(scores.contraRate * 100)}%</span>
+      </div>
+      <div class="rel-overall">
+        <div class="rel-overall-label">${ui.relOverall}</div>
+        <div class="rel-overall-val ${relClass}">${rel} <small>${relLabel}</small></div>
+      </div>
+    </div>
+    <div class="result-note">${ui.resultNote}</div>
+    <button class="btn-done">${ui.doneBtn}</button>`;
+
+  wrap.innerHTML = html;
+}
+
+// ===== ユーティリティ =====
+function showScreen(id) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
+</script>
+</body>
+</html>
